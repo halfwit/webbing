@@ -1,0 +1,28 @@
+{{define "content"}}
+	<main>
+	<h1>{{.mainHeader}}</h1>
+	<h2>{{.paymentHeader}}</h2>
+		<p>{{.paymentBody}}</p>
+	<h4>{{.whatBTCHeader}}</h4>
+		<p>{{.whatBTCBody}}</p>
+		<br>
+	<h4>{{.chargedHeader}}</h4>
+		<p>{{.chargedBody}}</p>
+		<br>
+	<h4>{{.anyCoinHeader}}</h4>
+		<p>{{.anyCoinBody}}</p>	
+		<br>	
+	<h4>{{.editWalletHeader}}</h4>
+		<p>{{.editWalletBody}}</p>
+		<br>
+	<h4>{{.delWalletHeader}}</h4>
+		<p>{{.delWalletBody}}</p>
+    	<p>{{.delWalletBody1}}</p>
+    	<p>{{.delWalletBody2}}</p>
+		<br>
+<p>{{.otherCoinNote}}</p>	
+		<br>
+	<h4>{{.blockedHeader}}</h4> 
+<p>{{.blockedBody}}</p>
+	</main>
+{{end}}
