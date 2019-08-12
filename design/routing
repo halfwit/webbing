@@ -1,0 +1,28 @@
+For now the router is a simple hand-made. It sends a majority of pages that aren't related to a client session via a default method: 
+
+```
+func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
+	// Get the language for a given client request
+	accept := r.Header.Get("Accept-Language")
+	[...]
+	p := message.NewPrinter(tag)
+	// Get the session based on tokens
+	// If none exist, start a new one
+	us := d.manager.SessionStart(w, r)
+	[...]
+	// Check the auth for a given site, or return a 503 error
+	// Additionally, we get the data based on that identity for things like the header's links
+	// for example for someone authorized as a patient
+	// This pagedata calls the functions in pages/path/to/my/page
+	// Then adds all additional data to the map so a template can be fully Executed
+	// Then it returns a []byte with the actual HTML served to the client
+	data, _ := pagedata(p, requsted_path, loginstatus, "patient")
+	// Write the actual data to w
+	fmt.Fprintf(w, "%s", data)
+}
+```
+
+ * actual code is slightly different
+
+At the present time, generic form parsing is not implemented, but the pathway will be roughly similar; a switch on r.Method will be used (one of GET, POST, etc etc) and a similarily generic function to the above will be used to get form data, pass it through a validator that lives in forms/path/to/my/page
+Which returns an array of any validation errors.

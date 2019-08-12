@@ -1,0 +1,4 @@
+The session management is pulled right out of astaxie's web design book.
+A client connects to the site, and is issued a token. The token is tied into session cookies, and is used to validate login status, tying the token to a username. The username itself is then queried against the database for any additional information
+
+There's not much that happens here as of yet, but eventually the design will generate tokens for each page the user visits, and generate tokens that are seperate and linked to a form on a given page. This allows us to do two things: Stop multiple form submissions, which can happen just from slow internet or user confusion, as well as remove the chance for nefarious people to hijack a client access cookie to do anything that would cause damage to the client
