@@ -1,0 +1,28 @@
+aside.tagline {
+  margin: 0 auto;
+  padding-top: 50px;
+  background-size: contain;
+  background-image: url("https://image.shutterstock.com/z/stock-vector-online-consultation-concept-with-character-can-use-for-web-banner-infographics-hero-images-flat-1241185750.jpg");
+  background-repeat: no-repeat;
+  padding-bottom: 38%;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  aside.tagline {
+    background-image: url("https://image.shutterstock.com/z/stock-vector-online-doctor-at-work-can-use-for-web-banner-infographics-hero-images-flat-isometric-vector-1241183551.jpg");
+  }
+}
+
+aside.showcase {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+aside.showcase table th {
+  padding: 1.5rem;
+  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
+  color: #323232;
+}
+aside.showcase th p {
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+}

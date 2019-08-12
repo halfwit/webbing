@@ -1,0 +1,394 @@
+header {
+  grid-area: header;
+  padding: 0 1rem;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  display: flex;
+  align-items: center;
+  background: #323232;
+  transition: top 0.3s;
+}
+header a {
+  text-decoration: none;
+}
+header a:visited {
+  color: #cdcdcd;
+}
+header a.logo {
+  order: 1;
+  flex-grow: 20;
+  font-size: 2.4rem;
+  padding-left: 1rem;
+  color: #cdcdcd;
+  font-family: "Times New Roman";
+}
+header a:visited {
+  color: #cdcdcd;
+}
+header label {
+  display: block;
+  color: #cdcdcd;
+  padding: 1rem;
+  margin: 1.2rem;
+  font-size: 2.4rem;
+  order: 5;
+  cursor: pointer;
+}
+header label:hover {
+  color: #4b83f2;
+}
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header input {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+header nav.hamburger {
+  display: none;
+  font-size: 1.1em;
+}
+header nav.login {
+  order: 3;
+}
+header nav.login ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav.login a {
+  font-size: 2rem;
+  padding: 1rem;
+}
+header nav.login a.signup {
+  background-color: #4b83f2;
+}
+header nav.login a:hover {
+  background-color: #3b4a96;
+  transition: all 0.25s ease;
+}
+header summary {
+  /* Hide the blue outline when you click the details element */
+  outline: none;
+}
+.headerlogo {
+  /* Gotta do the hacky placements because the SVG bounds seem to be odd */
+  width: 3rem;
+  height: 3rem;
+  fill: #4b83f2;
+}
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(60ch, 1fr));
+  color: #323232;
+}
+main h2 {
+  padding: 0 1rem 1rem 0;
+  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
+  font-size: 30px;
+  margin-bottom: -1rem;
+}
+
+main form {
+  background: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+main form input {
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-size: 16px;
+}
+main form input,
+main form button {
+  width: 30rem;
+}
+
+main form label,
+main form button {
+  font-size: 16px;
+  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
+}
+
+aside {
+  width: 1024px;
+  height: 768px;
+}
+body {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 68px auto auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+header input:checked ~ nav {
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: absolute;
+  background: #cdcdcd;
+  right: 0;
+  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+  height: 100vh;
+  border-radius: 2px;
+  box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+header input:checked ~ nav.hamburger {
+  height: calc(85% - 4.5rem);
+  overflow: auto;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+}
+header input:checked ~ nav.hamburger a,
+header input:checked ~ nav.hamburger details {
+  font-family: "Arial";
+  cursor: pointer;
+  display: block;
+  padding: 22px;
+  color: #232323;
+}
+header input:checked ~ nav.hamburger hr {
+  width: 90%;
+  border-bottom: 1px solid #323232;
+}
+header input:checked ~ nav.hamburger details[open] ul {
+  margin-top: 1rem;
+}
+header input:checked ~ nav.hamburger details:hover,
+header input:checked ~ nav.hamburger a:hover {
+  color: #3b4a96;
+}
+header input:checked ~ nav.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  top: calc(100vh - 15%);
+  height: 15%;
+  padding-top: 1em;
+  background: #323232;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+}
+main section {
+  padding: 1.5rem;
+  width: auto;
+  background-color: white;
+}
+main section h2 {
+  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
+  color: #323232;
+  font-size: 30px;
+}
+main section p {
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+}
+
+footer {
+  grid-area: footer;
+  padding: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: #323232;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+footer ul {
+  list-style-type: none;
+}
+footer li a {
+  text-decoration: none;
+  display: block;
+}
+footer section.branding {
+  padding: 2rem;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer nav.leftfooter {
+  padding: 1rem;
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+footer nav.rightfooter {
+  padding: 1rem;
+  order: 2;
+  display: flex;
+  flex: end;
+  flex-direction: column;
+  justify-content: top;
+}
+footer nav details {
+  padding: 1rem;
+}
+footer svg {
+  display: block;
+  width: 6em;
+  height: 6em;
+  fill: #4b83f2;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+}
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    flex-flow: column-wrap;
+    align-items: center;
+  }
+  footer nav.rightfooter {
+    order: 0;
+  }
+}
+@media (pointer: coarse) and (orientation: portrait) {
+  footer {
+    font-size: 3rem;
+    flex-direction: column;
+    flex-flow: column-wrap;
+    align-items: center;
+  }
+  footer nav.rightfooter {
+    order: 0;
+  }
+}
+footer nav details[open] footer nav details[open] li a {
+  color: #cdcdcd;
+}
+footer nav details[open] li a:hover {
+  color: #3b4a96;
+}
+
+@media (max-width: 700px) {
+  header a.logo {
+    visibility: collapse;
+    width: 0px;
+    padding: 0px;
+    flex-shrink: 50;
+  }
+}
+@media (max-width: 500px) {
+  header svg.headerlogo {
+    display: none;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (max-width: 900px) {
+  header {
+    font-size: 1rem;
+    height: 48px;
+  }
+ 
+  header a.logo {
+    visibility: collapse;
+    width: 0px;
+    padding: 0px;
+    flex-shrink: 50;
+  }
+  header input:checked ~ nav {
+    top: 48px;
+  }
+  header nav.login a {    
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  header nav.login a:hover {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  hr,
+  header label {
+    display: none;
+  }
+  header {
+    padding-right: 0;
+    height: 48px;
+  }
+  header nav.hamburger {
+    order: 3;
+    display: flex;
+    color: #cdcdcd;
+  }
+  header nav.hamburger li,
+  header nav.hamburger details {
+    display: flex;
+    padding: 0.8rem 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Arial";
+  }
+  header nav.hamburger details[open] ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    top: 100%;
+    z-index: 1;
+    background: #cdcdcd;
+    box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    margin: 4px 0 0 -10px;
+    border-radius: 0.2rem;
+  }
+  header nav.hamburger details[open] li {
+    width: auto;
+    display: block;
+    padding: 1rem 0.2rem;
+  }
+  header nav.hamburger details[open] li a {
+    color: #323232;
+    padding: 1rem 0.2rem;
+  }
+  header nav.hamburger details[open] li a:hover {
+    width: 100%;
+    display: block;
+    padding: 1rem 0.2rem;
+    color: #3b4a96;
+  }
+  header nav.hamburger ul {
+    display: flex;
+  }
+  header nav.login a {
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+  }
+  header nav.login a.signin {
+    margin-right: 1rem;
+  }
+  header nav.login a.signup {
+    background-color: #323232;
+    margin-right: 0rem;
+  }
+  header nav.hamburger details:hover,
+  header nav.login a:hover {
+    padding: 0.8rem 0.5rem;
+    background-color: #111111;
+    transition: all 0.5s ease;
+  }
+}
