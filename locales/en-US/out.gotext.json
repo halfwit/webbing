@@ -1,0 +1,1840 @@
+{
+    "language": "en-US",
+    "messages": [
+        {
+            "id": "Olmax Medical | Appointments",
+            "message": "Olmax Medical | Appointments",
+            "translation": "Olmax Medical | Appointments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You currently have no appointments pending.",
+            "message": "You currently have no appointments pending.",
+            "translation": "You currently have no appointments pending.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "message": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translation": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Htmlhelpa",
+                    "string": "%[1]s",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\"help.html\"\u003ehelp\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Create Offer",
+            "message": "Olmax Medical | Create Offer",
+            "translation": "Olmax Medical | Create Offer",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create An Offer",
+            "message": "Create An Offer",
+            "translation": "Create An Offer",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Physician Specialty",
+            "message": "Physician Specialty",
+            "translation": "Physician Specialty",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Bitcoin Per Unit \u003ci\u003e(15min)\u003c/i\u003e",
+            "message": "Bitcoin Per Unit \u003ci\u003e(15min)\u003c/i\u003e",
+            "translation": "Bitcoin Per Unit \u003ci\u003e(15min)\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dates",
+            "message": "Dates",
+            "translation": "Dates",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "From:",
+            "message": "From:",
+            "translation": "From:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "To:",
+            "message": "To:",
+            "translation": "To:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Deploy Contract",
+            "message": "Deploy Contract",
+            "translation": "Deploy Contract",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Profile",
+            "message": "Olmax Medical | Profile",
+            "translation": "Olmax Medical | Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hello",
+            "message": "Hello",
+            "translation": "Hello",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Find A Doctor",
+            "message": "Find A Doctor",
+            "translation": "Find A Doctor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Specialty",
+            "message": "Specialty",
+            "translation": "Specialty",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Country",
+            "message": "Country",
+            "translation": "Country",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointment Dates:",
+            "message": "Appointment Dates:",
+            "translation": "Appointment Dates:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Search",
+            "message": "Search",
+            "translation": "Search",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Create Profile",
+            "message": "Olmax Medical | Create Profile",
+            "translation": "Olmax Medical | Create Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create Patient Profile",
+            "message": "Create Patient Profile",
+            "translation": "Create Patient Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please submit some information regarding your consult.",
+            "message": "Please submit some information regarding your consult.",
+            "translation": "Please submit some information regarding your consult.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "When were you born?",
+            "message": "When were you born?",
+            "translation": "When were you born?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What is your biological gender?",
+            "message": "What is your biological gender?",
+            "translation": "What is your biological gender?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "message": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "translation": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "When did your symptoms start?",
+            "message": "When did your symptoms start?",
+            "translation": "When did your symptoms start?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "message": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "translation": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How long have these symptoms lasted?",
+            "message": "How long have these symptoms lasted?",
+            "translation": "How long have these symptoms lasted?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "message": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "translation": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What makes your symptoms better, and What makes them worse?",
+            "message": "What makes your symptoms better, and What makes them worse?",
+            "translation": "What makes your symptoms better, and What makes them worse?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Does your pain travel or radiate to another part of your body?",
+            "message": "Does your pain travel or radiate to another part of your body?",
+            "translation": "Does your pain travel or radiate to another part of your body?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Have you taken any medications for these symptoms and how much have they worked?",
+            "message": "Have you taken any medications for these symptoms and how much have they worked?",
+            "translation": "Have you taken any medications for these symptoms and how much have they worked?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any fevers or Chills?",
+            "message": "Any fevers or Chills?",
+            "translation": "Any fevers or Chills?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any weight gain or weight loss?",
+            "message": "Any weight gain or weight loss?",
+            "translation": "Any weight gain or weight loss?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any changes in vision?",
+            "message": "Any changes in vision?",
+            "translation": "Any changes in vision?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any lung issues?",
+            "message": "Any lung issues?",
+            "translation": "Any lung issues?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any heart problems?",
+            "message": "Any heart problems?",
+            "translation": "Any heart problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any intestinal problems?",
+            "message": "Any intestinal problems?",
+            "translation": "Any intestinal problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any kidney problems?",
+            "message": "Any kidney problems?",
+            "translation": "Any kidney problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any problems with muscles or bones?",
+            "message": "Any problems with muscles or bones?",
+            "translation": "Any problems with muscles or bones?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "message": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "translation": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "message": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "translation": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Male",
+            "message": "Male",
+            "translation": "Male",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Female",
+            "message": "Female",
+            "translation": "Female",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "message": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "translation": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "FAQ",
+            "message": "FAQ",
+            "translation": "FAQ",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Help",
+            "message": "Help",
+            "translation": "Help",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Over 12B patients served",
+            "message": "Over 12B patients served",
+            "translation": "Over 12B patients served",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payment Methods",
+            "message": "Payment Methods",
+            "translation": "Payment Methods",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Prices and Fees",
+            "message": "Prices and Fees",
+            "translation": "Prices and Fees",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Verification",
+            "message": "Verification",
+            "translation": "Verification",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointments",
+            "message": "Appointments",
+            "translation": "Appointments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Legal",
+            "message": "Legal",
+            "translation": "Legal",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Privacy Policy",
+            "message": "Privacy Policy",
+            "translation": "Privacy Policy",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "About Us",
+            "message": "About Us",
+            "translation": "About Us",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax",
+            "message": "Olmax",
+            "translation": "Olmax",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Partnering",
+            "message": "Partnering",
+            "translation": "Partnering",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Become A Partner",
+            "message": "Become A Partner",
+            "translation": "Become A Partner",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Are You A Doctor?",
+            "message": "Are You A Doctor?",
+            "translation": "Are You A Doctor?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Copyright 2017, 2018, 2019",
+            "message": "Copyright 2017, 2018, 2019",
+            "translation": "Copyright 2017, 2018, 2019",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Doctors",
+            "message": "Doctors",
+            "translation": "Doctors",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Become A Provider",
+            "message": "Become A Provider",
+            "translation": "Become A Provider",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Who can become a doctor",
+            "message": "Who can become a doctor",
+            "translation": "Who can become a doctor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How It Works",
+            "message": "How It Works",
+            "translation": "How It Works",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Contact Us",
+            "message": "Contact Us",
+            "translation": "Contact Us",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Pricing",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payment Procedures",
+            "message": "Payment Procedures",
+            "translation": "Payment Procedures",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Call toll free",
+            "message": "Call toll free",
+            "translation": "Call toll free",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Email",
+            "message": "Email",
+            "translation": "Email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Login",
+            "message": "Login",
+            "translation": "Login",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Logout",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sign Up",
+            "message": "Sign Up",
+            "translation": "Sign Up",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Profile",
+            "message": "Profile",
+            "translation": "Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Welcome",
+            "message": "Olmax Medical | Welcome",
+            "translation": "Olmax Medical | Welcome",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical",
+            "message": "Olmax Medical",
+            "translation": "Olmax Medical",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Find a Doctor",
+            "message": "Find a Doctor",
+            "translation": "Find a Doctor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointment Times",
+            "message": "Appointment Times",
+            "translation": "Appointment Times",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Start Time:",
+            "message": "Start Time:",
+            "translation": "Start Time:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "End Time:",
+            "message": "End Time:",
+            "translation": "End Time:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Who We Are",
+            "message": "Who We Are",
+            "translation": "Who We Are",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "message": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "translation": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Second Opinions",
+            "message": "Second Opinions",
+            "translation": "Second Opinions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "message": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "translation": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Anonymity",
+            "message": "Anonymity",
+            "translation": "Anonymity",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "message": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "translation": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Access to Physicians from around the world",
+            "message": "Access to Physicians from around the world",
+            "translation": "Access to Physicians from around the world",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "message": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "translation": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payment",
+            "message": "Payment",
+            "translation": "Payment",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "message": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "translation": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "See More",
+            "message": "See More",
+            "translation": "See More",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What are patients saying about our doctors from",
+            "message": "What are patients saying about our doctors from",
+            "translation": "What are patients saying about our doctors from",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Login",
+            "message": "Olmax Medical | Login",
+            "translation": "Olmax Medical | Login",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Welcome back!",
+            "message": "Welcome back!",
+            "translation": "Welcome back!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Email:",
+            "message": "Email:",
+            "translation": "Email:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password:",
+            "message": "Password:",
+            "translation": "Password:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Forgot your password?",
+            "message": "Forgot your password?",
+            "translation": "Forgot your password?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Messages",
+            "message": "Olmax Medical | Messages",
+            "translation": "Olmax Medical | Messages",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You currently have no messages.",
+            "message": "You currently have no messages.",
+            "translation": "You currently have no messages.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Previous messages: Click here",
+            "message": "Previous messages: Click here",
+            "translation": "Previous messages: Click here",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter Email",
+            "message": "Enter Email",
+            "translation": "Enter Email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We will send a reset code to the email provided",
+            "message": "We will send a reset code to the email provided",
+            "translation": "We will send a reset code to the email provided",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Reset",
+            "message": "Reset",
+            "translation": "Reset",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Sign Up",
+            "message": "Olmax Medical | Sign Up",
+            "translation": "Olmax Medical | Sign Up",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sign Up for free",
+            "message": "Sign Up for free",
+            "translation": "Sign Up for free",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First Name:",
+            "message": "First Name:",
+            "translation": "First Name:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your first name",
+            "message": "Enter your first name",
+            "translation": "Enter your first name",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your last name",
+            "message": "Enter your last name",
+            "translation": "Enter your last name",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last Name:",
+            "message": "Last Name:",
+            "translation": "Last Name:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter a valid email",
+            "message": "Enter a valid email",
+            "translation": "Enter a valid email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter password (8+ chars)",
+            "message": "Enter password (8+ chars)",
+            "translation": "Enter password (8+ chars)",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Wallet",
+            "message": "Olmax Medical | Wallet",
+            "translation": "Olmax Medical | Wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "0 BTC",
+            "message": "0 BTC",
+            "translation": "0 BTC",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "message": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "translation": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Deposit Funds",
+            "message": "Deposit Funds",
+            "translation": "Deposit Funds",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Send only Bitcoin (BTC) to this address",
+            "message": "Send only Bitcoin (BTC) to this address",
+            "translation": "Send only Bitcoin (BTC) to this address",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "message": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "translation": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | FAQ",
+            "message": "Olmax Medical | FAQ",
+            "translation": "Olmax Medical | FAQ",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointment Requests",
+            "message": "Appointment Requests",
+            "translation": "Appointment Requests",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "I am a patient. How do I check the status of my appointment?",
+            "message": "I am a patient. How do I check the status of my appointment?",
+            "translation": "I am a patient. How do I check the status of my appointment?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Once an appointment request is submitted, the physician has 4 to 12 hrs to replay. Depending on the urgency. If you would like a reply within 4 hr for urgent consults, an extra fee can be payed. Otherwise doctors have 12 hrs to reply to appointment request.",
+            "message": "Once an appointment request is submitted, the physician has 4 to 12 hrs to replay. Depending on the urgency. If you would like a reply within 4 hr for urgent consults, an extra fee can be payed. Otherwise doctors have 12 hrs to reply to appointment request.",
+            "translation": "Once an appointment request is submitted, the physician has 4 to 12 hrs to replay. Depending on the urgency. If you would like a reply within 4 hr for urgent consults, an extra fee can be payed. Otherwise doctors have 12 hrs to reply to appointment request.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Should I clear my schedule if I have no heard back from my doctor?",
+            "message": "Should I clear my schedule if I have no heard back from my doctor?",
+            "translation": "Should I clear my schedule if I have no heard back from my doctor?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you do not recieve a confimation email by 12 hrs, then a full refund will be returned to your bitcoin account along with an email stating that an appointment could not be made",
+            "message": "If you do not recieve a confimation email by 12 hrs, then a full refund will be returned to your bitcoin account along with an email stating that an appointment could not be made",
+            "translation": "If you do not recieve a confimation email by 12 hrs, then a full refund will be returned to your bitcoin account along with an email stating that an appointment could not be made",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What happens if my appointment request is declined or expires?",
+            "message": "What happens if my appointment request is declined or expires?",
+            "translation": "What happens if my appointment request is declined or expires?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you recieve an email confirming a cancelation of decline, bitcoin will be returned to your account infull, then you may seek another appointment",
+            "message": "If you recieve an email confirming a cancelation of decline, bitcoin will be returned to your account infull, then you may seek another appointment",
+            "translation": "If you recieve an email confirming a cancelation of decline, bitcoin will be returned to your account infull, then you may seek another appointment",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "I did not recieve an email confirming nor denying my request",
+            "message": "I did not recieve an email confirming nor denying my request",
+            "translation": "I did not recieve an email confirming nor denying my request",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Make sure your email address is correct",
+            "message": "Make sure your email address is correct",
+            "translation": "Make sure your email address is correct",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We may be sending emails to an old or incorrect email address. To see or change the email address associated with your account, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "message": "We may be sending emails to an old or incorrect email address. To see or change the email address associated with your account, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "translation": "We may be sending emails to an old or incorrect email address. To see or change the email address associated with your account, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "1.) Go to Edit Profile.",
+            "message": "1.) Go to Edit Profile.",
+            "translation": "1.) Go to Edit Profile.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2.) Look for the Email Address field. Make sure your address is correct.",
+            "message": "2.) Look for the Email Address field. Make sure your address is correct.",
+            "translation": "2.) Look for the Email Address field. Make sure your address is correct.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "3.) If it is incorrect, add the correct address and click Save.",
+            "message": "3.) If it is incorrect, add the correct address and click Save.",
+            "translation": "3.) If it is incorrect, add the correct address and click Save.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Check your email notification settings",
+            "message": "Check your email notification settings",
+            "translation": "Check your email notification settings",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We'll only send the emails you tell us you want. To check your email notification settings, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "message": "We'll only send the emails you tell us you want. To check your email notification settings, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "translation": "We'll only send the emails you tell us you want. To check your email notification settings, log in to your Olmax account from a desktop computer and follow the steps below:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "1.) Go to your Notification Settings.",
+            "message": "1.) Go to your Notification Settings.",
+            "translation": "1.) Go to your Notification Settings.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2.) Look for the \"Email Settings\" field. Make sure you have chosen the email types you want to receive.",
+            "message": "2.) Look for the \"Email Settings\" field. Make sure you have chosen the email types you want to receive.",
+            "translation": "2.) Look for the \"Email Settings\" field. Make sure you have chosen the email types you want to receive.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "3.) After adding or removing checkmarks from the right boxes, scroll to the bottom of the page and click Save.",
+            "message": "3.) After adding or removing checkmarks from the right boxes, scroll to the bottom of the page and click Save.",
+            "translation": "3.) After adding or removing checkmarks from the right boxes, scroll to the bottom of the page and click Save.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Search all messages in your email inbox",
+            "message": "Search all messages in your email inbox",
+            "translation": "Search all messages in your email inbox",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sometimes emails can get lost in your inbox. In your email account, search for terms like \"Olmax Medical\", \"Appointment\", \"Verification\", or other words related to the email you're looking for.",
+            "message": "Sometimes emails can get lost in your inbox. In your email account, search for terms like \"Olmax Medical\", \"Appointment\", \"Verification\", or other words related to the email you're looking for.",
+            "translation": "Sometimes emails can get lost in your inbox. In your email account, search for terms like \"Olmax Medical\", \"Appointment\", \"Verification\", or other words related to the email you're looking for.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Check your spam and other email filters",
+            "message": "Check your spam and other email filters",
+            "translation": "Check your spam and other email filters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "It's possible your email provider mistakenly sent our messages to your spam or junk folder. To avoid this:",
+            "message": "It's possible your email provider mistakenly sent our messages to your spam or junk folder. To avoid this:",
+            "translation": "It's possible your email provider mistakenly sent our messages to your spam or junk folder. To avoid this:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "1.) Remove Olmax messages from your spam list",
+            "message": "1.) Remove Olmax messages from your spam list",
+            "translation": "1.) Remove Olmax messages from your spam list",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2.) Add nemo@olmax.com, halfwit@olmax.com, and services@olmax.com to your personal email address book",
+            "message": "2.) Add nemo@olmax.com, halfwit@olmax.com, and services@olmax.com to your personal email address book",
+            "translation": "2.) Add nemo@olmax.com, halfwit@olmax.com, and services@olmax.com to your personal email address book",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.\u003c/br\u003eCheck for issues with your email service provider.",
+            "message": "If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.\u003c/br\u003eCheck for issues with your email service provider.",
+            "translation": "If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.\u003c/br\u003eCheck for issues with your email service provider.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account.",
+            "message": "Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account.",
+            "translation": "Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If your country blocks Olmax Medical?",
+            "message": "If your country blocks Olmax Medical?",
+            "translation": "If your country blocks Olmax Medical?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can bypass their firewall using tunnel software such as a VPN or {OrgTora} software",
+            "message": "You can bypass their firewall using tunnel software such as a VPN or {OrgTora} software",
+            "translation": "You can bypass their firewall using tunnel software such as a VPN or {OrgTora} software",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "OrgTora",
+                    "string": "%[1]s",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\"https://www.torproject.org\"\u003eTor\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Our Doctors",
+            "message": "Olmax Medical | Our Doctors",
+            "translation": "Olmax Medical | Our Doctors",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Contacting Physician",
+            "message": "Contacting Physician",
+            "translation": "Contacting Physician",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You may make contact with your doctor as soon as the appointment is confirmed.",
+            "message": "You may make contact with your doctor as soon as the appointment is confirmed.",
+            "translation": "You may make contact with your doctor as soon as the appointment is confirmed.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Do I need to pay before scheduling an appointment?",
+            "message": "Do I need to pay before scheduling an appointment?",
+            "translation": "Do I need to pay before scheduling an appointment?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Yes, you must submit payment in order to secure appointment contract. Your payment will be held in escrow until the visit is finalized. Once you submit fees, we will contact the physician and give him or her your medical information. The doctor will then confirm appointment, and an email or text will be sent to you, along with the physicians contact information. Fees are structured in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equivalent to 15 min, time spent in visit will be pre-determined, and visits going longer that what was agreed upon will not cost extra. All new consults must be a minimum of 2 units, and repeat visits can be a minimum of 1 unit.",
+            "message": "Yes, you must submit payment in order to secure appointment contract. Your payment will be held in escrow until the visit is finalized. Once you submit fees, we will contact the physician and give him or her your medical information. The doctor will then confirm appointment, and an email or text will be sent to you, along with the physicians contact information. Fees are structured in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equivalent to 15 min, time spent in visit will be pre-determined, and visits going longer that what was agreed upon will not cost extra. All new consults must be a minimum of 2 units, and repeat visits can be a minimum of 1 unit.",
+            "translation": "Yes, you must submit payment in order to secure appointment contract. Your payment will be held in escrow until the visit is finalized. Once you submit fees, we will contact the physician and give him or her your medical information. The doctor will then confirm appointment, and an email or text will be sent to you, along with the physicians contact information. Fees are structured in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equivalent to 15 min, time spent in visit will be pre-determined, and visits going longer that what was agreed upon will not cost extra. All new consults must be a minimum of 2 units, and repeat visits can be a minimum of 1 unit.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "When will I be charged?",
+            "message": "When will I be charged?",
+            "translation": "When will I be charged?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Bitcoin must be paid in full upon deployment or acceptance of contract.",
+            "message": "Bitcoin must be paid in full upon deployment or acceptance of contract.",
+            "translation": "Bitcoin must be paid in full upon deployment or acceptance of contract.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Can I pay with any currency?",
+            "message": "Can I pay with any currency?",
+            "translation": "Can I pay with any currency?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No.",
+            "message": "No.",
+            "translation": "No.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Help",
+            "message": "Olmax Medical | Help",
+            "translation": "Olmax Medical | Help",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How can we help?",
+            "message": "How can we help?",
+            "translation": "How can we help?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Suggested Topics",
+            "message": "Suggested Topics",
+            "translation": "Suggested Topics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Should I clear my schedule if I have not heard back from the doctor?",
+            "message": "Should I clear my schedule if I have not heard back from the doctor?",
+            "translation": "Should I clear my schedule if I have not heard back from the doctor?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I edit or remove a payment method?",
+            "message": "How do I edit or remove a payment method?",
+            "translation": "How do I edit or remove a payment method?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What is Bitcoin?",
+            "message": "What is Bitcoin?",
+            "translation": "What is Bitcoin?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I use Bitcoin to pay?",
+            "message": "How do I use Bitcoin to pay?",
+            "translation": "How do I use Bitcoin to pay?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How can I add another appointment or business address to my receipt?",
+            "message": "How can I add another appointment or business address to my receipt?",
+            "translation": "How can I add another appointment or business address to my receipt?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I verify my phone number?",
+            "message": "How do I verify my phone number?",
+            "translation": "How do I verify my phone number?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Why didn't I get my email notification?",
+            "message": "Why didn't I get my email notification?",
+            "translation": "Why didn't I get my email notification?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What is a Verified Medical License?",
+            "message": "What is a Verified Medical License?",
+            "translation": "What is a Verified Medical License?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Prices \u0026 Fees",
+            "message": "Prices \u0026 Fees",
+            "translation": "Prices \u0026 Fees",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How is the price determined for my appointment?",
+            "message": "How is the price determined for my appointment?",
+            "translation": "How is the price determined for my appointment?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Contacting A Physician",
+            "message": "Contacting A Physician",
+            "translation": "Contacting A Physician",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What does each appointment status mean?",
+            "message": "What does each appointment status mean?",
+            "translation": "What does each appointment status mean?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I make an appointment on Olmax?",
+            "message": "How do I make an appointment on Olmax?",
+            "translation": "How do I make an appointment on Olmax?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "-View all",
+            "message": "-View all",
+            "translation": "-View all",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "All payments will be done via {OrgBitcoina}",
+            "message": "All payments will be done via {OrgBitcoina}",
+            "translation": "All payments will be done via {OrgBitcoina}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "OrgBitcoina",
+                    "string": "%[1]v",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(\"\u003ca href=\\\"https://bitcoin.org\\\"\u003eBitcoin\u003c/a\u003e\")"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "What is {OrgwikiBitcoinBitcoina}?",
+            "message": "What is {OrgwikiBitcoinBitcoina}?",
+            "translation": "What is {OrgwikiBitcoinBitcoina}?",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "OrgwikiBitcoinBitcoina",
+                    "string": "%[1]v",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\\\"https://en.wikipedia.org/wiki/Bitcoin\\\"\u003eBitcoin\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Prices and fees are for the most part determined by doctors and patients.",
+            "message": "Prices and fees are for the most part determined by doctors and patients.",
+            "translation": "Prices and fees are for the most part determined by doctors and patients.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Prices are set by who deploys the contract (doctor or patient). Fees are structured in a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 mins. All new consults must be a minimum of 2 units, and repeat visits can be 1 unit.",
+            "message": "Prices are set by who deploys the contract (doctor or patient). Fees are structured in a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 mins. All new consults must be a minimum of 2 units, and repeat visits can be 1 unit.",
+            "translation": "Prices are set by who deploys the contract (doctor or patient). Fees are structured in a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 mins. All new consults must be a minimum of 2 units, and repeat visits can be 1 unit.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No",
+            "message": "No",
+            "translation": "No",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Become A Provider",
+            "message": "Olmax Medical | Become A Provider",
+            "translation": "Olmax Medical | Become A Provider",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Find out what you could earn",
+            "message": "Find out what you could earn",
+            "translation": "Find out what you could earn",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Get Started",
+            "message": "Get Started",
+            "translation": "Get Started",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Why become a provider on Olmax?",
+            "message": "Why become a provider on Olmax?",
+            "translation": "Why become a provider on Olmax?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No matter what your specialty, Olmax makes it simple and secure to reach millions of patients looking for doctors with unique skills and specialties, just like yours.",
+            "message": "No matter what your specialty, Olmax makes it simple and secure to reach millions of patients looking for doctors with unique skills and specialties, just like yours.",
+            "translation": "No matter what your specialty, Olmax makes it simple and secure to reach millions of patients looking for doctors with unique skills and specialties, just like yours.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You're in control",
+            "message": "You're in control",
+            "translation": "You're in control",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "With Olmax, you're in full control of your availability, prices, medical management, and how you interact with patients. You can set appointment times and handle the process however you like.",
+            "message": "With Olmax, you're in full control of your availability, prices, medical management, and how you interact with patients. You can set appointment times and handle the process however you like.",
+            "translation": "With Olmax, you're in full control of your availability, prices, medical management, and how you interact with patients. You can set appointment times and handle the process however you like.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We're there at every step",
+            "message": "We're there at every step",
+            "translation": "We're there at every step",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax offers tools, service tips, 24/7 support, and an on-line community of experienced physicians for questions and sharing ideas for success.",
+            "message": "Olmax offers tools, service tips, 24/7 support, and an on-line community of experienced physicians for questions and sharing ideas for success.",
+            "translation": "Olmax offers tools, service tips, 24/7 support, and an on-line community of experienced physicians for questions and sharing ideas for success.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How to become an Olmax Provider",
+            "message": "How to become an Olmax Provider",
+            "translation": "How to become an Olmax Provider",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create your profile",
+            "message": "Create your profile",
+            "translation": "Create your profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "It's free and easy to create a profile on Olmax. Describe your resume, how many patients you can accomodate, set your own times, and add photos and details about yourself.",
+            "message": "It's free and easy to create a profile on Olmax. Describe your resume, how many patients you can accomodate, set your own times, and add photos and details about yourself.",
+            "translation": "It's free and easy to create a profile on Olmax. Describe your resume, how many patients you can accomodate, set your own times, and add photos and details about yourself.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Welcome patients",
+            "message": "Welcome patients",
+            "translation": "Welcome patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Communicate with patients via 3rd party applications, or personal telephone.",
+            "message": "Communicate with patients via 3rd party applications, or personal telephone.",
+            "translation": "Communicate with patients via 3rd party applications, or personal telephone.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Get Paid",
+            "message": "Get Paid",
+            "translation": "Get Paid",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax's secure payment system means you will never see a patient without compensation, or have to deal with money directly. Patienst are charged before appointments, and you are paid after the visit is completed. We embrace the future, therefore payments will be via Bitcoin only.",
+            "message": "Olmax's secure payment system means you will never see a patient without compensation, or have to deal with money directly. Patienst are charged before appointments, and you are paid after the visit is completed. We embrace the future, therefore payments will be via Bitcoin only.",
+            "translation": "Olmax's secure payment system means you will never see a patient without compensation, or have to deal with money directly. Patienst are charged before appointments, and you are paid after the visit is completed. We embrace the future, therefore payments will be via Bitcoin only.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Safety on Olmax",
+            "message": "Safety on Olmax",
+            "translation": "Safety on Olmax",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax is built on trust",
+            "message": "Olmax is built on trust",
+            "translation": "Olmax is built on trust",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "All Olmax physicians must: submit a profile photo, medical diplomas, residency certification or equivalent, verify their phone, email, government ID, and background checks. Patients and physicians can each publish reviews after visit conclusions keeping everyone accountable and respectful.",
+            "message": "All Olmax physicians must: submit a profile photo, medical diplomas, residency certification or equivalent, verify their phone, email, government ID, and background checks. Patients and physicians can each publish reviews after visit conclusions keeping everyone accountable and respectful.",
+            "translation": "All Olmax physicians must: submit a profile photo, medical diplomas, residency certification or equivalent, verify their phone, email, government ID, and background checks. Patients and physicians can each publish reviews after visit conclusions keeping everyone accountable and respectful.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Start seeing patients",
+            "message": "Start seeing patients",
+            "translation": "Start seeing patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Profile information such as government ID, diplomas, phone numbers, and emails will will be verified before being posted on Olmax Medical website.",
+            "message": "Profile information such as government ID, diplomas, phone numbers, and emails will will be verified before being posted on Olmax Medical website.",
+            "translation": "Profile information such as government ID, diplomas, phone numbers, and emails will will be verified before being posted on Olmax Medical website.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Once you have submitted a phone number, you can either receive a text message or call with a confirmation number.",
+            "message": "Once you have submitted a phone number, you can either receive a text message or call with a confirmation number.",
+            "translation": "Once you have submitted a phone number, you can either receive a text message or call with a confirmation number.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Why did I not get a notification email?",
+            "message": "Why did I not get a notification email?",
+            "translation": "Why did I not get a notification email?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please refer to the {HtmlAppointment_Requestsa} help page",
+            "message": "Please refer to the {HtmlAppointment_Requestsa} help page",
+            "translation": "Please refer to the {HtmlAppointment_Requestsa} help page",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "HtmlAppointment_Requestsa",
+                    "string": "%[1]v",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\"https://olmaxmedical.com/appointmentRequests.html\"\u003eAppointment Requests\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Valid email required",
+            "message": "Valid email required",
+            "translation": "Valid email required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid email",
+            "message": "Invalid email",
+            "translation": "Invalid email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First name required",
+            "message": "First name required",
+            "translation": "First name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First name must be at least 2 characters",
+            "message": "First name must be at least 2 characters",
+            "translation": "First name must be at least 2 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last name required",
+            "message": "Last name required",
+            "translation": "Last name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last name must be at least 2 characters",
+            "message": "Last name must be at least 2 characters",
+            "translation": "Last name must be at least 2 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password required",
+            "message": "Password required",
+            "translation": "Password required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password must be at least 8 characters",
+            "message": "Password must be at least 8 characters",
+            "translation": "Password must be at least 8 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "An email has been sent to the following email with instructions on finalizing your account creation: {Em}",
+            "message": "An email has been sent to the following email with instructions on finalizing your account creation: {Em}",
+            "translation": "An email has been sent to the following email with instructions on finalizing your account creation: {Em}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Em",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "em"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "An email has been sent to the following email with a link to reset your password: {Em}",
+            "message": "An email has been sent to the following email with a link to reset your password: {Em}",
+            "translation": "An email has been sent to the following email with a link to reset your password: {Em}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Em",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "em"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Subject: Olmax Medical - Reset Your Password",
+            "message": "Subject: Olmax Medical - Reset Your Password",
+            "translation": "Subject: Olmax Medical - Reset Your Password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please click the following link to reset your password",
+            "message": "Please click the following link to reset your password",
+            "translation": "Please click the following link to reset your password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Subject: Olmax Medical - Verify your new account",
+            "message": "Subject: Olmax Medical - Verify your new account",
+            "translation": "Subject: Olmax Medical - Verify your new account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please click the following link to finalize your account creation",
+            "message": "Please click the following link to finalize your account creation",
+            "translation": "Please click the following link to finalize your account creation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Acute Pain Medicine",
+            "message": "Acute Pain Medicine",
+            "translation": "Acute Pain Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Anesthesiology",
+            "message": "Anesthesiology",
+            "translation": "Anesthesiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Bariatric Surgery",
+            "message": "Bariatric Surgery",
+            "translation": "Bariatric Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Cardiology",
+            "message": "Cardiology",
+            "translation": "Cardiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Chiropractics",
+            "message": "Chiropractics",
+            "translation": "Chiropractics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Chronic Pain",
+            "message": "Chronic Pain",
+            "translation": "Chronic Pain",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dermatology",
+            "message": "Dermatology",
+            "translation": "Dermatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Emergency Medicine",
+            "message": "Emergency Medicine",
+            "translation": "Emergency Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Endocrinology",
+            "message": "Endocrinology",
+            "translation": "Endocrinology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Ear Nose and Throat",
+            "message": "Ear Nose and Throat",
+            "translation": "Ear Nose and Throat",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Family Medicine",
+            "message": "Family Medicine",
+            "translation": "Family Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Gastrointestinology",
+            "message": "Gastrointestinology",
+            "translation": "Gastrointestinology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Head and Neck",
+            "message": "Head and Neck",
+            "translation": "Head and Neck",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hematology and Oncology",
+            "message": "Hematology and Oncology",
+            "translation": "Hematology and Oncology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hepatology",
+            "message": "Hepatology",
+            "translation": "Hepatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hyperbaric",
+            "message": "Hyperbaric",
+            "translation": "Hyperbaric",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Immunology",
+            "message": "Immunology",
+            "translation": "Immunology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Infectious Diseases",
+            "message": "Infectious Diseases",
+            "translation": "Infectious Diseases",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Internal Medicine",
+            "message": "Internal Medicine",
+            "translation": "Internal Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neonatology",
+            "message": "Neonatology",
+            "translation": "Neonatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Nephrology",
+            "message": "Nephrology",
+            "translation": "Nephrology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neurology",
+            "message": "Neurology",
+            "translation": "Neurology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neurosurgery",
+            "message": "Neurosurgery",
+            "translation": "Neurosurgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Obstetrics and Gynecology",
+            "message": "Obstetrics and Gynecology",
+            "translation": "Obstetrics and Gynecology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Occupational Medicine",
+            "message": "Occupational Medicine",
+            "translation": "Occupational Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Opthamology",
+            "message": "Opthamology",
+            "translation": "Opthamology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orthopedic Surgery",
+            "message": "Orthopedic Surgery",
+            "translation": "Orthopedic Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Palliative Care",
+            "message": "Palliative Care",
+            "translation": "Palliative Care",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pediatrics",
+            "message": "Pediatrics",
+            "translation": "Pediatrics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Podiatry",
+            "message": "Podiatry",
+            "translation": "Podiatry",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pulmonology",
+            "message": "Pulmonology",
+            "translation": "Pulmonology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Radiology",
+            "message": "Radiology",
+            "translation": "Radiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Radiaton Oncology",
+            "message": "Radiaton Oncology",
+            "translation": "Radiaton Oncology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Transplant Surgery",
+            "message": "Transplant Surgery",
+            "translation": "Transplant Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Application",
+            "message": "Olmax Medical | Application",
+            "translation": "Olmax Medical | Application",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Bookings",
+            "message": "Olmax Medical | Bookings",
+            "translation": "Olmax Medical | Bookings",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Available patients",
+            "message": "Available patients",
+            "translation": "Available patients",
+            "comment": "more fields to populate when we have db access",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Find Patients",
+            "message": "Olmax Medical | Find Patients",
+            "translation": "Olmax Medical | Find Patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        }
+    ]
+}
