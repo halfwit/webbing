@@ -7,7 +7,7 @@ import (
 
 func init() {
 	b := &router.Page{
-		Access: router.PatientAuth | router.DoctorAuth,
+		Access: router.PatientAuth|router.DoctorAuth,
 		Css:    "",
 		Path:   "wallet",
 		Data:   Wallet,

@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "resetpassword",
 		Data:   ResetPassword,
-		Extra:  0,
+		Extra:  router.FormErrors,
 	}
 	router.Add(b)
 }

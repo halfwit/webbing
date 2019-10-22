@@ -1,4 +1,4 @@
-package router
+package email
 
 import (
 	"bytes"
@@ -12,7 +12,20 @@ import (
 	"olmax/db"
 )
 
-func nextResetToken(old, user string) string {
+func SendReset(email string, p *message.Printer) {
+	u, _ := uuid.NewRandom()
+	token := u.String()
+	if  db.UserExists(email) {	
+		db.CreateTempEntry("", "", email, "", token)
+		resetemail(token, email, p)
+		go func() {
+			time.Sleep(time.Minute * 10)
+			db.RemoveTempEntry(token)
+		}()
+	}
+}
+
+func NextResetToken(old, user string) string {
 	if db.FindTempEntry(old) {
 		db.RemoveTempEntry(old)
 		u, _ := uuid.NewRandom()
@@ -25,20 +38,6 @@ func nextResetToken(old, user string) string {
 		return token
 	}
 	return ""
-}
-
-func sendreset(email string, p *message.Printer) string {
-	u, _ := uuid.NewRandom()
-	token := u.String()
-	if  db.UserExists(email) {	
-		db.CreateTempEntry("", "", email, "", token)
-		resetemail(token, email, p)
-		go func() {
-			time.Sleep(time.Minute * 10)
-			db.RemoveTempEntry(token)
-		}()
-	}
-	return "<a href=\"https://mail.google.com/mail/u?authuser=" + email + "\"/>"
 }
 
 func resetemail(token string, sendto string, p *message.Printer) {

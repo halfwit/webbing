@@ -11,20 +11,22 @@ func init() {
 		Css:    "",
 		Path:   "patient/offer",
 		Data:   Createoffer,
-		Extra:  router.ListDoctors,
+		Extra:  router.ListServices|router.FormErrors,
 	}
 	router.Add(b)
 }
 
 func Createoffer(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
-		"title":           p.Sprintf("Olmax Medical | Create Offer"),
-		"mainHeader":      p.Sprintf("Create An Offer"),
-		"specialtyHeader": p.Sprintf("Physician Specialty"),
-		"bcu":             p.Sprintf("Bitcoin Per Unit <i>(15min)</i>"),
-		"dates":           p.Sprintf("Dates"),
-		"from":            p.Sprintf("From: "),
-		"to":              p.Sprintf("To: "),
-		"deploy":          p.Sprintf("Deploy Contract"),
+		"title":           p.Sprint("Olmax Medical | Create Offer"),
+		"mainHeader":      p.Sprint("Create An Offer"),
+		"specialty":	   p.Sprint("Specialty"),
+		"specialtyHeader": p.Sprint("Physician Specialty"),
+		"bcu":             p.Sprint("Bitcoin Per Unit"),
+		"rate":		   p.Sprint("15/min"),
+		"dates":           p.Sprint("Dates"),
+		"from":            p.Sprint("From: "),
+		"to":              p.Sprint("To: "),
+		"deploy":          p.Sprint("Deploy Contract"),
 	}
 }

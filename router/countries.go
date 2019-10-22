@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/pariz/gountries"
+	"golang.org/x/text/message"
 )
 
 type Country struct {
@@ -16,7 +17,7 @@ type countries struct {
 	list []gountries.Country
 }
 
-var country *countries
+var cache *countries
 
 func init() {
 	var l []gountries.Country
@@ -24,10 +25,10 @@ func init() {
 	for _, c := range c.FindAllCountries() {
 		l = append(l, c)
 	}
-	country = &countries{
+	cache = &countries{
 		list: l,
 	}
-	sort.Sort(country)
+	sort.Sort(cache)
 }
 
 func (c *countries) Len() int {
@@ -52,11 +53,29 @@ func (c *countries) Swap(i, j int) {
 // TODO: Filter out any countries we don't support
 func listcountries() []Country {
 	var c []Country
-	for _, item := range country.list {
+	for _, item := range cache.list {
 		c = append(c, Country{
 			ID:   item.Name.Common,
 			Name: item.Name.Common,
 		})
 	}
 	return c
+}
+
+func validateCountries(p *message.Printer, countries []string) string {
+	for _, c := range countries {
+		if msg := validateCountry(p, c); msg != "" {
+			return msg
+		}
+	}
+	return ""
+}
+
+func validateCountry(p *message.Printer, country string) string {
+	for _, item := range cache.list {
+		if item.Name.Common == country {
+			return ""
+		}
+	}
+	return p.Sprint("No country entered/nil value entered")
 }

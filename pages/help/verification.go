@@ -1,14 +1,13 @@
 package help
 
 import (
-	"html/template"
 	"golang.org/x/text/message"
 	"olmax/router"
 )
 
 func init() {
 	b := &router.Page{
-		Access: router.GuestAuth,
+		Access: router.GuestAuth|router.PatientAuth|router.DoctorAuth,
 		Css:    "",
 		Path:   "help/verification",
 		Data:   Verification,
@@ -26,8 +25,8 @@ func Verification(p *message.Printer) map[string]interface{} {
 		"phoneHeader":  p.Sprintf("How do I verify my phone number?"),
 		"phoneBody":    p.Sprintf("Once you have submitted a phone number, you can either receive a text message or call with a confirmation number."),
 		"noNoteHeader": p.Sprintf("Why did I not get a notification email?"),
-		"noNoteBody":   p.Sprintf("Please refer to the %v help page", template.HTML(`<a href="https://olmaxmedical.com/appointmentRequests.html">Appointment Requests</a>`)),
+		"noNoteBody":   p.Sprintf("Please refer to the following help page: "),
 		"blockHeader":  p.Sprintf("If your country blocks Olmax Medical?"),
-		"blockBody":    p.Sprintf("You can bypass their firewall using tunnel software such as a VPN or %v software", template.HTML(`<a href="https://www.torproject.org">Tor</a>`)),
+		"blockBody":    p.Sprintf("You can bypass their firewall using tunnel software such as a VPN or Tor software. See the following for more information: "),
 	}
 }

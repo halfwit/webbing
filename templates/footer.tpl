@@ -10,14 +10,14 @@
       <details>
 	<summary>{{.aboutHeader}}</summary>
 	<ul>
-          <li><a href="https://olmaxmedical.com/aboutus.html">{{.about}}</a></li>
+          <li><a href="{{.basedir}}/aboutus.html">{{.about}}</a></li>
 	</ul>
       </details>
       <details class="partner">
         <summary>{{.partHead}}</summary>
 	<ul>
-          <li><a href="https://olmaxmedical.com/partner.html">{{.partner}}</a></li>
-          <li><a href="https://olmaxmedical.com/becomeAProvider.html">{{.provider}}</a></li>
+          <li><a href="{{.basedir}}/partner.html">{{.partner}}</a></li>
+          <li><a href="{{.basedir}}/becomeAProvider.html">{{.provider}}</a></li>
 	</ul>
       </details>
     </nav>
@@ -25,8 +25,8 @@
       <details class="legal">
         <summary>{{.legal}}</summary>
 	<ul>
-          <li><a href="https://olmaxmedical.com/faq/legal.html">{{.legal}}</a></li>
-	  <li><a href="https://olmaxmedical.com/faq/privacy.html">{{.privacy}}</a></li>
+          <li><a href="{{.basedir}}/help/legal.html">{{.legal}}</a></li>
+	  <li><a href="{{.basedir}}/help/privacy.html">{{.privacy}}</a></li>
 	</ul>
       </details>
     </nav>

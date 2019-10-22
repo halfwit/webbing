@@ -1,8 +1,11 @@
 package main
 
 import (
+	"net/http"
 	"log"
 	_ "olmax/forms"
+	_ "olmax/forms/doctor"
+	_ "olmax/forms/patient"
 	_ "olmax/pages"
 	_ "olmax/pages/doctor"
 	_ "olmax/pages/help"
@@ -28,5 +31,8 @@ func main() {
 		}
 		log.Fatal("Unable to continue due to template errors")
 	}
+	go func() {
+		http.ListenAndServe(":6060", nil)
+	}()
 	log.Fatal(router.Route(sessions))
 }

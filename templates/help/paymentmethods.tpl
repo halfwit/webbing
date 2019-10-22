@@ -2,9 +2,9 @@
 	<main>
 	<h1>{{.mainHeader}}</h1>
 	<h2>{{.paymentHeader}}</h2>
-		<p>{{.paymentBody}}</p>
+		<p>{{.paymentBody}}<a href="https:/bitcoin.org">Bitcoin</a></p>
 	<h4>{{.whatBTCHeader}}</h4>
-		<p>{{.whatBTCBody}}</p>
+		<p>{{.whatBTCBody}}<a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a></p>
 		<br>
 	<h4>{{.chargedHeader}}</h4>
 		<p>{{.chargedBody}}</p>
@@ -23,6 +23,6 @@
 <p>{{.otherCoinNote}}</p>	
 		<br>
 	<h4>{{.blockedHeader}}</h4> 
-<p>{{.blockedBody}}</p>
+<p>{{.blockedBody}}<a href="https://www.torproject.org">Tor</a></p>
 	</main>
 {{end}}

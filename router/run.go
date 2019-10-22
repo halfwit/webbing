@@ -6,6 +6,7 @@ import (
 
 	"golang.org/x/text/message"
 	"olmax/db"
+	"olmax/email"
 	"olmax/session"
 )
 
@@ -37,7 +38,7 @@ func (d *handle) activate(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Bad Request", 400)
 		return
 	}
-	validateSignupToken(w, r, r.URL.Path[10:])
+	email.ValidateSignupToken(w, r, r.URL.Path[10:])
 }
 
 func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
@@ -46,8 +47,9 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	p := userLang(r)
-	user, _, us := getUser(d, w, r)
-	token := nextResetToken(r.URL.Path[7:], user)
+	user, _, us, _ := getUser(d, w, r)
+	token := email.NextResetToken(r.URL.Path[7:], user)
+	fmt.Println(r.URL.Path[7:], token)
 	if token == "" {
 		us.Set("errors", [1]string{p.Sprint("Token expired")})
 		return
@@ -63,6 +65,7 @@ type page struct {
 	user    string
 	status  string
 	path    string
+	role	db.Access
 }
 
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
@@ -70,13 +73,14 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/index.html", 302)
 		return
 	}
-	user, status, us := getUser(d, w, r)
+	user, status, us, role := getUser(d, w, r)
 	p := &page {
 		printer: userLang(r),
 		status: status,
 		user: user,
+		role: role,
 		session: us,
-		path: r.URL.Path[1:],
+		path: r.URL.Path[1:], 
 	}
 	switch r.Method {
 	case "GET":
@@ -93,10 +97,17 @@ func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 }
 
 func post(p *page, us session.Session, w http.ResponseWriter, r *http.Request) {
-	errors := parseform(p, w, r)
-	if len(errors) > 0 {
+	form, errors := parseform(p, w, r)
+	if len(errors) > 0 && errors[0] != "nil" {
+		// NOTE(halfwit) this stashes previous entries, but does not work
+		// on multipart forms (with file uploads)
 		us.Set("errors", errors)
-		get(p, w)
+		url := fmt.Sprintf("%s?%s", r.URL.String(), r.Form.Encode())
+		http.Redirect(w, r, url, 302)
+	}
+	if form != nil {
+		us.Set("errors", []string{})
+		http.Redirect(w, r, form.Redirect, 302)
 	}
 }
 
@@ -125,19 +136,23 @@ func userLang(r *http.Request) *message.Printer {
 	return message.NewPrinter(tag)
 }
 
-func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string, session.Session) {
+func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string, session.Session, db.Access) {
 	us := d.manager.SessionStart(w, r)
 	user, ok1 := us.Get("username").(string)
 	status, ok2 := us.Get("login").(string)
+	role, ok3 := us.Get("role").(db.Access)
 	if ! ok1 || ! ok2 || status != "true" {
 		status = "false"
 	}
-	return user, status, us
+	if ! ok3 {
+		role = db.GuestAuth
+	}
+	return user, status, us, role
 }
 
 // TODO: This will require actual client data from the database to populate the page
 func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
-	user, status, us := getUser(d, w, r)
+	user, status, us, role := getUser(d, w, r)
 	if status == "false" {
 		http.Error(w, "Unauthorized", 401)
 		return
@@ -147,14 +162,23 @@ func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 		status: status,
 		session: us,
 		user: user,
+		role: role,
 	}
 	var data []byte
 	var err error
 	switch db.UserRole(user) {
 	case db.DoctorAuth:
+		if role != db.DoctorAuth {
+			http.Error(w, "Unauthorized", 401)
+			return
+		}
 		p.path = "doctor/profile.html"
 		data, err = getdata(p, "doctor")
 	case db.PatientAuth:
+		if role != db.PatientAuth {
+			http.Error(w, "Unauthorized", 401)
+			return
+		}
 		p.path = "patient/profile.html"
 		data, err = getdata(p, "patient")
 	default:

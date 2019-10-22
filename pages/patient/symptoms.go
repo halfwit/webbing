@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "patient/symptoms",
 		Data:   Symptoms,
-		Extra:  0,
+		Extra:  router.FormErrors|router.SessionToken,
 	}
 	router.Add(b)
 }

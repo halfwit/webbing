@@ -1,14 +1,13 @@
 package help
 
 import (
-	"html/template"
 	"golang.org/x/text/message"
 	"olmax/router"
 )
 
 func init() {
 	b := &router.Page{
-		Access: router.GuestAuth,
+		Access: router.GuestAuth|router.PatientAuth|router.DoctorAuth,
 		Css:    "",
 		Path:   "help/appointments",
 		Data:   Appointments,
@@ -48,6 +47,6 @@ func Appointments(p *message.Printer) map[string]interface{} {
 		"checkSpamAdd":      p.Sprintf("If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.</br>Check for issues with your email service provider."),
 		"deliveryHeader":    p.Sprintf("Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account."),
 		"blockHeader":       p.Sprintf("If your country blocks Olmax Medical?"),
-		"blockBody":         p.Sprintf("You can bypass their firewall using tunnel software such as a VPN or %s software", template.HTML(`<a href="https://www.torproject.org">Tor</a>`)),
+		"blockBody":         p.Sprintf("You can bypass their firewall using tunnel software such as a VPN,  or Tor software. See the following for more information: "),
 	}
 }

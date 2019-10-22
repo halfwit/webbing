@@ -1,4 +1,4 @@
-package router
+package email
 
 import (
 	"bytes"
@@ -15,7 +15,7 @@ import (
 
 var url = "http://192.168.1.101"
 
-func sendsignup(first, last, email, pass string, p *message.Printer) string {
+func SendSignup(first, last, email, pass string, p *message.Printer) {
 	if ! db.UserExists(email) {
 		u, _ := uuid.NewRandom()
 		token := u.String()
@@ -27,10 +27,9 @@ func sendsignup(first, last, email, pass string, p *message.Printer) string {
 			db.RemoveTempEntry(token)
 		}()
 	}
-	return "<a href=\"https://mail.google.com/mail/u?authuser=" + email + "\"/>"
 }
 
-func validateSignupToken(w http.ResponseWriter, r *http.Request, token string) {
+func ValidateSignupToken(w http.ResponseWriter, r *http.Request, token string) {
 	if db.FindTempEntry(token) {
 		db.CreateEntry(token)
 		http.Redirect(w, r, "/login.html", 302)

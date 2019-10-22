@@ -35,6 +35,13 @@ func init() {
 		pass:  "1234567890",
 		role:  PatientAuth,
 	}
+	data["bar"] = &entry {
+		first: "foo",
+		last: "bar",
+		email: "doc@bar.com",
+		pass: "1234567890",
+		role: DoctorAuth,
+	}
 }
 
 // Placeholder code for database lookups

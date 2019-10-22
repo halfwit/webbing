@@ -1,15 +1,7 @@
 {{define "content"}}
 	<main>
 	    <h1>{{.mainHeader}}</h1>
-	    <div>
 		<h2>{{.helpHeader}}</h2>
-		<!--
-                <form method="post">
-		    <label>Search</label>
-		    <input type="text" id="helpSearch" name="helpSearch" placeholder="search">
-	    </div>
-            -->
-	    <div>
 		<h4>{{.topics}}</h4>
 		<h4>{{.appointmentHeader}}</h4>
 		<p>{{.appointmentStatus}}</p>

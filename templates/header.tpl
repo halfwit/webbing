@@ -6,7 +6,7 @@
   {{if .css}}
   <link rel="stylesheet" text="text/css" href="{{.basedir}}/css/{{.css}}">
   {{end}}
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="{{.basedir}}/favicon.svg">
   <link rel="stylesheet" test="text/css" href="{{.basedir}}/css/default.css">
   <script type="text/javascript" src="{{.basedir}}/scripts/details-polyfill.js"></script>
 </head>
@@ -27,15 +27,16 @@
       <details class="how-it-works">
         <summary>{{.howworks}}</summary>
         <ul>
+          <li><a href="{{.basedir}}/help/faq.html">{{.faq}}</a></li>
           <li><a href="{{.basedir}}/help/appointments.html">{{.appts}}</a></li>
           <li><a href="{{.basedir}}/help/contacting.html">{{.proc}}</a></li>
-          <li><a href="{{.basedir}}/help/paymethods.html">{{.payments}}</a></li>
-	  <li><a href="{{.basedir}}/help/pricefee.html">{{.fees}}</a></li>
-          <li><a href="{{.basedir}}/help/paymethods.html">{{.verify}}</a></li>
+	  <li><a href="{{.basedir}}/help/catalog.html">{{.catalog}}</a></li>
+          <li><a href="{{.basedir}}/help/paymentmethods.html">{{.payments}}</a></li>
+	  <li><a href="{{.basedir}}/help/pricesandfees.html">{{.fees}}</a></li>
+          <li><a href="{{.basedir}}/help/verification.html">{{.verify}}</a></li>
         </ul>
       </details>
       <ul>
-        <li><a href="{{.basedir}}/help/faq.html">{{.faq}}</a></li>
         {{if eq .status "true"}}
 	<li><a href="{{.basedir}}/profile.html">{{.profile}}</a></li>
         {{end}}
@@ -44,7 +45,7 @@
       <details class="contact-us">
         <summary>{{.contact}}</summary>
         <ul>
-	  <li><a href="mailto:help@olmaxmedical.com">{{.email}}</a></li>
+	  <li><a href="mailto:olmaxmedical@gmail.com">{{.email}}</a></li>
  	  <li><a href="tel:1-555-555-5555">{{.phone}}</a></li>
         </ul>
       </details>

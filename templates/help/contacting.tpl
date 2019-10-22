@@ -14,6 +14,6 @@
 		<p>{{.anycurrBody}}</p>
 	<br>
 	<h4>{{.blocksHeader}}</h4> 
-                <p>{{.blocksBody}}</p>
+                <p>{{.blocksBody}} <a href="https://www.torproject.org">Tor</a></p>
 	</main>
 {{end}}

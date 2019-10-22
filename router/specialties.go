@@ -18,7 +18,7 @@ func specialties(p *message.Printer) []Specialty {
 		{"cardiology", p.Sprintf("Cardiology")},
 		{"chiropractic", p.Sprintf("Chiropractics")},
 		{"chronic", p.Sprintf("Chronic Pain")},
-		{"critcare", p.Sprintf("Chronic Pain")},
+		{"critcare", p.Sprintf("Critical Care")},
 		{"dermatology", p.Sprintf("Dermatology")},
 		{"emergency", p.Sprintf("Emergency Medicine")},
 		{"endocrinology", p.Sprintf("Endocrinology")},
@@ -48,4 +48,21 @@ func specialties(p *message.Printer) []Specialty {
 		{"radiation", p.Sprintf("Radiaton Oncology")},
 		{"transplants", p.Sprintf("Transplant Surgery")},
 	}
+}
+
+func validateSpecialties(p *message.Printer, specialties []string) string {
+	for _, s := range specialties {
+		if msg := validateSpecialty(p, s); msg != "" {
+			return msg
+		}
+	}
+	return ""
+}
+
+func validateSpecialty(p *message.Printer, specialty string) string {
+	switch specialty {
+	case "acutepain","anesthesiology", "bariatric", "cardiology", "chiropractic", "chronic", "critcare", "dermatology", "emergency", "endocrinology", "otolaringology", "familymedicine", "gastro", "headneck", "hematology", "hepatology", "hyperbaric", "immunology", "diseases", "internal", "neonatal", "nephrology", "neurology", "neurosurgery", "obstetrics", "occupational", "opthamology", "orthopedics", "palliative", "pediatrics", "podiatry", "pulmonology", "radiology", "radiation", "transplants":
+		return ""
+	}
+	return p.Sprint("Unknown or nil specialty entered")
 }

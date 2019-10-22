@@ -1,14 +1,13 @@
 package help
 
 import (
-	"html/template"
 	"golang.org/x/text/message"
 	"olmax/router"
 )
 
 func init() {
 	b := &router.Page{
-		Access: router.GuestAuth,
+		Access: router.GuestAuth|router.PatientAuth|router.DoctorAuth,
 		Css:    "",
 		Path:   "help/contacting",
 		Data:   Contacting,
@@ -30,6 +29,6 @@ func Contacting(p *message.Printer) map[string]interface{} {
 		"anycurrHeader":  p.Sprintf("Can I pay with any currency?"),
 		"anycurrBody":    p.Sprintf("No."),
 		"blocksHeader":   p.Sprintf("If your country blocks Olmax Medical?"),
-		"blocksBody":      p.Sprintf("You can bypass their firewall using tunnel software such as a VPN or %v software", template.HTML(`<a href="https://www.torproject.org">Tor</a>`)),
+		"blocksBody":     p.Sprintf("You can bypass their firewall using tunnel software such as a VPN, or Tor software. See the following for more information: "),
 	}
 }

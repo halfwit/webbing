@@ -6,9 +6,9 @@
 	<h4>{{.phoneHeader}}</h4>
 		<p>{{.phoneBody}}</p>
 	<h4>{{.noNoteHeader}}</h4>
-		<p>{{.noNoteBody}}</p>
+		<p>{{.noNoteBody}}<a href="{{.basedir}}/appointmentRequests.html">Appointment Requests</a></p>
 
 	<h4>{{.blockHeader}}</h4> 
-                <p>{{.blockBody}}</p>
+                <p>{{.blockBody}}<a href="https://www.torproject.org">Tor</a></p>
 	</main>
 {{end}}

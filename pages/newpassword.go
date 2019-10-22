@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "newpassword",
 		Data:   NewPassword,
-		Extra:  router.OneTimeToken,
+		Extra:  router.FormToken|router.FormErrors,
 	}
 	router.Add(b)
 }

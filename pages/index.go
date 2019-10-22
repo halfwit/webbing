@@ -7,11 +7,11 @@ import (
 
 func init() {
 	b := &router.Page{
-		Access: router.GuestAuth,
+		Access: router.GuestAuth|router.DoctorAuth|router.PatientAuth,
 		Css:    "index.css",
 		Path:   "index",
 		Data:   Index,
-		Extra:  router.ListDoctors,
+		Extra:  router.ListDoctors|router.FormErrors,
 	}
 	router.Add(b)
 }

@@ -13,7 +13,7 @@ func init() {
 		Path: "newpassword",
 		Validator: NewPassword,
 		Redirect: "/login.html",
-		After: router.SetPassword,
+		After: router.SetPassword|router.ValidateToken,
 	}
 	router.AddPost(b)
 }

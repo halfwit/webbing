@@ -37,6 +37,6 @@
 	<h4>{{.deliveryHeader}}</h4>
 	<br>
 	<h4>{{.blockHeader}}</h4> 
-	<p>{{.blockBody}}</p>
+	<p>{{.blockBody}} <a href="https://www.torproject.org">Tor</a></p>
 	</main>
 {{end}}

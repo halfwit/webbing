@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "login",
 		Data:   Login,
-		Extra:  0,
+		Extra:  router.FormErrors,
 	}
 	//router.AddGet(b)
 	router.Add(b)
