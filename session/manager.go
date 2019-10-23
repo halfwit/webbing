@@ -108,7 +108,7 @@ func (manager *Manager) GC() {
 func (manager *Manager) sessionId() string {
 	u, err := uuid.NewRandom()
 	if err != nil {
-		log.Fatal("Unable to generate UUID %q", err)
+		log.Fatalf("Unable to generate UUID %q", err)
 	}
 	return u.String()
 }

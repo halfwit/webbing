@@ -1,8 +1,9 @@
 package main
 
 import (
-	"net/http"
 	"log"
+	"net/http"
+
 	_ "github.com/olmaxmedical/olmax_go/forms"
 	_ "github.com/olmaxmedical/olmax_go/forms/doctor"
 	_ "github.com/olmaxmedical/olmax_go/forms/patient"
