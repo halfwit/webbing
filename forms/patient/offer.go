@@ -5,17 +5,17 @@ import (
 	"time"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Form{
-		Access: router.PatientAuth,
-		Path: "patient/offer",
+		Access:    router.PatientAuth,
+		Path:      "patient/offer",
 		Validator: Offer,
-		After: router.Search|router.ValidateSpecialty,
-		Redirect: "results.html",
+		After:     router.Search | router.ValidateSpecialty,
+		Redirect:  "results.html",
 	}
 	router.AddPost(b)
 }

@@ -44,6 +44,7 @@ const tmpl = `
 </body>
 </html>
 `
+
 var t *template.Template
 
 func init() {
@@ -60,11 +61,11 @@ func SendForm(form map[string][]string, p *message.Printer, attachments map[stri
 	}
 	m := email.NewHTMLMessage("Form contents", body.String())
 	m.From = mail.Address{
-		Name: "From",
+		Name:    "From",
 		Address: "olmaxmedical@gmail.com",
 	}
 	m.AddTo(mail.Address{
-		Name: "To",
+		Name:    "To",
 		Address: address,
 	})
 	for name, buff := range attachments {

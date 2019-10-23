@@ -5,17 +5,17 @@ import (
 	"time"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Form{
-		Access: router.PatientAuth,
-		Path: "patient/sympoms",
+		Access:    router.PatientAuth,
+		Path:      "patient/sympoms",
 		Validator: Symptoms,
-		After: router.EmailForm|router.WithOffer,
-		Redirect: "patient/profile.html",
+		After:     router.EmailForm | router.WithOffer,
+		Redirect:  "patient/profile.html",
 	}
 	router.AddPost(b)
 }
@@ -59,7 +59,7 @@ func Symptoms(r *http.Request, p *message.Printer) []string {
 		"musSkel",
 		"neuro",
 		"psych",
-	}{
+	} {
 		sel, ok := r.Form[i]
 		if !ok {
 			val.AddError(i, p.Sprintf("No selection for %s", i))

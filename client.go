@@ -3,15 +3,15 @@ package main
 import (
 	"net/http"
 	"log"
-	_ "olmax/forms"
-	_ "olmax/forms/doctor"
-	_ "olmax/forms/patient"
-	_ "olmax/pages"
-	_ "olmax/pages/doctor"
-	_ "olmax/pages/help"
-	_ "olmax/pages/patient"
-	"olmax/router"
-	"olmax/session"
+	_ "github.com/olmaxmedical/olmax_go/forms"
+	_ "github.com/olmaxmedical/olmax_go/forms/doctor"
+	_ "github.com/olmaxmedical/olmax_go/forms/patient"
+	_ "github.com/olmaxmedical/olmax_go/pages"
+	_ "github.com/olmaxmedical/olmax_go/pages/doctor"
+	_ "github.com/olmaxmedical/olmax_go/pages/help"
+	_ "github.com/olmaxmedical/olmax_go/pages/patient"
+	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/olmax_go/session"
 )
 
 //go:generate gotext -srclang=en-US update -out=catalog.go -lang=en-US

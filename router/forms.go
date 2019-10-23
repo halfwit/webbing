@@ -5,10 +5,11 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+
+	"github.com/olmaxmedical/olmax_go/db"
+	"github.com/olmaxmedical/olmax_go/email"
+	"github.com/olmaxmedical/olmax_go/session"
 	"golang.org/x/text/message"
-	"olmax/db"
-	"olmax/email"
-	"olmax/session"
 )
 
 var formlist map[string]*Form
@@ -44,7 +45,7 @@ func init() {
 }
 
 func AddPost(f *Form) {
-	formlist[f.Path + ".html"] = f
+	formlist[f.Path+".html"] = f
 }
 
 // This large ladder just adds conditional logic to forms for a more generic
@@ -53,13 +54,13 @@ func parseform(p *page, w http.ResponseWriter, r *http.Request) (*Form, []string
 	var errors, errs []string
 	var e, msg string
 	form, ok := formlist[p.path]
-	if ! ok {
+	if !ok {
 		errors = append(errors, "No such page")
 		return nil, errors
 	}
 	if form.After&ValidateToken != 0 {
 		t := r.PostFormValue("token")
-		if ! validateToken(t) {
+		if !validateToken(t) {
 			return nil, []string{p.printer.Sprint("Invalid form token")}
 		}
 	}
@@ -148,7 +149,7 @@ func setPassword(p *message.Printer, us session.Session, r *http.Request) []stri
 		return errors
 	}
 	token := r.PostFormValue("token")
-	if ! db.FindTempEntry(token) {
+	if !db.FindTempEntry(token) {
 		errors = append(errors, p.Sprint("Session expired"))
 		return errors
 	}

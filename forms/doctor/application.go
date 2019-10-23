@@ -3,18 +3,19 @@ package forms
 import (
 	"fmt"
 	"net/http"
+
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Form{
-		Access: router.GuestAuth,
-		Path: "doctor/application",
+		Access:    router.GuestAuth,
+		Path:      "doctor/application",
 		Validator: Application,
-		Redirect: "/index.html",
-		After: router.EmailForm|router.ValidateCountries|router.ValidateSpecialties|router.ValidateToken,
+		Redirect:  "/index.html",
+		After:     router.EmailForm | router.ValidateCountries | router.ValidateSpecialties | router.ValidateToken,
 	}
 	router.AddPost(b)
 }
@@ -35,7 +36,7 @@ func Application(r *http.Request, p *message.Printer) []string {
 	val.AcceptFileExts("cv", "application/msword,applicationvnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf").Message(p.Sprint("Unsupported filetype for CV"))
 	val.RequireFile("diploma").Message(p.Sprint("Empty or missing Diploma/Board Certification"))
 	val.AcceptFileExts("cv", "application/msword,applicationvnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf").Message(p.Sprint("Unsupported filetype for Diploma/Board Certification"))
-	for  i := 1; i < 12; i++ {
+	for i := 1; i < 12; i++ {
 		num := fmt.Sprintf("q%d", i)
 		sel, ok := r.Form[num]
 		if !ok {

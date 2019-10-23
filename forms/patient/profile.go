@@ -2,18 +2,19 @@ package forms
 
 import (
 	"net/http"
+
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Form{
-		Access: router.PatientAuth,
-		Path: "patient/profile",
+		Access:    router.PatientAuth,
+		Path:      "patient/profile",
 		Validator: PatientProfile,
-		After: 0,
-		Redirect: "/patient/profile.html",
+		After:     0,
+		Redirect:  "/patient/profile.html",
 	}
 	router.AddPost(b)
 }

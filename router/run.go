@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/olmaxmedical/olmax_go/db"
+	"github.com/olmaxmedical/olmax_go/email"
+	"github.com/olmaxmedical/olmax_go/session"
 	"golang.org/x/text/message"
-	"olmax/db"
-	"olmax/email"
-	"olmax/session"
 )
 
 type handle struct {
@@ -15,7 +15,7 @@ type handle struct {
 }
 
 func Route(manager *session.Manager) error {
-	d := &handle {
+	d := &handle{
 		manager: manager,
 	}
 	css := http.FileServer(http.Dir("resources/css/"))
@@ -65,7 +65,7 @@ type page struct {
 	user    string
 	status  string
 	path    string
-	role	db.Access
+	role    db.Access
 }
 
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
@@ -74,26 +74,26 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	user, status, us, role := getUser(d, w, r)
-	p := &page {
+	p := &page{
 		printer: userLang(r),
-		status: status,
-		user: user,
-		role: role,
+		status:  status,
+		user:    user,
+		role:    role,
 		session: us,
-		path: r.URL.Path[1:], 
+		path:    r.URL.Path[1:],
 	}
 	switch r.Method {
 	case "GET":
 		get(p, w)
 	case "POST":
-		post(p, us, w, r);
+		post(p, us, w, r)
 	}
 }
 
 func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 	d.manager.SessionDestroy(w, r)
 	http.Redirect(w, r, "/index.html", 302)
-	
+
 }
 
 func post(p *page, us session.Session, w http.ResponseWriter, r *http.Request) {
@@ -126,7 +126,7 @@ func get(p *page, w http.ResponseWriter) {
 		http.Error(w, "Service Unavailable", 503)
 		return
 	}
-	fmt.Fprintf(w, "%s", data)	
+	fmt.Fprintf(w, "%s", data)
 }
 
 func userLang(r *http.Request) *message.Printer {
@@ -141,10 +141,10 @@ func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string,
 	user, ok1 := us.Get("username").(string)
 	status, ok2 := us.Get("login").(string)
 	role, ok3 := us.Get("role").(db.Access)
-	if ! ok1 || ! ok2 || status != "true" {
+	if !ok1 || !ok2 || status != "true" {
 		status = "false"
 	}
-	if ! ok3 {
+	if !ok3 {
 		role = db.GuestAuth
 	}
 	return user, status, us, role
@@ -157,12 +157,12 @@ func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Unauthorized", 401)
 		return
 	}
-	p := &page {
+	p := &page{
 		printer: userLang(r),
-		status: status,
+		status:  status,
 		session: us,
-		user: user,
-		role: role,
+		user:    user,
+		role:    role,
 	}
 	var data []byte
 	var err error
@@ -189,6 +189,5 @@ func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Service Unavailable", 503)
 		return
 	}
-	fmt.Fprintf(w, "%s", data)	
+	fmt.Fprintf(w, "%s", data)
 }
-

@@ -1,8 +1,8 @@
 package doctor
 
 import (
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {

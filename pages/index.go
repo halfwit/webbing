@@ -1,17 +1,17 @@
 package pages
 
 import (
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Page{
-		Access: router.GuestAuth|router.DoctorAuth|router.PatientAuth,
+		Access: router.GuestAuth | router.DoctorAuth | router.PatientAuth,
 		Css:    "index.css",
 		Path:   "index",
 		Data:   Index,
-		Extra:  router.ListDoctors|router.FormErrors,
+		Extra:  router.ListDoctors | router.FormErrors,
 	}
 	router.Add(b)
 }

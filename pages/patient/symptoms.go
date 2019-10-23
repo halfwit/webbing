@@ -1,8 +1,8 @@
 package patient
 
 import (
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "patient/symptoms",
 		Data:   Symptoms,
-		Extra:  router.FormErrors|router.SessionToken,
+		Extra:  router.FormErrors | router.SessionToken,
 	}
 	router.Add(b)
 }

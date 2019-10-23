@@ -1,8 +1,8 @@
 package doctor
 
 import (
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
@@ -11,7 +11,7 @@ func init() {
 		Css:    "",
 		Path:   "doctor/profile",
 		Data:   Profile,
-		Extra:  router.FormErrors|router.FormToken,
+		Extra:  router.FormErrors | router.FormToken,
 	}
 	router.Add(b)
 }

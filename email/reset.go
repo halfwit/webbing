@@ -8,14 +8,14 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/olmaxmedical/olmax_go/db"
 	"golang.org/x/text/message"
-	"olmax/db"
 )
 
 func SendReset(email string, p *message.Printer) {
 	u, _ := uuid.NewRandom()
 	token := u.String()
-	if  db.UserExists(email) {	
+	if db.UserExists(email) {
 		db.CreateTempEntry("", "", email, "", token)
 		resetemail(token, email, p)
 		go func() {

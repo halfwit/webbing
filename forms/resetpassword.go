@@ -2,18 +2,19 @@ package forms
 
 import (
 	"net/http"
+
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
-	"olmax/router"
 )
 
 func init() {
 	b := &router.Form{
-		Access: router.GuestAuth,
-		Path: "resetpassword",
+		Access:    router.GuestAuth,
+		Path:      "resetpassword",
 		Validator: Reset,
-		Redirect: "/login.html",
-		After: router.SendReset,
+		Redirect:  "/login.html",
+		After:     router.SendReset,
 	}
 	router.AddPost(b)
 }

@@ -9,14 +9,14 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/olmaxmedical/olmax_go/db"
 	"golang.org/x/text/message"
-	"olmax/db"
 )
 
 var url = "http://192.168.1.101"
 
 func SendSignup(first, last, email, pass string, p *message.Printer) {
-	if ! db.UserExists(email) {
+	if !db.UserExists(email) {
 		u, _ := uuid.NewRandom()
 		token := u.String()
 		db.CreateTempEntry(first, last, email, pass, token)
