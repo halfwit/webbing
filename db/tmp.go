@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 )
+
 type Access uint8
 
 const (
@@ -28,19 +29,19 @@ func init() {
 	tmpdata = make(map[string]*entry)
 	data = make(map[string]*entry)
 	// NOTE: Dummy entry for testing. This goes away when we have a real db
-	data["foo"] = &entry {
+	data["foo"] = &entry{
 		first: "foo",
 		last:  "bar",
 		email: "foo@bar.com",
 		pass:  "1234567890",
 		role:  PatientAuth,
 	}
-	data["bar"] = &entry {
+	data["bar"] = &entry{
 		first: "foo",
-		last: "bar",
+		last:  "bar",
 		email: "doc@bar.com",
-		pass: "1234567890",
-		role: DoctorAuth,
+		pass:  "1234567890",
+		role:  DoctorAuth,
 	}
 }
 
@@ -68,7 +69,7 @@ func FindTempEntry(token string) bool {
 func CreateEntry(token string) {
 	log.Println(data)
 	if ent, ok := tmpdata[token]; ok {
-		data[token] = &entry {
+		data[token] = &entry{
 			first: ent.first,
 			last:  ent.last,
 			email: ent.email,
@@ -142,7 +143,7 @@ func UserExists(email string) bool {
 }
 
 func UpdateUserPassword(token, pass string) {
-	if _, ok := data[token]; ! ok {
+	if _, ok := data[token]; !ok {
 		return
 	}
 	data[token].pass = pass

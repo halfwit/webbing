@@ -2,16 +2,16 @@ package session
 
 import (
 	"container/list"
-	"time"
 	"sync"
+	"time"
 )
 
-var pder = &Default {
+var pder = &Default{
 	list: list.New(),
 }
 
 type SessionStore struct {
-	sid string
+	sid   string
 	atime time.Time
 	value map[interface{}]interface{}
 }
@@ -46,25 +46,25 @@ func (st *SessionStore) SessionID() string {
 }
 
 type Default struct {
-	lock sync.Mutex
+	lock     sync.Mutex
 	sessions map[string]*list.Element
-	list *list.List
+	list     *list.List
 }
 
 func (pder *Default) SessionInit(sid string) (Session, error) {
-        pder.lock.Lock()
-        defer pder.lock.Unlock()
-        v := make(map[interface{}]interface{}, 0)
-        newsess := &SessionStore{sid: sid, atime: time.Now(), value: v}
-        element := pder.list.PushBack(newsess)
-        pder.sessions[sid] = element
-        return newsess, nil
+	pder.lock.Lock()
+	defer pder.lock.Unlock()
+	v := make(map[interface{}]interface{}, 0)
+	newsess := &SessionStore{sid: sid, atime: time.Now(), value: v}
+	element := pder.list.PushBack(newsess)
+	pder.sessions[sid] = element
+	return newsess, nil
 }
 
 func (pder *Default) SessionRead(sid string) (Session, error) {
 	if element, ok := pder.sessions[sid]; ok {
 		return element.Value.(*SessionStore), nil
-	} 
+	}
 	return pder.SessionInit(sid)
 }
 
@@ -72,7 +72,7 @@ func (pder *Default) SessionDestroy(sid string) error {
 	if element, ok := pder.sessions[sid]; ok {
 		delete(pder.sessions, sid)
 		pder.list.Remove(element)
-    }
+	}
 	return nil
 }
 

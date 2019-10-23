@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"time"
 	"sync"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -14,17 +14,17 @@ import (
 var provides = make(map[string]Provider)
 
 type Manager struct {
-	cookieName string
-	lock sync.Mutex
-	provider Provider
+	cookieName  string
+	lock        sync.Mutex
+	provider    Provider
 	maxlifetime int64
 }
 
 func NewManager(provideName, cookieName string, maxlifetime int64) (*Manager, error) {
 	if provider, ok := provides[provideName]; ok {
 		m := &Manager{
-			provider: provider,
-			cookieName: cookieName,
+			provider:    provider,
+			cookieName:  cookieName,
 			maxlifetime: maxlifetime,
 		}
 		return m, nil
@@ -67,11 +67,11 @@ func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
 	manager.provider.SessionDestroy(cookie.Value)
 	expiration := time.Now()
 	c := http.Cookie{
-		Name: manager.cookieName,
-		Path: "/",
+		Name:     manager.cookieName,
+		Path:     "/",
 		HttpOnly: true,
-		Expires: expiration,
-		MaxAge: -1,
+		Expires:  expiration,
+		MaxAge:   -1,
 	}
 	http.SetCookie(w, &c)
 }
@@ -84,11 +84,11 @@ func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (se
 		sid := manager.sessionId()
 		session, _ = manager.provider.SessionInit(sid)
 		cookie := http.Cookie{
-			Name: manager.cookieName,
-			Value: url.QueryEscape(sid),
-			Path: "/",
+			Name:     manager.cookieName,
+			Value:    url.QueryEscape(sid),
+			Path:     "/",
 			HttpOnly: true,
-			MaxAge: int(manager.maxlifetime),
+			MaxAge:   int(manager.maxlifetime),
 		}
 		http.SetCookie(w, &cookie)
 		return
