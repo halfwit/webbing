@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
+	"github.com/olmaxmedical/olmax_go/db"
 	"golang.org/x/text/message"
-	"olmax/db"
 )
 
 var pagecache map[string]*Page
@@ -72,8 +72,8 @@ func ValidateAndCache() []error {
 		}
 		p := &page{
 			printer: printer,
-			path: item.Path + ".html",
-			role: db.PatientAuth|db.DoctorAuth|db.GuestAuth,
+			path:    item.Path + ".html",
+			role:    db.PatientAuth | db.DoctorAuth | db.GuestAuth,
 		}
 		_, err = getdata(p, "")
 		if err != nil {
@@ -84,17 +84,17 @@ func ValidateAndCache() []error {
 }
 
 func getdata(p *page, in string) ([]byte, error) {
-        cache, ok := pagecache[p.path]
-	if ! ok {
-		return nil,  fmt.Errorf("No such page: %s", p.path)
+	cache, ok := pagecache[p.path]
+	if !ok {
+		return nil, fmt.Errorf("No such page: %s", p.path)
 	}
 	if uint8(p.role)&uint8(cache.Access) == 0 {
 		return nil, fmt.Errorf("Unauthorized")
 	}
 	i := cache.Data(p.printer)
-	i["css"]     = cache.Css
-	i["header"]  = header(p.printer, p.status)
-	i["footer"]  = footer(p.printer)
+	i["css"] = cache.Css
+	i["header"] = header(p.printer, p.status)
+	i["footer"] = footer(p.printer)
 	i["basedir"] = getBaseDir(cache.Path)
 	if cache.Extra&ListDoctors != 0 {
 		i["doctors"] = listdoctors()
@@ -114,7 +114,7 @@ func getdata(p *page, in string) ([]byte, error) {
 		// keyed by token which returns the current session data at this point
 		// useful for things like offers while a patient fills out symptoms
 		//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
-	}	
+	}
 	//if cache.Extra&ClientName != 0 {
 	//	i["firstname"] = db.ClientName(p.session)
 	//}
@@ -143,9 +143,9 @@ func (page *Page) render(i map[string]interface{}) ([]byte, error) {
 	err := page.tmpl.ExecuteTemplate(data, "layout", i)
 	data.Flush()
 	return buf.Bytes(), err
-	
+
 }
 
 func getBaseDir(fp string) string {
-	return strings.Repeat("../", strings.Count(fp, "/"))	
+	return strings.Repeat("../", strings.Count(fp, "/"))
 }
