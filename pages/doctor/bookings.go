@@ -8,7 +8,7 @@ import (
 func init() {
 	b := &router.Page{
 		Access: router.DoctorAuth,
-		Css:    "",
+		CSS:    "",
 		Path:   "doctor/bookings",
 		Data:   Bookings,
 		Extra:  0,

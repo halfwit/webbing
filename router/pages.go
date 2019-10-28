@@ -20,6 +20,7 @@ func init() {
 	countrylist = listcountries()
 }
 
+// Access defines the access rights for a specific page
 type Access uint8
 
 const (
@@ -28,6 +29,7 @@ const (
 	DoctorAuth
 )
 
+// IncludeExtra - helper bitmasks to populate common elements across the site
 type IncludeExtra uint8
 
 const (
@@ -39,21 +41,23 @@ const (
 	SessionToken
 )
 
+// Page defines what a client receives from a GET request
 type Page struct {
 	Access Access
 	Extra  IncludeExtra
-	Css    string
+	CSS    string
 	Path   string
 	Data   func(p *message.Printer) map[string]interface{}
 	tmpl   *template.Template
 }
 
+// Add - register a *Page to the cache
 func Add(p *Page) {
 	pagecache[p.Path+".html"] = p
 }
 
-// Walk all our templates and finally return applicable errors as an array
-func ValidateAndCache() []error {
+// ValidatePages - Walk all our templates and finally return applicable errors as an array
+func ValidatePages() []error {
 	var errs []error
 	hd := path.Join("templates", "header.tpl")
 	fd := path.Join("templates", "footer.tpl")
@@ -80,6 +84,13 @@ func ValidateAndCache() []error {
 			errs = append(errs, err)
 		}
 	}
+	return errs
+}
+
+// ValidatePlugins will register each plugin and do a test load, returning all errors encountered
+// If any plugin tries to register with the same key it will be a fatal error
+func ValidatePlugins() []error {
+	var errs []error
 	return errs
 }
 

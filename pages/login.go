@@ -8,7 +8,7 @@ import (
 func init() {
 	b := &router.Page{
 		Access: router.GuestAuth,
-		Css:    "",
+		CSS:    "",
 		Path:   "login",
 		Data:   Login,
 		Extra:  router.FormErrors,

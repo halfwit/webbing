@@ -5,6 +5,8 @@ import (
 )
 
 // TODO: inverse function to get the actual specialty back from a whitelist
+
+// Specialty - mapping our token to internationalized string
 type Specialty struct {
 	ID   string
 	Name string

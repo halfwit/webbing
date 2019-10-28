@@ -14,8 +14,8 @@ import (
 
 var formlist map[string]*Form
 
+// After will go away when with plugins
 type After uint16
-
 const (
 	ValidateLogin After = 1 << iota
 	ValidateCountry

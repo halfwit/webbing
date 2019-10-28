@@ -8,6 +8,7 @@ import (
 	"golang.org/x/text/message"
 )
 
+// Country - Mapping token to internationalized country code
 type Country struct {
 	ID   string
 	Name string

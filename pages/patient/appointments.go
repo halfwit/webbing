@@ -10,7 +10,7 @@ import (
 func init() {
 	b := &router.Page{
 		Access: router.PatientAuth,
-		Css:    "",
+		CSS:    "",
 		Path:   "patient/appointments",
 		Data:   Appointments,
 		Extra:  0,

@@ -12,6 +12,7 @@ import (
 	_ "github.com/olmaxmedical/olmax_go/pages/help"
 	_ "github.com/olmaxmedical/olmax_go/pages/patient"
 	"github.com/olmaxmedical/olmax_go/router"
+	//"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/session"
 )
 
@@ -22,16 +23,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("Unable to initialize manager %v", err)
 	}
-	// This is session timeouts, I didn't write this logic and it's very, very broken
+	//BUG(halfwit) This is session timeouts, I didn't write this logic and it's very, very broken
 	//go sessions.GC()
 
-	errs := router.ValidateAndCache()
+	errs := router.ValidatePages()
 	if len(errs) > 0 {
 		for _, err := range errs {
 			log.Print(err)
 		}
 		log.Fatal("Unable to continue due to template errors")
 	}
+	errs := router.ValidatePlugins()
 	go func() {
 		http.ListenAndServe(":6060", nil)
 	}()
