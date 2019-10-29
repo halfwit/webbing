@@ -12,6 +12,7 @@ import (
 	_ "github.com/olmaxmedical/olmax_go/pages/help"
 	_ "github.com/olmaxmedical/olmax_go/pages/patient"
 	"github.com/olmaxmedical/olmax_go/router"
+
 	//"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/session"
 )
@@ -33,7 +34,7 @@ func main() {
 		}
 		log.Fatal("Unable to continue due to template errors")
 	}
-	errs := router.ValidatePlugins()
+	//errs := router.ValidatePlugins()
 	go func() {
 		http.ListenAndServe(":6060", nil)
 	}()
