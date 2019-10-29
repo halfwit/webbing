@@ -103,7 +103,7 @@ func getdata(p *page, in string) ([]byte, error) {
 		return nil, fmt.Errorf("Unauthorized")
 	}
 	i := cache.Data(p.printer)
-	i["css"] = cache.Css
+	i["css"] = cache.CSS
 	i["header"] = header(p.printer, p.status)
 	i["footer"] = footer(p.printer)
 	i["basedir"] = getBaseDir(cache.Path)
