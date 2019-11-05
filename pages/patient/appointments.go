@@ -13,11 +13,12 @@ func init() {
 		CSS:    "",
 		Path:   "patient/appointments",
 		Data:   Appointments,
-		Extra:  0,
+		Extra:  0, // call function to look up appointments here
 	}
 	router.Add(b)
 }
 
+// Appointments - olmaxmedical.com/patient/appointments.html
 func Appointments(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Appointments"),

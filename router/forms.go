@@ -16,6 +16,7 @@ var formlist map[string]*Form
 
 // After will go away when with plugins
 type After uint16
+
 const (
 	ValidateLogin After = 1 << iota
 	ValidateCountry
@@ -32,6 +33,7 @@ const (
 	AddAppointment
 )
 
+// Form - POST requests
 type Form struct {
 	Access    Access
 	After     After
@@ -44,6 +46,7 @@ func init() {
 	formlist = make(map[string]*Form)
 }
 
+// AddPost - Register a POST form from forms/
 func AddPost(f *Form) {
 	formlist[f.Path+".html"] = f
 }

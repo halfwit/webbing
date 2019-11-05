@@ -13,8 +13,10 @@ import (
 	"golang.org/x/text/message"
 )
 
+// This will change!
 var url = "http://192.168.1.101"
 
+// SendSignup - email our prospective clients and create tokens
 func SendSignup(first, last, email, pass string, p *message.Printer) {
 	if !db.UserExists(email) {
 		u, _ := uuid.NewRandom()
@@ -29,6 +31,7 @@ func SendSignup(first, last, email, pass string, p *message.Printer) {
 	}
 }
 
+// ValidateSignupToken - Make sure token is good
 func ValidateSignupToken(w http.ResponseWriter, r *http.Request, token string) {
 	if db.FindTempEntry(token) {
 		db.CreateEntry(token)

@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// Application - olmaxmedical.com/doctor/application.html
 func Application(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"fullname":   p.Sprint("Full name"),

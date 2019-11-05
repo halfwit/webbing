@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// ResetPassword - olmaxmedical.com/resetpassword.html
 func ResetPassword(p *message.Printer) map[string]interface{} {
 	// TODO: Also add in the error messages here
 	return map[string]interface{}{

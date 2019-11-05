@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// Paymethod - olmaxmedical.com/help/paymentmethods.html
 func Paymethod(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":            p.Sprint("Olmax Medical | FAQ"),

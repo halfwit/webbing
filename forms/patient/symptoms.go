@@ -12,7 +12,7 @@ import (
 func init() {
 	b := &router.Form{
 		Access:    router.PatientAuth,
-		Path:      "patient/sympoms",
+		Path:      "patient/symptoms",
 		Validator: Symptoms,
 		After:     router.EmailForm | router.WithOffer,
 		Redirect:  "patient/profile.html",
@@ -20,6 +20,7 @@ func init() {
 	router.AddPost(b)
 }
 
+// Symptoms - olmaxmedical.com/patient/symptoms.html
 func Symptoms(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)

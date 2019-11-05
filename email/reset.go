@@ -12,6 +12,7 @@ import (
 	"golang.org/x/text/message"
 )
 
+// SendReset - Wrapper for resetmail and timeout
 func SendReset(email string, p *message.Printer) {
 	u, _ := uuid.NewRandom()
 	token := u.String()
@@ -25,6 +26,7 @@ func SendReset(email string, p *message.Printer) {
 	}
 }
 
+// NextResetToken - Make sure we have unique tokens!
 func NextResetToken(old, user string) string {
 	if db.FindTempEntry(old) {
 		db.RemoveTempEntry(old)

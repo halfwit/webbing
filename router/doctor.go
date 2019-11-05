@@ -1,14 +1,14 @@
 package router
 
 type doctor struct {
-	Image string
+	Image     string
 	AlmaMater string
-	Name string
+	Name      string
 	Residency string
-	Current string
-	Country string
+	Current   string
+	Country   string
 	Specialty string
-	Rate string
+	Rate      string
 }
 
 func listdoctors() []doctor {

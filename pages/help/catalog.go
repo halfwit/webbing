@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// Catalog - olmaxmedical.com/help/catalog.html
 func Catalog(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Our Doctors"),

@@ -10,7 +10,8 @@ var pder = &Default{
 	list: list.New(),
 }
 
-type SessionStore struct {
+// Store - map of clients and their sessions
+type Store struct {
 	sid   string
 	atime time.Time
 	value map[interface{}]interface{}
@@ -21,54 +22,62 @@ func init() {
 	Register("default", pder)
 }
 
-func (st *SessionStore) Set(key, value interface{}) error {
+// Set - register kv into manager
+func (st *Store) Set(key, value interface{}) error {
 	st.value[key] = value
-	pder.SessionUpdate(st.sid)
+	pder.Update(st.sid)
 	return nil
 }
 
-func (st *SessionStore) Get(key interface{}) interface{} {
-	pder.SessionUpdate(st.sid)
+// Get - lookup value by key
+func (st *Store) Get(key interface{}) interface{} {
+	pder.Update(st.sid)
 	if v, ok := st.value[key]; ok {
 		return v
 	}
 	return nil
 }
 
-func (st *SessionStore) Delete(key interface{}) error {
+// Delete - remove value pointed to by key
+func (st *Store) Delete(key interface{}) error {
 	delete(st.value, key)
-	pder.SessionUpdate(st.sid)
+	pder.Update(st.sid)
 	return nil
 }
 
-func (st *SessionStore) SessionID() string {
+// ID - return session ID
+func (st *Store) ID() string {
 	return st.sid
 }
 
+// Default - The main session used for clients on the site
 type Default struct {
 	lock     sync.Mutex
 	sessions map[string]*list.Element
 	list     *list.List
 }
 
-func (pder *Default) SessionInit(sid string) (Session, error) {
+// Init - create session
+func (pder *Default) Init(sid string) (Session, error) {
 	pder.lock.Lock()
 	defer pder.lock.Unlock()
 	v := make(map[interface{}]interface{}, 0)
-	newsess := &SessionStore{sid: sid, atime: time.Now(), value: v}
+	newsess := &Store{sid: sid, atime: time.Now(), value: v}
 	element := pder.list.PushBack(newsess)
 	pder.sessions[sid] = element
 	return newsess, nil
 }
 
-func (pder *Default) SessionRead(sid string) (Session, error) {
+// Read - Request session by id
+func (pder *Default) Read(sid string) (Session, error) {
 	if element, ok := pder.sessions[sid]; ok {
-		return element.Value.(*SessionStore), nil
+		return element.Value.(*Store), nil
 	}
-	return pder.SessionInit(sid)
+	return pder.Init(sid)
 }
 
-func (pder *Default) SessionDestroy(sid string) error {
+// Destroy - Remove session by id
+func (pder *Default) Destroy(sid string) error {
 	if element, ok := pder.sessions[sid]; ok {
 		delete(pder.sessions, sid)
 		pder.list.Remove(element)
@@ -76,7 +85,8 @@ func (pder *Default) SessionDestroy(sid string) error {
 	return nil
 }
 
-func (pder *Default) SessionGC(maxlifetime int64) {
+// GC - Clean up all expired sessions
+func (pder *Default) GC(maxlifetime int64) {
 	pder.lock.Lock()
 	defer pder.lock.Unlock()
 	for {
@@ -84,19 +94,20 @@ func (pder *Default) SessionGC(maxlifetime int64) {
 		if element == nil {
 			break
 		}
-		if (element.Value.(*SessionStore).atime.Unix() + maxlifetime) >= time.Now().Unix() {
+		if (element.Value.(*Store).atime.Unix() + maxlifetime) >= time.Now().Unix() {
 			break
 		}
 		pder.list.Remove(element)
-		delete(pder.sessions, element.Value.(*SessionStore).sid)
+		delete(pder.sessions, element.Value.(*Store).sid)
 	}
 }
 
-func (pder *Default) SessionUpdate(sid string) error {
+// Update - move session labelled with ID to top of list
+func (pder *Default) Update(sid string) error {
 	pder.lock.Lock()
 	defer pder.lock.Unlock()
 	if element, ok := pder.sessions[sid]; ok {
-		element.Value.(*SessionStore).atime = time.Now()
+		element.Value.(*Store).atime = time.Now()
 		pder.list.MoveToFront(element)
 	}
 	return nil

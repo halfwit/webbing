@@ -17,6 +17,7 @@ func init() {
 	router.Add(b)
 }
 
+// Login - olmaxmedical.com/login.html
 func Login(p *message.Printer) map[string]interface{} {
 	// TODO: Also add in the error messages here
 	return map[string]interface{}{

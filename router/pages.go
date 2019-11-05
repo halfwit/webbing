@@ -87,13 +87,6 @@ func ValidatePages() []error {
 	return errs
 }
 
-// ValidatePlugins will register each plugin and do a test load, returning all errors encountered
-// If any plugin tries to register with the same key it will be a fatal error
-func ValidatePlugins() []error {
-	var errs []error
-	return errs
-}
-
 func getdata(p *page, in string) ([]byte, error) {
 	cache, ok := pagecache[p.path]
 	if !ok {

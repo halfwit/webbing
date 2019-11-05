@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// Pricefee - olmaxmedical.com/help/pricesandfees.html
 func Pricefee(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":           p.Sprintf("Olmax Medical | FAQ"),

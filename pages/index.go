@@ -16,6 +16,7 @@ func init() {
 	router.Add(b)
 }
 
+// Index - olmaxmedical.com/index.html
 func Index(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":            p.Sprintf("Olmax Medical | Welcome"),

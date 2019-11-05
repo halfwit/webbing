@@ -14,7 +14,7 @@ type handle struct {
 	manager *session.Manager
 }
 
-// Route - All requests pass through here firstßß
+// Route - All requests pass through here first
 func Route(manager *session.Manager) error {
 	d := &handle{
 		manager: manager,

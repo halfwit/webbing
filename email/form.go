@@ -51,6 +51,7 @@ func init() {
 	t = template.Must(template.New("email").Parse(tmpl))
 }
 
+// SendForm - Fill in the template and send it out from our email address
 func SendForm(form map[string][]string, p *message.Printer, attachments map[string]multipart.File) {
 	var body bytes.Buffer
 	address := form["sendto"][0]

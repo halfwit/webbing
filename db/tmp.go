@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// Access - Who can access the data
 type Access uint8
 
 const (
@@ -45,7 +46,7 @@ func init() {
 	}
 }
 
-// Placeholder code for database lookups
+// CreateTempEntry - Temporary (time limited) database entry
 func CreateTempEntry(first, last, email, pass, token string) {
 	tmpdata[token] = &entry{
 		first: first,
@@ -55,10 +56,12 @@ func CreateTempEntry(first, last, email, pass, token string) {
 	}
 }
 
+// RemoveTempEntry - Called after timeout - this should be internal to db
 func RemoveTempEntry(token string) {
 	delete(tmpdata, token)
 }
 
+// FindTempEntry - validate entry still exists
 func FindTempEntry(token string) bool {
 	if _, ok := tmpdata[token]; ok {
 		return true
@@ -66,6 +69,7 @@ func FindTempEntry(token string) bool {
 	return false
 }
 
+// CreateEntry - Add a permanent entry to the database
 func CreateEntry(token string) {
 	log.Println(data)
 	if ent, ok := tmpdata[token]; ok {
@@ -80,13 +84,14 @@ func CreateEntry(token string) {
 	}
 }
 
+// User - Any registered user on the site
 type User struct {
 	First string
 	Last  string
 	Email string
 }
 
-// Dummy function of all dummy functions, this will eventually call cookie functions to maintain forward secrecy
+// FromCookie - look up by Cookie token
 func FromCookie(token string) (*User, error) {
 	if u, ok := data[token]; ok {
 		return &User{
@@ -98,6 +103,7 @@ func FromCookie(token string) (*User, error) {
 	return nil, errors.New("No such user")
 }
 
+// UpdateToken - Change entry status for temp entries
 func UpdateToken(old, new string) bool {
 	defer delete(data, old)
 	if ent, ok := data[old]; ok {
@@ -107,6 +113,7 @@ func UpdateToken(old, new string) bool {
 	return false
 }
 
+// FindEntry - Look up if token is still valid
 func FindEntry(token string) bool {
 	if _, ok := data[token]; ok {
 		return true
@@ -114,6 +121,7 @@ func FindEntry(token string) bool {
 	return false
 }
 
+// ValidateLogin - Dummy function for login
 func ValidateLogin(username, password string) bool {
 	for _, client := range data {
 		if client.email == username && client.pass == password {
@@ -123,6 +131,7 @@ func ValidateLogin(username, password string) bool {
 	return false
 }
 
+// UserRole - Find Access mappings for given user
 func UserRole(username string) Access {
 	for _, client := range data {
 		if client.email != username {
@@ -133,6 +142,7 @@ func UserRole(username string) Access {
 	return GuestAuth
 }
 
+// UserExists - Look up by email if user is in db
 func UserExists(email string) bool {
 	for _, client := range data {
 		if client.email == email {
@@ -142,6 +152,7 @@ func UserExists(email string) bool {
 	return false
 }
 
+// UpdateUserPassword - Dummy funtion to update password
 func UpdateUserPassword(token, pass string) {
 	if _, ok := data[token]; !ok {
 		return

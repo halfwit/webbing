@@ -20,6 +20,7 @@ func init() {
 	router.AddPost(b)
 }
 
+// Application - olmaxmedical.com/doctor/application.html
 func Application(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)

@@ -13,6 +13,7 @@ import (
 
 var provides = make(map[string]Provider)
 
+// Manager - Represents a particular cookie to a client
 type Manager struct {
 	cookieName  string
 	lock        sync.Mutex
@@ -20,6 +21,7 @@ type Manager struct {
 	maxlifetime int64
 }
 
+// NewManager - returns a Cookie manager, ready to use or an error
 func NewManager(provideName, cookieName string, maxlifetime int64) (*Manager, error) {
 	if provider, ok := provides[provideName]; ok {
 		m := &Manager{
@@ -32,20 +34,23 @@ func NewManager(provideName, cookieName string, maxlifetime int64) (*Manager, er
 	return nil, fmt.Errorf("session: unknown provide %q", provideName)
 }
 
+// Provider - interface our cookie manager calls to manage lifetimes
 type Provider interface {
-	SessionInit(sid string) (Session, error)
-	SessionRead(sid string) (Session, error)
-	SessionDestroy(sid string) error
-	SessionGC(maxLifeTime int64)
+	Init(sid string) (Session, error)
+	Read(sid string) (Session, error)
+	Destroy(sid string) error
+	GC(maxLifeTime int64)
 }
 
+// Session - a client connection
 type Session interface {
 	Set(key, value interface{}) error
 	Get(key interface{}) interface{}
 	Delete(key interface{}) error
-	SessionID() string
+	ID() string
 }
 
+// Register - Add a provider to our stack (e.g., Default)
 func Register(name string, provider Provider) {
 	if provider == nil {
 		log.Fatal("session: Register provider is nil")
@@ -57,14 +62,15 @@ func Register(name string, provider Provider) {
 	log.Fatal("session: Register called twice for provider " + name)
 }
 
-func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
+// Destroy - Call provider Destroy
+func (manager *Manager) Destroy(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie(manager.cookieName)
 	if err != nil || cookie.Value == "" {
 		return
 	}
 	manager.lock.Lock()
 	defer manager.lock.Unlock()
-	manager.provider.SessionDestroy(cookie.Value)
+	manager.provider.Destroy(cookie.Value)
 	expiration := time.Now()
 	c := http.Cookie{
 		Name:     manager.cookieName,
@@ -76,13 +82,14 @@ func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
 	http.SetCookie(w, &c)
 }
 
-func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (session Session) {
+// Start - Call provider Start
+func (manager *Manager) Start(w http.ResponseWriter, r *http.Request) (session Session) {
 	manager.lock.Lock()
 	defer manager.lock.Unlock()
 	cookie, err := r.Cookie(manager.cookieName)
 	if err != nil || cookie.Value == "" {
-		sid := manager.sessionId()
-		session, _ = manager.provider.SessionInit(sid)
+		sid := manager.sessionID()
+		session, _ = manager.provider.Init(sid)
 		cookie := http.Cookie{
 			Name:     manager.cookieName,
 			Value:    url.QueryEscape(sid),
@@ -94,18 +101,19 @@ func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (se
 		return
 	}
 	sid, _ := url.QueryUnescape(cookie.Value)
-	session, _ = manager.provider.SessionRead(sid)
+	session, _ = manager.provider.Read(sid)
 	return
 }
 
+// GC - call all providers GC
 func (manager *Manager) GC() {
 	manager.lock.Lock()
 	defer manager.lock.Unlock()
-	manager.provider.SessionGC(manager.maxlifetime)
+	manager.provider.GC(manager.maxlifetime)
 	time.AfterFunc(time.Duration(manager.maxlifetime), func() { manager.GC() })
 }
 
-func (manager *Manager) sessionId() string {
+func (manager *Manager) sessionID() string {
 	u, err := uuid.NewRandom()
 	if err != nil {
 		log.Fatalf("Unable to generate UUID %q", err)
