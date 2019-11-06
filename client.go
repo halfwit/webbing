@@ -34,7 +34,13 @@ func main() {
 		}
 		log.Fatal("Unable to continue due to template errors")
 	}
-	//errs := router.ValidatePlugins()
+	errs = router.ValidatePlugins()
+	if len(errs) > 0 {
+		for _, err := range errs {
+			log.Print(err)
+		}
+		log.Fatal("Unable to continue due to plugin errors")
+	}
 	go func() {
 		http.ListenAndServe(":6060", nil)
 	}()

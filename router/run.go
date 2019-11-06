@@ -92,7 +92,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 }
 
 func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
-	d.manager.SessionDestroy(w, r)
+	d.manager.Destroy(w, r)
 	http.Redirect(w, r, "/index.html", 302)
 
 }
@@ -138,7 +138,7 @@ func userLang(r *http.Request) *message.Printer {
 }
 
 func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string, session.Session, db.Access) {
-	us := d.manager.SessionStart(w, r)
+	us := d.manager.Start(w, r)
 	user, ok1 := us.Get("username").(string)
 	status, ok2 := us.Get("login").(string)
 	role, ok3 := us.Get("role").(db.Access)
