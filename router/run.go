@@ -145,7 +145,7 @@ func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string,
 	if !ok1 || !ok2 || status != "true" {
 		status = "false"
 	}
-	if !ok3 {
+	if !ok {
 		role = db.GuestAuth
 	}
 	return user, status, us, role
