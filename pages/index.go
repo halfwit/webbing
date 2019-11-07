@@ -13,7 +13,7 @@ func init() {
 		Data:   Index,
 		Extra:  router.ListDoctors | router.FormErrors,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Index - olmaxmedical.com/index.html

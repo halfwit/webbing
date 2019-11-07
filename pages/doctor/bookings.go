@@ -13,7 +13,7 @@ func init() {
 		Data:   Bookings,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Bookings - olmaxmedical.com/doctor/bookings.html

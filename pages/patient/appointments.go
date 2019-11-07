@@ -15,7 +15,7 @@ func init() {
 		Data:   Appointments,
 		Extra:  0, // call function to look up appointments here
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Appointments - olmaxmedical.com/patient/appointments.html

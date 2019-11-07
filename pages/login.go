@@ -14,7 +14,7 @@ func init() {
 		Extra:  router.FormErrors,
 	}
 	//router.AddGet(b)
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Login - olmaxmedical.com/login.html

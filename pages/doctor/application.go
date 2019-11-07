@@ -13,7 +13,7 @@ func init() {
 		Data:   Application,
 		Extra:  router.ListCountries | router.ListServices | router.FormErrors | router.FormToken,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Application - olmaxmedical.com/doctor/application.html

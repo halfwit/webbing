@@ -13,7 +13,7 @@ func init() {
 		Data:   NewPassword,
 		Extra:  router.FormToken | router.FormErrors,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // NewPassword - olmaxmedical.com/newpassword.html

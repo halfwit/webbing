@@ -13,7 +13,7 @@ func init() {
 		Data:   Verification,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Verification - olmaxmedical.com/help/verification.html

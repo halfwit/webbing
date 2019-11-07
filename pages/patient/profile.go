@@ -13,7 +13,7 @@ func init() {
 		Data:   Profile,
 		Extra:  0, // listPendingAppointments
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Profile - olmaxmedical.com/patient/profile.html

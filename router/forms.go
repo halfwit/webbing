@@ -55,7 +55,7 @@ func AddPost(f *Form) {
 // Ideally, the *page abstraction will never leak into the form validation
 func parseform(p *page, w http.ResponseWriter, r *http.Request) (*Form, []string) {
 	var errors, errs []string
-	var e, msg string
+	var msg string
 	form, ok := formlist[p.path]
 	if !ok {
 		errors = append(errors, "No such page")

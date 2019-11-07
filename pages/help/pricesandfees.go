@@ -13,7 +13,7 @@ func init() {
 		Data:   Pricefee,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Pricefee - olmaxmedical.com/help/pricesandfees.html

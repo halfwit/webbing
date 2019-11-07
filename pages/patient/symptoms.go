@@ -13,7 +13,7 @@ func init() {
 		Data:   Symptoms,
 		Extra:  router.FormErrors | router.SessionToken,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Symptoms - olmaxmedical.com/patient/symptoms.html

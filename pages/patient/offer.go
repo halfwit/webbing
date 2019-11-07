@@ -13,7 +13,7 @@ func init() {
 		Data:   Createoffer,
 		Extra:  router.ListServices | router.FormErrors,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Createoffer - olmaxmedical.com/patient/offer.html

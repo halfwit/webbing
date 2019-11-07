@@ -13,7 +13,7 @@ func init() {
 		Data:   Messages,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Messages - olmaxmedical.com/messages.html

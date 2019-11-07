@@ -13,7 +13,8 @@ import (
 )
 
 var pagecache map[string]*Page
-var countrylist []Country
+
+//var countrylist []Country
 
 func init() {
 	pagecache = make(map[string]*Page)
@@ -51,8 +52,8 @@ type Page struct {
 	tmpl   *template.Template
 }
 
-// Add - register a *Page to the cache
-func Add(p *Page) {
+// AddPage - register a *Page to the cache
+func AddPage(p *Page) {
 	pagecache[p.Path+".html"] = p
 }
 

@@ -13,7 +13,7 @@ func init() {
 		Data:   ResetPassword,
 		Extra:  router.FormErrors,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // ResetPassword - olmaxmedical.com/resetpassword.html

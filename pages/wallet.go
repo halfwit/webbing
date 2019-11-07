@@ -13,7 +13,7 @@ func init() {
 		Data:   Wallet,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Wallet - olmaxmedical.com/wallet.html

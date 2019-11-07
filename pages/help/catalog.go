@@ -13,7 +13,7 @@ func init() {
 		Data:   Catalog,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Catalog - olmaxmedical.com/help/catalog.html

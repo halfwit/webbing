@@ -13,7 +13,7 @@ func init() {
 		Data:   Paymethod,
 		Extra:  0,
 	}
-	router.Add(b)
+	router.AddPage(b)
 }
 
 // Paymethod - olmaxmedical.com/help/paymentmethods.html
