@@ -6,6 +6,7 @@ import (
 
 var pluginCache map[int]*Plugin
 
+// Plugin - Provide extra data or functionality from GET/POST pages
 type Plugin struct {
 	Run func(p *message.Printer) map[string]interface{}
 }
@@ -22,6 +23,7 @@ func ValidatePlugins() []error {
 	return errs
 }
 
-func Register(p *Plugin, key int) {
+// AddPlugin - Add Plugin to map by key
+func AddPlugin(p *Plugin, key int) {
 	pluginCache[key] = p
 }

@@ -60,7 +60,7 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 	d.normal(w, r)
 }
 
-type page struct {
+type request struct {
 	printer *message.Printer
 	session session.Session
 	user    string
@@ -75,7 +75,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	user, status, us, role := getUser(d, w, r)
-	p := &page{
+	p := &request{
 		printer: userLang(r),
 		status:  status,
 		user:    user,
@@ -97,7 +97,7 @@ func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func post(p *page, us session.Session, w http.ResponseWriter, r *http.Request) {
+func post(p *request, us session.Session, w http.ResponseWriter, r *http.Request) {
 	form, errors := parseform(p, w, r)
 	if len(errors) > 0 && errors[0] != "nil" {
 		// NOTE(halfwit) this stashes previous entries, but does not work
@@ -112,7 +112,7 @@ func post(p *page, us session.Session, w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func get(p *page, w http.ResponseWriter) {
+func get(p *request, w http.ResponseWriter) {
 	var data []byte
 	var err error
 	switch db.UserRole(p.user) {
@@ -158,7 +158,7 @@ func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Unauthorized", 401)
 		return
 	}
-	p := &page{
+	p := &request{
 		printer: userLang(r),
 		status:  status,
 		session: us,

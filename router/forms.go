@@ -53,7 +53,7 @@ func AddPost(f *Form) {
 
 // This large ladder just adds conditional logic to forms for a more generic
 // Ideally, the *page abstraction will never leak into the form validation
-func parseform(p *page, w http.ResponseWriter, r *http.Request) (*Form, []string) {
+func parseform(p *request, w http.ResponseWriter, r *http.Request) (*Form, []string) {
 	var errors, errs []string
 	var msg string
 	form, ok := formlist[p.path]

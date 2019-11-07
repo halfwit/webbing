@@ -75,7 +75,7 @@ func ValidatePages() []error {
 			errs = append(errs, fmt.Errorf("parsing in %s - %v", path.Dir(item.Path), err))
 			continue
 		}
-		p := &page{
+		p := &request{
 			printer: printer,
 			path:    item.Path + ".html",
 			role:    db.PatientAuth | db.DoctorAuth | db.GuestAuth,
@@ -88,7 +88,7 @@ func ValidatePages() []error {
 	return errs
 }
 
-func getdata(p *page, in string) ([]byte, error) {
+func getdata(p *request, in string) ([]byte, error) {
 	cache, ok := pagecache[p.path]
 	if !ok {
 		return nil, fmt.Errorf("No such page: %s", p.path)
@@ -101,6 +101,7 @@ func getdata(p *page, in string) ([]byte, error) {
 	i["header"] = header(p.printer, p.status)
 	i["footer"] = footer(p.printer)
 	i["basedir"] = getBaseDir(cache.Path)
+
 	/*
 		if cache.Extra&ListDoctors != 0 {
 			i["doctors"] = listdoctors()
