@@ -17,7 +17,7 @@ var countrylist []Country
 
 func init() {
 	pagecache = make(map[string]*Page)
-	countrylist = listcountries()
+	//countrylist = listcountries()
 }
 
 // Access defines the access rights for a specific page
@@ -100,41 +100,43 @@ func getdata(p *page, in string) ([]byte, error) {
 	i["header"] = header(p.printer, p.status)
 	i["footer"] = footer(p.printer)
 	i["basedir"] = getBaseDir(cache.Path)
-	if cache.Extra&ListDoctors != 0 {
-		i["doctors"] = listdoctors()
-	}
-	if cache.Extra&ListServices != 0 {
-		i["specialties"] = specialties(p.printer)
-	}
-	if cache.Extra&ListCountries != 0 {
-		i["countrylist"] = countrylist
-	}
-	if p.session != nil && cache.Extra&FormErrors != 0 {
-		i["errors"] = p.session.Get("errors")
-	}
-	if p.session != nil && cache.Extra&SessionToken != 0 {
-		// TODO(halfwit) once database is live
-		// session token is a temporary db entry
-		// keyed by token which returns the current session data at this point
-		// useful for things like offers while a patient fills out symptoms
-		//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
-	}
-	//if cache.Extra&ClientName != 0 {
-	//	i["firstname"] = db.ClientName(p.session)
-	//}
-	//if cache.Extra&ClientSurname != 0 {
-	//	i["surname"] = db.ClientSurname(p.session)
-	//}
-	//if cache.Extra&ClientUsername != 0 {
-	//	i["username"] = db.ClientUsername(p.session)
-	//}
-	if cache.Extra&FormErrors != 0 && p.session != nil {
-		i["errors"] = p.session.Get("errors")
-	}
-	if cache.Extra&FormToken != 0 {
-		// generate token and put it in the form!
-		i["token"] = newToken()
-	}
+	/*
+		if cache.Extra&ListDoctors != 0 {
+			i["doctors"] = listdoctors()
+		}
+		if cache.Extra&ListServices != 0 {
+			i["specialties"] = specialties(p.printer)
+		}
+		if cache.Extra&ListCountries != 0 {
+			i["countrylist"] = countrylist
+		}
+		if p.session != nil && cache.Extra&FormErrors != 0 {
+			i["errors"] = p.session.Get("errors")
+		}
+		if p.session != nil && cache.Extra&SessionToken != 0 {
+			// TODO(halfwit) once database is live
+			// session token is a temporary db entry
+			// keyed by token which returns the current session data at this point
+			// useful for things like offers while a patient fills out symptoms
+			//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
+		}
+		//if cache.Extra&ClientName != 0 {
+		//	i["firstname"] = db.ClientName(p.session)
+		//}
+		//if cache.Extra&ClientSurname != 0 {
+		//	i["surname"] = db.ClientSurname(p.session)
+		//}
+		//if cache.Extra&ClientUsername != 0 {
+		//	i["username"] = db.ClientUsername(p.session)
+		//}
+		if cache.Extra&FormErrors != 0 && p.session != nil {
+			i["errors"] = p.session.Get("errors")
+		}
+		if cache.Extra&FormToken != 0 {
+			// generate token and put it in the form!
+			i["token"] = newToken()
+		}
+	*/
 	if p.session != nil {
 		i["username"] = p.session.Get("username")
 	}

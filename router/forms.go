@@ -87,30 +87,31 @@ func parseform(p *page, w http.ResponseWriter, r *http.Request) (*Form, []string
 			return nil, errs
 		}
 	}
-	if form.After&ValidateCountry != 0 {
-		c := r.PostFormValue("country")
-		if e = validateCountry(p.printer, c); e != "" {
-			errors = append(errors, e)
+	/*
+		if form.After&ValidateCountry != 0 {
+			c := r.PostFormValue("country")
+			if e = validateCountry(p.printer, c); e != "" {
+				errors = append(errors, e)
+			}
 		}
-	}
-	if form.After&ValidateSpecialty != 0 {
-		s := r.PostFormValue("specialty")
-		if e = validateSpecialty(p.printer, s); e != "" {
-			errors = append(errors, e)
+		if form.After&ValidateSpecialty != 0 {
+			s := r.PostFormValue("specialty")
+			if e = validateSpecialty(p.printer, s); e != "" {
+				errors = append(errors, e)
+			}
 		}
-	}
-	if form.After&ValidateCountries != 0 {
-		c := r.Form["country"]
-		if e = validateCountries(p.printer, c); e != "" {
-			errors = append(errors, e)
+		if form.After&ValidateCountries != 0 {
+			c := r.Form["country"]
+			if e = validateCountries(p.printer, c); e != "" {
+				errors = append(errors, e)
+			}
 		}
-	}
-	if form.After&ValidateSpecialties != 0 {
-		s := r.Form["specialty"]
-		if e = validateSpecialties(p.printer, s); e != "" {
-			errors = append(errors, e)
-		}
-	}
+		if form.After&ValidateSpecialties != 0 {
+			s := r.Form["specialty"]
+			if e = validateSpecialties(p.printer, s); e != "" {
+				errors = append(errors, e)
+			}
+		}*/
 	if form.After&SetPassword != 0 {
 		if errs = setPassword(p.printer, p.session, r); len(errs) > 0 {
 			errors = append(errors, errs...)
