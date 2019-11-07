@@ -1,4 +1,4 @@
-package router
+package plugins
 
 type doctor struct {
 	Image     string

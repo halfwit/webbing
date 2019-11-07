@@ -1,4 +1,4 @@
-package router
+package plugins
 
 import (
 	"sort"

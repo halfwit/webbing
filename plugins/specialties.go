@@ -1,4 +1,4 @@
-package router
+package plugins
 
 import (
 	"golang.org/x/text/message"
@@ -63,7 +63,7 @@ func validateSpecialties(p *message.Printer, specialties []string) string {
 
 func validateSpecialty(p *message.Printer, specialty string) string {
 	switch specialty {
-	case "acutepain","anesthesiology", "bariatric", "cardiology", "chiropractic", "chronic", "critcare", "dermatology", "emergency", "endocrinology", "otolaringology", "familymedicine", "gastro", "headneck", "hematology", "hepatology", "hyperbaric", "immunology", "diseases", "internal", "neonatal", "nephrology", "neurology", "neurosurgery", "obstetrics", "occupational", "opthamology", "orthopedics", "palliative", "pediatrics", "podiatry", "pulmonology", "radiology", "radiation", "transplants":
+	case "acutepain", "anesthesiology", "bariatric", "cardiology", "chiropractic", "chronic", "critcare", "dermatology", "emergency", "endocrinology", "otolaringology", "familymedicine", "gastro", "headneck", "hematology", "hepatology", "hyperbaric", "immunology", "diseases", "internal", "neonatal", "nephrology", "neurology", "neurosurgery", "obstetrics", "occupational", "opthamology", "orthopedics", "palliative", "pediatrics", "podiatry", "pulmonology", "radiology", "radiation", "transplants":
 		return ""
 	}
 	return p.Sprint("Unknown or nil specialty entered")
