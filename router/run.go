@@ -31,7 +31,7 @@ func Route(manager *session.Manager) error {
 	mux.HandleFunc("/logout.html", d.logout)
 	mux.HandleFunc("/profile.html", d.profile)
 	mux.HandleFunc("/", d.normal)
-	return http.ListenAndServe(":80", mux)
+	return http.ListenAndServe(":8080", mux)
 }
 
 func (d *handle) activate(w http.ResponseWriter, r *http.Request) {

@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"net/http"
 
 	_ "github.com/olmaxmedical/olmax_go/forms"
 	_ "github.com/olmaxmedical/olmax_go/forms/doctor"
@@ -41,8 +40,5 @@ func main() {
 		}
 		log.Fatal("Unable to continue due to plugin errors")
 	}
-	go func() {
-		http.ListenAndServe(":6060", nil)
-	}()
 	log.Fatal(router.Route(sessions))
 }
