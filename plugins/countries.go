@@ -32,10 +32,12 @@ func init() {
 	sort.Sort(cache)
 }
 
+// Len - For Sort implementation
 func (c *countries) Len() int {
 	return len(c.list)
 }
 
+// Less - For Sort implementation
 func (c *countries) Less(i, j int) bool {
 	switch strings.Compare(c.list[i].Name.Common, c.list[j].Name.Common) {
 	case -1:
@@ -45,6 +47,7 @@ func (c *countries) Less(i, j int) bool {
 	}
 }
 
+// Swap - For Sort implementation
 func (c *countries) Swap(i, j int) {
 	tmp := c.list[i]
 	c.list[i] = c.list[j]

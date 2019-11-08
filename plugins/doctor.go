@@ -1,5 +1,10 @@
 package plugins
 
+import (
+	"github.com/olmaxmedical/olmax_go/router"
+	"golang.org/x/text/message"
+)
+
 type doctor struct {
 	Image     string
 	AlmaMater string
@@ -11,7 +16,19 @@ type doctor struct {
 	Rate      string
 }
 
-func listdoctors() []doctor {
+func init() {
+	b := &router.Plugin{
+		Name:     "List doctors",
+		Run:      ListDoctors,
+		Validate: ValidateListDoctors,
+	}
+}
+
+func ValidateListDoctors() error {
+	return nil
+}
+
+func ListDoctors(p *message.Printer) []doctor {
 	return []doctor{
 		{
 			Image:     "AbuzamzamMD.jpg",
