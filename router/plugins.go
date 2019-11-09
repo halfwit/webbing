@@ -7,9 +7,9 @@ import (
 )
 
 // DEAD is a magic string to indicate a non-unique plugin key
-const DEAD = 666
+const DEAD IncludeExtra = 0x0666000
 
-var pluginCache map[int]*Plugin
+var pluginCache map[IncludeExtra]*Plugin
 
 // Plugin - Provide extra data or functionality from GET/POST pages
 type Plugin struct {
@@ -19,7 +19,7 @@ type Plugin struct {
 }
 
 func init() {
-	pluginCache = make(map[int]*Plugin)
+	pluginCache = make(map[IncludeExtra]*Plugin)
 }
 
 // ValidatePlugins - Run through each plugin
@@ -32,17 +32,17 @@ func ValidatePlugins() []error {
 		if err != nil {
 			errs = append(errs, err)
 		}
-		if (key & DEAD) != 0 {
-			errs = append(errs, fmt.Errorf("Key requested already in use for plugin %s: %d", item.Name, key|DEAD))
+		if (DEAD & key) != 0 {
+			errs = append(errs, fmt.Errorf("Error registering %s: Key requested already in use (%d)", item.Name, key^DEAD))
 		}
 	}
 	return errs
 }
 
 // AddPlugin - Add Plugin to map by key
-func AddPlugin(p *Plugin, key int) {
+func AddPlugin(p *Plugin, key IncludeExtra) {
 	if pluginCache[key] != nil {
-		key &= DEAD
+		key |= DEAD
 	}
 	pluginCache[key] = p
 }

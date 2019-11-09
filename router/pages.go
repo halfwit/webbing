@@ -31,12 +31,10 @@ const (
 )
 
 // IncludeExtra - helper bitmasks to populate common elements across the site
-type IncludeExtra uint8
+type IncludeExtra uint32
 
 const (
-	ListDoctors IncludeExtra = 1 << iota
-	ListServices
-	ListCountries
+	ListCountries IncludeExtra = 1 << iota
 	FormToken
 	FormErrors
 	SessionToken

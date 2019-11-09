@@ -1,7 +1,9 @@
 package help
 
 import (
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
+
 	"golang.org/x/text/message"
 )
 
@@ -11,7 +13,7 @@ func init() {
 		CSS:    "",
 		Path:   "help/provider",
 		Data:   Provider,
-		Extra:  router.ListServices,
+		Extra:  plugins.ListServices,
 	}
 	router.AddPage(b)
 }
