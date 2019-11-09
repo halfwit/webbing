@@ -34,8 +34,7 @@ const (
 type IncludeExtra uint32
 
 const (
-	ListCountries IncludeExtra = 1 << iota
-	FormToken
+	FormToken IncludeExtra = 1 << iota
 	FormErrors
 	SessionToken
 )
@@ -99,40 +98,36 @@ func getdata(p *request, in string) ([]byte, error) {
 	r["header"] = header(p.printer, p.status)
 	r["footer"] = footer(p.printer)
 	r["basedir"] = getBaseDir(cache.Path)
-	var i IncludeExtra
-	for i = 0; i < Nplugin; i++ {
-		if (cache.Extra & i) != 0 {
-			r[pluginCache[i].Name] = pluginCache[i].Run(p.printer)
+	// comparing an int against cache.Extra is not useful, we need an array of keys instead set at AddPlugin.
+	for _, key := range pluginKey {
+		if (cache.Extra & key) != 0 {
+			r[pluginCache[key].Name] = pluginCache[key].Run(p.printer)
 		}
 	}
-	/*
-		if p.session != nil && cache.Extra&FormErrors != 0 {
-			i["errors"] = p.session.Get("errors")
-		}
-		if p.session != nil && cache.Extra&SessionToken != 0 {
-			// TODO(halfwit) once database is live
-			// session token is a temporary db entry
-			// keyed by token which returns the current session data at this point
-			// useful for things like offers while a patient fills out symptoms
-			//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
-		}
-		//if cache.Extra&ClientName != 0 {
-		//	i["firstname"] = db.ClientName(p.session)
-		//}
-		//if cache.Extra&ClientSurname != 0 {
-		//	i["surname"] = db.ClientSurname(p.session)
-		//}
-		//if cache.Extra&ClientUsername != 0 {
-		//	i["username"] = db.ClientUsername(p.session)
-		//}
-		if cache.Extra&FormErrors != 0 && p.session != nil {
-			i["errors"] = p.session.Get("errors")
-		}
-		if cache.Extra&FormToken != 0 {
-			// generate token and put it in the form!
-			i["token"] = newToken()
-		}
-	*/
+
+	if p.session != nil && cache.Extra&FormErrors != 0 {
+		r["errors"] = p.session.Get("errors")
+	}
+	if p.session != nil && cache.Extra&SessionToken != 0 {
+		// TODO(halfwit) once database is live
+		// session token is a temporary db entry
+		// keyed by token which returns the current session data at this point
+		// useful for things like offers while a patient fills out symptoms
+		//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
+	}
+	//if cache.Extra&ClientName != 0 {
+	//	i["firstname"] = db.ClientName(p.session)
+	//}
+	//if cache.Extra&ClientSurname != 0 {
+	//	i["surname"] = db.ClientSurname(p.session)
+	//}
+	//if cache.Extra&ClientUsername != 0 {
+	//	i["username"] = db.ClientUsername(p.session)
+	//}
+	if cache.Extra&FormErrors != 0 && p.session != nil {
+		r["errors"] = p.session.Get("errors")
+	}
+
 	if p.session != nil {
 		r["username"] = p.session.Get("username")
 	}

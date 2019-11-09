@@ -4,9 +4,13 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/olmaxmedical/olmax_go/router"
 	"github.com/pariz/gountries"
 	"golang.org/x/text/message"
 )
+
+// ListCountries - Populate a localized spinner to select country
+const ListCountries router.IncludeExtra = 4
 
 // Country - Mapping token to internationalized country code
 type Country struct {
@@ -30,6 +34,12 @@ func init() {
 		list: l,
 	}
 	sort.Sort(cache)
+	b := &router.Plugin{
+		Name:     "countrylist",
+		Run:      Countries,
+		Validate: CheckCountries,
+	}
+	router.AddPlugin(b, ListCountries)
 }
 
 // Len - For Sort implementation
@@ -54,16 +64,18 @@ func (c *countries) Swap(i, j int) {
 	c.list[j] = tmp
 }
 
-// TODO: Filter out any countries we don't support
-func listcountries() []Country {
-	var c []Country
+// Countries - return a localized list of countries
+func Countries(_ *message.Printer) map[string]interface{} {
+	c := make(map[string]interface{})
 	for _, item := range cache.list {
-		c = append(c, Country{
-			ID:   item.Name.Common,
-			Name: item.Name.Common,
-		})
+		c[item.Name.Common] = item.Name.Common
 	}
 	return c
+}
+
+// CheckCountries - no-op
+func CheckCountries() error {
+	return nil
 }
 
 func validateCountries(p *message.Printer, countries []string) string {

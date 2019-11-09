@@ -4,8 +4,8 @@
 	 <form action="findspecialty">
 		<label for="Specialty">{{.specialty}}</label>
 	 	<select name="Specialty">
-		{{range .specialties}}
-			<option value="{{.ID}}">{{.Name}}</option>
+		{{range $id, $name := .specialties}}
+			<option value="{{$id}}">{{$name}}</option>
 		{{end}}
 		</select>
 		<br/>

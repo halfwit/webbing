@@ -7,15 +7,15 @@
 			<fieldset>
 				<label for="country">{{.doccountry}}</label>
 				<select name="country" id="country" multiple required>
-		    		{{range .countrylist}}
-					<option value="{{.ID}}">{{.Name}}</option>
+		    		{{range $id, $name := .countrylist}}
+					<option value="{{$id}}">{{$name}}</option>
   	          		{{end}}
 				</select>
 				<br><!-- clean up the formatting on some browsers -->
 				<label for="specialty">{{.docspecial}}</label>	   
 		 		<select name="specialty" id="specialty" multiple required>
-				{{range .specialties}}
-					<option value="{{.ID}}">{{.Name}}</option>
+				{{range $id, $name := .specialties}}
+					<option value="{{$id}}">{{$name}}</option>
 				{{end}}
 				</select>
 			</fieldset>

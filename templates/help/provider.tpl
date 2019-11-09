@@ -5,8 +5,8 @@
 	    <form method="post">
 	        <p>{{.specialtyHeader}}</p>
 	        <select name="specialty">
-		    {{range .specialties}}
-		    <option value="{{.ID}}">{{.Name}}</option>
+		    {{range $id, $name := .specialties}}
+		    <option value="{{$id}}">{{$name}}</option>
 		    {{end}}
 		</select>
 	        <button>{{.getStartedHeader}}</button>
