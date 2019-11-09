@@ -17,22 +17,15 @@
     <input type="checkbox" id="showmenu" />
     <label for="showmenu">&#x2630;</label>
     <nav class="hamburger">
-      <details class="doctors">
-        <summary>{{.doctors}}</summary>
-        <ul>
-          <li><a href="{{.basedir}}/guest/becomeAProvider.html">{{.provider}}</a></li>
-	  <li><a href="{{.basedir}}/guest/whocandoctor.html">{{.whodoctor}}</a></li>
-        </ul>
-      </details>
       <details class="how-it-works">
         <summary>{{.howworks}}</summary>
         <ul>
           <li><a href="{{.basedir}}/help/faq.html">{{.faq}}</a></li>
           <li><a href="{{.basedir}}/help/appointments.html">{{.appts}}</a></li>
           <li><a href="{{.basedir}}/help/contacting.html">{{.proc}}</a></li>
-	  <li><a href="{{.basedir}}/help/catalog.html">{{.catalog}}</a></li>
+	        <li><a href="{{.basedir}}/help/catalog.html">{{.catalog}}</a></li>
           <li><a href="{{.basedir}}/help/paymentmethods.html">{{.payments}}</a></li>
-	  <li><a href="{{.basedir}}/help/pricesandfees.html">{{.fees}}</a></li>
+	        <li><a href="{{.basedir}}/help/pricesandfees.html">{{.fees}}</a></li>
           <li><a href="{{.basedir}}/help/verification.html">{{.verify}}</a></li>
         </ul>
       </details>

@@ -83,6 +83,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 		session: us,
 		path:    r.URL.Path[1:],
 	}
+	fmt.Println(p.path)
 	switch r.Method {
 	case "GET":
 		get(p, w)

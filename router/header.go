@@ -7,9 +7,6 @@ import (
 func header(p *message.Printer, status string) map[string]string {
 	return map[string]string{
 		// These go away, in the layout.go they'll be called these values added
-		"doctors":   p.Sprint("Doctors"),
-		"provider":  p.Sprint("Become A Provider"),
-		"whodoctor": p.Sprint("Who can become a doctor"),
 		"howworks":  p.Sprint("How It Works"),
 		"contact":   p.Sprint("Contact Us"),
 		"faq":       p.Sprint("FAQ"),

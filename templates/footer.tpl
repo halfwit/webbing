@@ -7,17 +7,11 @@
     	<small>{{.copy}}</small>
     </section>
     <nav class="leftfooter">
-      <details>
-	<summary>{{.aboutHeader}}</summary>
-	<ul>
-          <li><a href="{{.basedir}}/aboutus.html">{{.about}}</a></li>
-	</ul>
-      </details>
-      <details class="partner">
+      <details class="workwithus">
         <summary>{{.partHead}}</summary>
 	<ul>
           <li><a href="{{.basedir}}/partner.html">{{.partner}}</a></li>
-          <li><a href="{{.basedir}}/becomeAProvider.html">{{.provider}}</a></li>
+          <li><a href="{{.basedir}}/help/provider.html">{{.provider}}</a></li>
 	</ul>
       </details>
     </nav>
@@ -26,7 +20,7 @@
         <summary>{{.legal}}</summary>
 	<ul>
           <li><a href="{{.basedir}}/help/legal.html">{{.legal}}</a></li>
-	  <li><a href="{{.basedir}}/help/privacy.html">{{.privacy}}</a></li>
+	        <li><a href="{{.basedir}}/help/privacy.html">{{.privacy}}</a></li>
 	</ul>
       </details>
     </nav>
