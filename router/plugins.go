@@ -11,6 +11,9 @@ const DEAD IncludeExtra = 0x0666000
 
 var pluginCache map[IncludeExtra]*Plugin
 
+// Nplugin - Number of current plugins
+var Nplugin IncludeExtra
+
 // Plugin - Provide extra data or functionality from GET/POST pages
 type Plugin struct {
 	Name     string
@@ -36,6 +39,7 @@ func ValidatePlugins() []error {
 			errs = append(errs, fmt.Errorf("Error registering %s: Key requested already in use (%d)", item.Name, key^DEAD))
 		}
 	}
+	Nplugin = IncludeExtra(len(pluginCache))
 	return errs
 }
 

@@ -21,7 +21,7 @@ type doctor struct {
 
 func init() {
 	b := &router.Plugin{
-		Name:     "List doctors",
+		Name:     "doctors",
 		Run:      ListDocs,
 		Validate: ValidateListDocs,
 	}

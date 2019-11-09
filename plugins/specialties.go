@@ -6,11 +6,11 @@ import (
 )
 
 // ListServices - Bitmask to list services in native language
-const ListServices router.IncludeExtra = 3
+const ListServices router.IncludeExtra = 1
 
 func init() {
 	b := &router.Plugin{
-		Name:     "List specialties",
+		Name:     "specialties",
 		Run:      Specialties,
 		Validate: ValidateSpecialties,
 	}

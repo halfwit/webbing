@@ -94,22 +94,18 @@ func getdata(p *request, in string) ([]byte, error) {
 	if uint8(p.role)&uint8(cache.Access) == 0 {
 		return nil, fmt.Errorf("Unauthorized")
 	}
-	i := cache.Data(p.printer)
-	i["css"] = cache.CSS
-	i["header"] = header(p.printer, p.status)
-	i["footer"] = footer(p.printer)
-	i["basedir"] = getBaseDir(cache.Path)
-
+	r := cache.Data(p.printer)
+	r["css"] = cache.CSS
+	r["header"] = header(p.printer, p.status)
+	r["footer"] = footer(p.printer)
+	r["basedir"] = getBaseDir(cache.Path)
+	var i IncludeExtra
+	for i = 0; i < Nplugin; i++ {
+		if (cache.Extra & i) != 0 {
+			r[pluginCache[i].Name] = pluginCache[i].Run(p.printer)
+		}
+	}
 	/*
-		if cache.Extra&ListDoctors != 0 {
-			i["doctors"] = listdoctors()
-		}
-		if cache.Extra&ListServices != 0 {
-			i["specialties"] = specialties(p.printer)
-		}
-		if cache.Extra&ListCountries != 0 {
-			i["countrylist"] = countrylist
-		}
 		if p.session != nil && cache.Extra&FormErrors != 0 {
 			i["errors"] = p.session.Get("errors")
 		}
@@ -138,9 +134,9 @@ func getdata(p *request, in string) ([]byte, error) {
 		}
 	*/
 	if p.session != nil {
-		i["username"] = p.session.Get("username")
+		r["username"] = p.session.Get("username")
 	}
-	return cache.render(i)
+	return cache.render(r)
 }
 
 func (page *Page) render(i map[string]interface{}) ([]byte, error) {
