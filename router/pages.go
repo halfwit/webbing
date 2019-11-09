@@ -108,13 +108,7 @@ func getdata(p *request, in string) ([]byte, error) {
 	if p.session != nil && cache.Extra&FormErrors != 0 {
 		r["errors"] = p.session.Get("errors")
 	}
-	if p.session != nil && cache.Extra&SessionToken != 0 {
-		// TODO(halfwit) once database is live
-		// session token is a temporary db entry
-		// keyed by token which returns the current session data at this point
-		// useful for things like offers while a patient fills out symptoms
-		//i["sessiontoken"] = db.SetData("offer", p.sessionsomething)
-	}
+
 	//if cache.Extra&ClientName != 0 {
 	//	i["firstname"] = db.ClientName(p.session)
 	//}
