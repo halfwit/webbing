@@ -2,6 +2,40 @@
     "language": "en-US",
     "messages": [
         {
+            "id": "No selection for {I}",
+            "message": "No selection for {I}",
+            "translation": "No selection for {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid selection for {I}",
+            "message": "Invalid selection for {I}",
+            "translation": "Invalid selection for {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
             "id": "Olmax Medical | Welcome",
             "message": "Olmax Medical | Welcome",
             "translation": "Olmax Medical | Welcome",
@@ -373,6 +407,28 @@
             "fuzzy": true
         },
         {
+            "id": "Olmax Medical | Bookings",
+            "message": "Olmax Medical | Bookings",
+            "translation": "Olmax Medical | Bookings",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Available patients",
+            "message": "Available patients",
+            "translation": "Available patients",
+            "comment": "more fields to populate when we have db access",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Find Patients",
+            "message": "Olmax Medical | Find Patients",
+            "translation": "Olmax Medical | Find Patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "FAQ",
             "message": "FAQ",
             "translation": "FAQ",
@@ -436,6 +492,13 @@
             "fuzzy": true
         },
         {
+            "id": "About Us",
+            "message": "About Us",
+            "translation": "About Us",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Olmax",
             "message": "Olmax",
             "translation": "Olmax",
@@ -443,9 +506,9 @@
             "fuzzy": true
         },
         {
-            "id": "Work with us!",
-            "message": "Work with us!",
-            "translation": "Work with us!",
+            "id": "Partnering",
+            "message": "Partnering",
+            "translation": "Partnering",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -457,396 +520,37 @@
             "fuzzy": true
         },
         {
-            "id": "Password required",
-            "message": "Password required",
-            "translation": "Password required",
+            "id": "Are You A Doctor?",
+            "message": "Are You A Doctor?",
+            "translation": "Are You A Doctor?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Password must be at least 8 characters",
-            "message": "Password must be at least 8 characters",
-            "translation": "Password must be at least 8 characters",
+            "id": "Subject: Olmax Medical - Reset Your Password",
+            "message": "Subject: Olmax Medical - Reset Your Password",
+            "translation": "Subject: Olmax Medical - Reset Your Password",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Re-enter same password",
-            "message": "Re-enter same password",
-            "translation": "Re-enter same password",
+            "id": "Please click the following link to reset your password",
+            "message": "Please click the following link to reset your password",
+            "translation": "Please click the following link to reset your password",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Valid email required",
-            "message": "Valid email required",
-            "translation": "Valid email required",
+            "id": "Subject: Olmax Medical - Verify your new account",
+            "message": "Subject: Olmax Medical - Verify your new account",
+            "translation": "Subject: Olmax Medical - Verify your new account",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Invalid email",
-            "message": "Invalid email",
-            "translation": "Invalid email",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "First name required",
-            "message": "First name required",
-            "translation": "First name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "First name must be at least 2 characters",
-            "message": "First name must be at least 2 characters",
-            "translation": "First name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Last name required",
-            "message": "Last name required",
-            "translation": "Last name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Last name must be at least 2 characters",
-            "message": "Last name must be at least 2 characters",
-            "translation": "Last name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No selection for {I}",
-            "message": "No selection for {I}",
-            "translation": "No selection for {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]s",
-                    "type": "string",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Invalid selection for {I}",
-            "message": "Invalid selection for {I}",
-            "translation": "Invalid selection for {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]s",
-                    "type": "string",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Bookings",
-            "message": "Olmax Medical | Bookings",
-            "translation": "Olmax Medical | Bookings",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Available patients",
-            "message": "Available patients",
-            "translation": "Available patients",
-            "comment": "more fields to populate when we have db access",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Find Patients",
-            "message": "Olmax Medical | Find Patients",
-            "translation": "Olmax Medical | Find Patients",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No selection for question {I}",
-            "message": "No selection for question {I}",
-            "translation": "No selection for question {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Invalid selection for question {I}",
-            "message": "Invalid selection for question {I}",
-            "translation": "Invalid selection for question {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Full name required",
-            "message": "Full name required",
-            "translation": "Full name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Full name must be at least 2 characters",
-            "message": "Full name must be at least 2 characters",
-            "translation": "Full name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Appointments",
-            "message": "Olmax Medical | Appointments",
-            "translation": "Olmax Medical | Appointments",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "You currently have no appointments pending.",
-            "message": "You currently have no appointments pending.",
-            "translation": "You currently have no appointments pending.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "message": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "translation": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "Htmlhelpa",
-                    "string": "%[1]s",
-                    "type": "html/template.HTML",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "template.HTML(`\u003ca href=\"help.html\"\u003ehelp\u003c/a\u003e`)"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Profile",
-            "message": "Olmax Medical | Profile",
-            "translation": "Olmax Medical | Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Hello",
-            "message": "Hello",
-            "translation": "Hello",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Create Profile",
-            "message": "Olmax Medical | Create Profile",
-            "translation": "Olmax Medical | Create Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Create Patient Profile",
-            "message": "Create Patient Profile",
-            "translation": "Create Patient Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please submit some information regarding your consult.",
-            "message": "Please submit some information regarding your consult.",
-            "translation": "Please submit some information regarding your consult.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "When were you born?",
-            "message": "When were you born?",
-            "translation": "When were you born?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What is your biological gender?",
-            "message": "What is your biological gender?",
-            "translation": "What is your biological gender?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "message": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "translation": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "When did your symptoms start?",
-            "message": "When did your symptoms start?",
-            "translation": "When did your symptoms start?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "message": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "translation": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "How long have these symptoms lasted?",
-            "message": "How long have these symptoms lasted?",
-            "translation": "How long have these symptoms lasted?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "message": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "translation": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What makes your symptoms better, and What makes them worse?",
-            "message": "What makes your symptoms better, and What makes them worse?",
-            "translation": "What makes your symptoms better, and What makes them worse?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Does your pain travel or radiate to another part of your body?",
-            "message": "Does your pain travel or radiate to another part of your body?",
-            "translation": "Does your pain travel or radiate to another part of your body?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Have you taken any medications for these symptoms and how much have they worked?",
-            "message": "Have you taken any medications for these symptoms and how much have they worked?",
-            "translation": "Have you taken any medications for these symptoms and how much have they worked?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any fevers or Chills?",
-            "message": "Any fevers or Chills?",
-            "translation": "Any fevers or Chills?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any weight gain or weight loss?",
-            "message": "Any weight gain or weight loss?",
-            "translation": "Any weight gain or weight loss?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any changes in vision?",
-            "message": "Any changes in vision?",
-            "translation": "Any changes in vision?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any lung issues?",
-            "message": "Any lung issues?",
-            "translation": "Any lung issues?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any heart problems?",
-            "message": "Any heart problems?",
-            "translation": "Any heart problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any intestinal problems?",
-            "message": "Any intestinal problems?",
-            "translation": "Any intestinal problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any kidney problems?",
-            "message": "Any kidney problems?",
-            "translation": "Any kidney problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any problems with muscles or bones?",
-            "message": "Any problems with muscles or bones?",
-            "translation": "Any problems with muscles or bones?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "message": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "translation": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "message": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "translation": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Male",
-            "message": "Male",
-            "translation": "Male",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Female",
-            "message": "Female",
-            "translation": "Female",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please check any of the following if you have experienced in the last 6 weeks:",
-            "message": "Please check any of the following if you have experienced in the last 6 weeks:",
-            "translation": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "id": "Please click the following link to finalize your account creation",
+            "message": "Please click the following link to finalize your account creation",
+            "translation": "Please click the following link to finalize your account creation",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -1453,275 +1157,340 @@
             "fuzzy": true
         },
         {
-            "id": "Acute Pain Medicine",
-            "message": "Acute Pain Medicine",
-            "translation": "Acute Pain Medicine",
+            "id": "Password required",
+            "message": "Password required",
+            "translation": "Password required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Anesthesiology",
-            "message": "Anesthesiology",
-            "translation": "Anesthesiology",
+            "id": "Password must be at least 8 characters",
+            "message": "Password must be at least 8 characters",
+            "translation": "Password must be at least 8 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Bariatric Surgery",
-            "message": "Bariatric Surgery",
-            "translation": "Bariatric Surgery",
+            "id": "Re-enter same password",
+            "message": "Re-enter same password",
+            "translation": "Re-enter same password",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Cardiology",
-            "message": "Cardiology",
-            "translation": "Cardiology",
+            "id": "Valid email required",
+            "message": "Valid email required",
+            "translation": "Valid email required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Chiropractics",
-            "message": "Chiropractics",
-            "translation": "Chiropractics",
+            "id": "Invalid email",
+            "message": "Invalid email",
+            "translation": "Invalid email",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Chronic Pain",
-            "message": "Chronic Pain",
-            "translation": "Chronic Pain",
+            "id": "First name required",
+            "message": "First name required",
+            "translation": "First name required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Critical Care",
-            "message": "Critical Care",
-            "translation": "Critical Care",
+            "id": "First name must be at least 2 characters",
+            "message": "First name must be at least 2 characters",
+            "translation": "First name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Dermatology",
-            "message": "Dermatology",
-            "translation": "Dermatology",
+            "id": "Last name required",
+            "message": "Last name required",
+            "translation": "Last name required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Emergency Medicine",
-            "message": "Emergency Medicine",
-            "translation": "Emergency Medicine",
+            "id": "Last name must be at least 2 characters",
+            "message": "Last name must be at least 2 characters",
+            "translation": "Last name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Endocrinology",
-            "message": "Endocrinology",
-            "translation": "Endocrinology",
+            "id": "No selection for question {I}",
+            "message": "No selection for question {I}",
+            "translation": "No selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid selection for question {I}",
+            "message": "Invalid selection for question {I}",
+            "translation": "Invalid selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Full name required",
+            "message": "Full name required",
+            "translation": "Full name required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Ear Nose and Throat",
-            "message": "Ear Nose and Throat",
-            "translation": "Ear Nose and Throat",
+            "id": "Full name must be at least 2 characters",
+            "message": "Full name must be at least 2 characters",
+            "translation": "Full name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Family Medicine",
-            "message": "Family Medicine",
-            "translation": "Family Medicine",
+            "id": "Olmax Medical | Appointments",
+            "message": "Olmax Medical | Appointments",
+            "translation": "Olmax Medical | Appointments",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Gastrointestinology",
-            "message": "Gastrointestinology",
-            "translation": "Gastrointestinology",
+            "id": "You currently have no appointments pending.",
+            "message": "You currently have no appointments pending.",
+            "translation": "You currently have no appointments pending.",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Head and Neck",
-            "message": "Head and Neck",
-            "translation": "Head and Neck",
+            "id": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "message": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translation": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Htmlhelpa",
+                    "string": "%[1]s",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\"help.html\"\u003ehelp\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Profile",
+            "message": "Olmax Medical | Profile",
+            "translation": "Olmax Medical | Profile",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Hematology and Oncology",
-            "message": "Hematology and Oncology",
-            "translation": "Hematology and Oncology",
+            "id": "Hello",
+            "message": "Hello",
+            "translation": "Hello",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Hepatology",
-            "message": "Hepatology",
-            "translation": "Hepatology",
+            "id": "Olmax Medical | Create Profile",
+            "message": "Olmax Medical | Create Profile",
+            "translation": "Olmax Medical | Create Profile",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Hyperbaric",
-            "message": "Hyperbaric",
-            "translation": "Hyperbaric",
+            "id": "Create Patient Profile",
+            "message": "Create Patient Profile",
+            "translation": "Create Patient Profile",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Immunology",
-            "message": "Immunology",
-            "translation": "Immunology",
+            "id": "Please submit some information regarding your consult.",
+            "message": "Please submit some information regarding your consult.",
+            "translation": "Please submit some information regarding your consult.",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Infectious Diseases",
-            "message": "Infectious Diseases",
-            "translation": "Infectious Diseases",
+            "id": "When were you born?",
+            "message": "When were you born?",
+            "translation": "When were you born?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Internal Medicine",
-            "message": "Internal Medicine",
-            "translation": "Internal Medicine",
+            "id": "What is your biological gender?",
+            "message": "What is your biological gender?",
+            "translation": "What is your biological gender?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Neonatology",
-            "message": "Neonatology",
-            "translation": "Neonatology",
+            "id": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "message": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "translation": "Please give a brief statement regarding the main reason you would like to see your doctor:",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Nephrology",
-            "message": "Nephrology",
-            "translation": "Nephrology",
+            "id": "When did your symptoms start?",
+            "message": "When did your symptoms start?",
+            "translation": "When did your symptoms start?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Neurology",
-            "message": "Neurology",
-            "translation": "Neurology",
+            "id": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "message": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "translation": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Neurosurgery",
-            "message": "Neurosurgery",
-            "translation": "Neurosurgery",
+            "id": "How long have these symptoms lasted?",
+            "message": "How long have these symptoms lasted?",
+            "translation": "How long have these symptoms lasted?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Obstetrics and Gynecology",
-            "message": "Obstetrics and Gynecology",
-            "translation": "Obstetrics and Gynecology",
+            "id": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "message": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "translation": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Occupational Medicine",
-            "message": "Occupational Medicine",
-            "translation": "Occupational Medicine",
+            "id": "What makes your symptoms better, and What makes them worse?",
+            "message": "What makes your symptoms better, and What makes them worse?",
+            "translation": "What makes your symptoms better, and What makes them worse?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Opthamology",
-            "message": "Opthamology",
-            "translation": "Opthamology",
+            "id": "Does your pain travel or radiate to another part of your body?",
+            "message": "Does your pain travel or radiate to another part of your body?",
+            "translation": "Does your pain travel or radiate to another part of your body?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Orthopedic Surgery",
-            "message": "Orthopedic Surgery",
-            "translation": "Orthopedic Surgery",
+            "id": "Have you taken any medications for these symptoms and how much have they worked?",
+            "message": "Have you taken any medications for these symptoms and how much have they worked?",
+            "translation": "Have you taken any medications for these symptoms and how much have they worked?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Palliative Care",
-            "message": "Palliative Care",
-            "translation": "Palliative Care",
+            "id": "Any fevers or Chills?",
+            "message": "Any fevers or Chills?",
+            "translation": "Any fevers or Chills?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Pediatrics",
-            "message": "Pediatrics",
-            "translation": "Pediatrics",
+            "id": "Any weight gain or weight loss?",
+            "message": "Any weight gain or weight loss?",
+            "translation": "Any weight gain or weight loss?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Podiatry",
-            "message": "Podiatry",
-            "translation": "Podiatry",
+            "id": "Any changes in vision?",
+            "message": "Any changes in vision?",
+            "translation": "Any changes in vision?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Pulmonology",
-            "message": "Pulmonology",
-            "translation": "Pulmonology",
+            "id": "Any lung issues?",
+            "message": "Any lung issues?",
+            "translation": "Any lung issues?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Radiology",
-            "message": "Radiology",
-            "translation": "Radiology",
+            "id": "Any heart problems?",
+            "message": "Any heart problems?",
+            "translation": "Any heart problems?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Radiaton Oncology",
-            "message": "Radiaton Oncology",
-            "translation": "Radiaton Oncology",
+            "id": "Any intestinal problems?",
+            "message": "Any intestinal problems?",
+            "translation": "Any intestinal problems?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Transplant Surgery",
-            "message": "Transplant Surgery",
-            "translation": "Transplant Surgery",
+            "id": "Any kidney problems?",
+            "message": "Any kidney problems?",
+            "translation": "Any kidney problems?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Subject: Olmax Medical - Reset Your Password",
-            "message": "Subject: Olmax Medical - Reset Your Password",
-            "translation": "Subject: Olmax Medical - Reset Your Password",
+            "id": "Any problems with muscles or bones?",
+            "message": "Any problems with muscles or bones?",
+            "translation": "Any problems with muscles or bones?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Please click the following link to reset your password",
-            "message": "Please click the following link to reset your password",
-            "translation": "Please click the following link to reset your password",
+            "id": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "message": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "translation": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Subject: Olmax Medical - Verify your new account",
-            "message": "Subject: Olmax Medical - Verify your new account",
-            "translation": "Subject: Olmax Medical - Verify your new account",
+            "id": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "message": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "translation": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Please click the following link to finalize your account creation",
-            "message": "Please click the following link to finalize your account creation",
-            "translation": "Please click the following link to finalize your account creation",
+            "id": "Male",
+            "message": "Male",
+            "translation": "Male",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Female",
+            "message": "Female",
+            "translation": "Female",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "message": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "translation": "Please check any of the following if you have experienced in the last 6 weeks:",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         }

@@ -1,10 +1,4 @@
 {{define "content"}}
-	  <aside class="tagline">
-	    <h2>Quality Healthcare</h2>
-	      <p>Your Terms</p>
-	      <p>Your Time</p>
-	      <p>Your Coin</p>
-	  </aside>
 	  <main>
 	    <section>
 	      <h2>{{.whoWeAre}}</h2> 

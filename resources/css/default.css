@@ -1,92 +1,33 @@
 header {
   grid-area: header;
-  padding: 0 1rem;
   font-family: "Avenir Next", "Avenir", sans-serif;
-  display: flex;
-  align-items: center;
-  background: #323232;
   transition: top 0.3s;
+}
+header li {
+  padding: 1rem;
 }
 header a {
   text-decoration: none;
+  color: #323232;
 }
 header a:visited {
-  color: #cdcdcd;
-}
-header a.logo {
-  order: 1;
-  flex-grow: 20;
-  font-size: 2.4rem;
-  padding-left: 1rem;
-  color: #cdcdcd;
-  font-family: "Times New Roman";
-}
-header a:visited {
-  color: #cdcdcd;
-}
-header label {
-  display: block;
-  color: #cdcdcd;
-  padding: 1rem;
-  margin: 1.2rem;
-  font-size: 2.4rem;
-  order: 5;
-  cursor: pointer;
+  color: #323232;
 }
 header label:hover {
-  color: #4b83f2;
-}
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-header input {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-header nav.login {
-  order: 3;
-}
-header nav.login ul {
-  display: flex;
-  flex-direction: row;
-}
-header nav.login a {
-  font-size: 2rem;
-  padding: 1rem;
-}
-header nav.login a.signup {
-  background-color: #4b83f2;
-}
-header nav.login a:hover {
-  background-color: #3b4a96;
-  transition: all 0.25s ease;
-}
-header summary {
-  /* Hide the blue outline when you click the details element */
-  outline: none;
-}
-.headerlogo {
-  /* Gotta do the hacky placements because the SVG bounds seem to be odd */
-  width: 3rem;
-  height: 3rem;
-  fill: #4b83f2;
+  color: #3b4a96;
 }
 .content {
   grid-area: content;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 main {
+  display: -ms-grid;
+  display: -moz-grid;
   display: grid;
   grid-gap: 1rem;
   grid-auto-flow: dense;
@@ -99,10 +40,11 @@ main h2 {
   font-size: 30px;
   margin-bottom: -1rem;
 }
-
 main form {
   background: white;
-  padding: 1rem;
+  padding: 1rem;  
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 }
@@ -110,7 +52,6 @@ main form input {
   font-family: "Georgia", "Times", "Times New Roman", serif;
   font-size: 16px;
 }
-
 main form label,
 main form button {
   font-size: 16px;
@@ -118,8 +59,8 @@ main form button {
 }
 body {
   display: grid;
-  grid-gap: 20px;
-  grid-template-rows: 68px auto auto;
+  grid-gap: 1rem;
+  grid-template-rows: 10rem auto auto;
   grid-template-areas:
     "header"
     "content"
@@ -138,13 +79,11 @@ main section h2 {
 main section p {
   font-family: "Georgia", "Times", "Times New Roman", serif;
 }
-
 footer {
   grid-area: footer;
   padding: 1rem;
   padding-top: 2rem;
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-evenly;
   background-color: #323232;
@@ -158,31 +97,44 @@ footer li a {
   text-decoration: none;
   display: block;
 }
+@media all and (max-width: 800px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+  .leftfooter {
+    order: 1;
+  }
+  .rightfooter {
+    order: 2;
+  }
+  .branding {
+    padding-top: 1rem;
+    order: 3;
+  }
+}
 footer section.branding {
-  padding: 2rem;
-  order: 1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 footer nav.leftfooter {
-  padding: 1rem;
-  order: -1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: top;
 }
 footer nav.rightfooter {
-  padding: 1rem;
-  order: 2;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex: end;
   flex-direction: column;
   justify-content: top;
-}
-footer nav details {
-  padding: 1rem;
 }
 footer svg {
   display: block;
@@ -191,7 +143,7 @@ footer svg {
   fill: #4b83f2;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
 }
-footer nav details[open] footer nav details[open] li a {
+footer nav details[open] li a {
   color: #cdcdcd;
 }
 footer nav details[open] li a:hover {
