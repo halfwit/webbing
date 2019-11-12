@@ -10,7 +10,7 @@ import (
 )
 
 // ListCountries - Populate a localized spinner to select country
-const ListCountries router.IncludeExtra = 4
+const ListCountries router.PluginMask = 4
 
 // Country - Mapping token to internationalized country code
 type Country struct {
@@ -37,7 +37,7 @@ func init() {
 	b := &router.Plugin{
 		Name:     "countrylist",
 		Run:      Countries,
-		Validate: CheckCountries,
+		Validate: nil,
 	}
 	router.AddPlugin(b, ListCountries)
 }
@@ -66,16 +66,12 @@ func (c *countries) Swap(i, j int) {
 
 // Countries - return a localized list of countries
 func Countries(_ *router.Request) map[string]interface{} {
+	// TODO(halfwit): Use Request to get a localized country name
 	c := make(map[string]interface{})
 	for _, item := range cache.list {
 		c[item.Name.Common] = item.Name.Common
 	}
 	return c
-}
-
-// CheckCountries - no-op
-func CheckCountries() error {
-	return nil
 }
 
 // TODO: Export this so it's available to form parsing as a bitmask

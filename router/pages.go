@@ -25,24 +25,18 @@ func init() {
 type Access uint8
 
 const (
+	// GuestAuth - non registered user
 	GuestAuth Access = 1 << iota
+	// PatientAuth - normal user, added by registration process
 	PatientAuth
+	// DoctorAuth - manually added to the database
 	DoctorAuth
-)
-
-// IncludeExtra - helper bitmasks to populate common elements across the site
-type IncludeExtra uint32
-
-const (
-	FormToken IncludeExtra = 1 << iota
-	FormErrors
-	SessionToken
 )
 
 // Page defines what a client receives from a GET request
 type Page struct {
 	Access Access
-	Extra  IncludeExtra
+	Extra  PluginMask
 	CSS    string
 	Path   string
 	Data   func(p *message.Printer) map[string]interface{}
@@ -98,30 +92,11 @@ func getdata(p *Request, in string) ([]byte, error) {
 	r["header"] = header(p.printer, p.status)
 	r["footer"] = footer(p.printer)
 	r["basedir"] = getBaseDir(cache.Path)
-	// We may want some helper functions to p instead to access the printer, the session, etc
 	for _, key := range pluginKey {
 		if (cache.Extra & key) != 0 {
 			r[pluginCache[key].Name] = pluginCache[key].Run(p)
 		}
 	}
-
-	if p.session != nil && cache.Extra&FormErrors != 0 {
-		r["errors"] = p.session.Get("errors")
-	}
-
-	//if cache.Extra&ClientName != 0 {
-	//	i["firstname"] = db.ClientName(p.session)
-	//}
-	//if cache.Extra&ClientSurname != 0 {
-	//	i["surname"] = db.ClientSurname(p.session)
-	//}
-	//if cache.Extra&ClientUsername != 0 {
-	//	i["username"] = db.ClientUsername(p.session)
-	//}
-	if cache.Extra&FormErrors != 0 && p.session != nil {
-		r["errors"] = p.session.Get("errors")
-	}
-
 	if p.session != nil {
 		r["username"] = p.session.Get("username")
 	}

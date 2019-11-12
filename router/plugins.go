@@ -5,14 +5,13 @@ import (
 )
 
 // PluginMask - (Must be unique) ID for a plugin
-// Once everything is moved to plugins, remove IncludeExtra in favour of PluginMask
 type PluginMask uint32
 
 // DEAD is a magic string to indicate a non-unique plugin key
-const DEAD IncludeExtra = 0x0666000
+const DEAD PluginMask = 0x0666000
 
-var pluginCache map[IncludeExtra]*Plugin
-var pluginKey []IncludeExtra
+var pluginCache map[PluginMask]*Plugin
+var pluginKey []PluginMask
 
 // Plugin - Provide extra data or functionality from GET/POST pages
 type Plugin struct {
@@ -22,15 +21,17 @@ type Plugin struct {
 }
 
 func init() {
-	pluginCache = make(map[IncludeExtra]*Plugin)
+	pluginCache = make(map[PluginMask]*Plugin)
 }
 
 // ValidatePlugins - Run through each plugin
 // make sure that its mapping isn't redundant with any other
-// Make sure the code runs accurately without error
 func ValidatePlugins() []error {
 	errs := []error{}
 	for key, item := range pluginCache {
+		if item.Validate == nil {
+			continue
+		}
 		err := item.Validate()
 		if err != nil {
 			errs = append(errs, err)
@@ -43,7 +44,7 @@ func ValidatePlugins() []error {
 }
 
 // AddPlugin - Add Plugin to map by key
-func AddPlugin(p *Plugin, key IncludeExtra) {
+func AddPlugin(p *Plugin, key PluginMask) {
 
 	if pluginCache[key] != nil {
 		key |= DEAD

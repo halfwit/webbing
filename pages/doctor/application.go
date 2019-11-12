@@ -12,7 +12,7 @@ func init() {
 		CSS:    "",
 		Path:   "doctor/application",
 		Data:   Application,
-		Extra:  plugins.ListCountries | plugins.ListServices | router.FormErrors | router.FormToken,
+		Extra:  plugins.ListCountries | plugins.ListServices | plugins.FormErrors | plugins.FormToken,
 	}
 	router.AddPage(b)
 }

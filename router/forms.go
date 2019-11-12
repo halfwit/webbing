@@ -61,12 +61,13 @@ func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []str
 		errors = append(errors, "No such page")
 		return nil, errors
 	}
-	if form.After&ValidateToken != 0 {
-		t := r.PostFormValue("token")
-		if !validateToken(t) {
-			return nil, []string{p.printer.Sprint("Invalid form token")}
-		}
-	}
+	/*
+		if form.After&ValidateToken != 0 {
+			t := r.PostFormValue("token")
+			if !validateToken(t) {
+				return nil, []string{p.printer.Sprint("Invalid form token")}
+			}
+		}*/
 	if form.After&WithOffer != 0 {
 		//token := r.PostFormValue("sessiontoken")
 		//offer := db.GetOffer(token)

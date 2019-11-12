@@ -1,6 +1,7 @@
 package pages
 
 import (
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -11,7 +12,7 @@ func init() {
 		CSS:    "",
 		Path:   "login",
 		Data:   Login,
-		Extra:  router.FormErrors,
+		Extra:  plugins.FormErrors,
 	}
 	//router.AddGet(b)
 	router.AddPage(b)

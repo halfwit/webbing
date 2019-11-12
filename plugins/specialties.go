@@ -5,20 +5,15 @@ import (
 )
 
 // ListServices - Bitmask to list services in native language
-const ListServices router.IncludeExtra = 2
+const ListServices router.PluginMask = 2
 
 func init() {
 	b := &router.Plugin{
 		Name:     "specialties",
 		Run:      Specialties,
-		Validate: ValidateSpecialties,
+		Validate: nil,
 	}
 	router.AddPlugin(b, ListServices)
-}
-
-// ValidateSpecialties - No-op
-func ValidateSpecialties() error {
-	return nil
 }
 
 // Specialties - return a list of native language representations of our medical fields

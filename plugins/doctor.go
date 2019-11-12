@@ -5,7 +5,7 @@ import (
 )
 
 // ListDoctors - Bitmask to list doctors of in client country
-const ListDoctors router.IncludeExtra = 3
+const ListDoctors router.PluginMask = 3
 
 type doctor struct {
 	Image     string
@@ -22,14 +22,9 @@ func init() {
 	b := &router.Plugin{
 		Name:     "doctors",
 		Run:      ListDocs,
-		Validate: ValidateListDocs,
+		Validate: nil,
 	}
 	router.AddPlugin(b, ListDoctors)
-}
-
-// ValidateListDocs - Check that db entries exist
-func ValidateListDocs() error {
-	return nil
 }
 
 // ListDocs - Query db and return list of doctors in country

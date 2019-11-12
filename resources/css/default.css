@@ -76,7 +76,7 @@ footer nav details[open] li a {
 footer nav details[open] li a:hover {
   color: #3b4a96;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 480px) {
   main {
     font-size: 1rem;
   }

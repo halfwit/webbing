@@ -12,7 +12,7 @@ func init() {
 		CSS:    "index.css",
 		Path:   "index",
 		Data:   Index,
-		Extra:  plugins.ListDoctors | router.FormErrors,
+		Extra:  plugins.ListDoctors | plugins.FormErrors,
 	}
 	router.AddPage(b)
 }
