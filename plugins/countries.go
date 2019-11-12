@@ -65,7 +65,7 @@ func (c *countries) Swap(i, j int) {
 }
 
 // Countries - return a localized list of countries
-func Countries(_ *message.Printer) map[string]interface{} {
+func Countries(_ *router.Request) map[string]interface{} {
 	c := make(map[string]interface{})
 	for _, item := range cache.list {
 		c[item.Name.Common] = item.Name.Common
@@ -78,6 +78,7 @@ func CheckCountries() error {
 	return nil
 }
 
+// TODO: Export this so it's available to form parsing as a bitmask
 func validateCountries(p *message.Printer, countries []string) string {
 	for _, c := range countries {
 		if msg := validateCountry(p, c); msg != "" {

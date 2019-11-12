@@ -60,7 +60,8 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 	d.normal(w, r)
 }
 
-type request struct {
+// Request represents an incoming GET/POST
+type Request struct {
 	printer *message.Printer
 	session session.Session
 	user    string
@@ -69,13 +70,23 @@ type request struct {
 	role    db.Access
 }
 
+// Printer - returns the client's localized printer handler
+func (r *Request) Printer() *message.Printer {
+	return r.printer
+}
+
+// Session - returns the client's session
+func (r *Request) Session() session.Session {
+	return r.session
+}
+
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/" {
 		http.Redirect(w, r, "/index.html", 302)
 		return
 	}
 	user, status, us, role := getUser(d, w, r)
-	p := &request{
+	p := &Request{
 		printer: userLang(r),
 		status:  status,
 		user:    user,
@@ -97,7 +108,7 @@ func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func post(p *request, us session.Session, w http.ResponseWriter, r *http.Request) {
+func post(p *Request, us session.Session, w http.ResponseWriter, r *http.Request) {
 	form, errors := parseform(p, w, r)
 	if len(errors) > 0 && errors[0] != "nil" {
 		// NOTE(halfwit) this stashes previous entries, but does not work
@@ -112,7 +123,7 @@ func post(p *request, us session.Session, w http.ResponseWriter, r *http.Request
 	}
 }
 
-func get(p *request, w http.ResponseWriter) {
+func get(p *Request, w http.ResponseWriter) {
 	var data []byte
 	var err error
 	switch db.UserRole(p.user) {
@@ -158,7 +169,7 @@ func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Unauthorized", 401)
 		return
 	}
-	p := &request{
+	p := &Request{
 		printer: userLang(r),
 		status:  status,
 		session: us,

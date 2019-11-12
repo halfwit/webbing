@@ -2,8 +2,6 @@ package router
 
 import (
 	"fmt"
-
-	"golang.org/x/text/message"
 )
 
 // PluginMask - (Must be unique) ID for a plugin
@@ -19,7 +17,7 @@ var pluginKey []IncludeExtra
 // Plugin - Provide extra data or functionality from GET/POST pages
 type Plugin struct {
 	Name     string
-	Run      func(p *message.Printer) map[string]interface{}
+	Run      func(p *Request) map[string]interface{}
 	Validate func() error
 }
 

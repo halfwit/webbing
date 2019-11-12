@@ -2,7 +2,6 @@ package plugins
 
 import (
 	"github.com/olmaxmedical/olmax_go/router"
-	"golang.org/x/text/message"
 )
 
 // ListDoctors - Bitmask to list doctors of in client country
@@ -34,7 +33,8 @@ func ValidateListDocs() error {
 }
 
 // ListDocs - Query db and return list of doctors in country
-func ListDocs(p *message.Printer) map[string]interface{} {
+// These may need eventual localization for any bilingual doctors we have
+func ListDocs(r *router.Request) map[string]interface{} {
 	return map[string]interface{}{
 		"Mark Abuzamzam, MD": &doctor{
 			Image:     "AbuzamzamMD.jpg",

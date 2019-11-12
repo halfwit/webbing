@@ -2,7 +2,6 @@ package plugins
 
 import (
 	"github.com/olmaxmedical/olmax_go/router"
-	"golang.org/x/text/message"
 )
 
 // ListServices - Bitmask to list services in native language
@@ -23,7 +22,8 @@ func ValidateSpecialties() error {
 }
 
 // Specialties - return a list of native language representations of our medical fields
-func Specialties(p *message.Printer) map[string]interface{} {
+func Specialties(r *router.Request) map[string]interface{} {
+	p := r.Printer()
 	return map[string]interface{}{
 		"acutepain":      p.Sprintf("Acute Pain Medicine"),
 		"anesthesiology": p.Sprintf("Anesthesiology"),

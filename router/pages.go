@@ -72,7 +72,7 @@ func ValidatePages() []error {
 			errs = append(errs, fmt.Errorf("parsing in %s - %v", path.Dir(item.Path), err))
 			continue
 		}
-		p := &request{
+		p := &Request{
 			printer: printer,
 			path:    item.Path + ".html",
 			role:    db.PatientAuth | db.DoctorAuth | db.GuestAuth,
@@ -85,7 +85,7 @@ func ValidatePages() []error {
 	return errs
 }
 
-func getdata(p *request, in string) ([]byte, error) {
+func getdata(p *Request, in string) ([]byte, error) {
 	cache, ok := pagecache[p.path]
 	if !ok {
 		return nil, fmt.Errorf("No such page: %s", p.path)
@@ -98,10 +98,10 @@ func getdata(p *request, in string) ([]byte, error) {
 	r["header"] = header(p.printer, p.status)
 	r["footer"] = footer(p.printer)
 	r["basedir"] = getBaseDir(cache.Path)
-	// comparing an int against cache.Extra is not useful, we need an array of keys instead set at AddPlugin.
+	// We may want some helper functions to p instead to access the printer, the session, etc
 	for _, key := range pluginKey {
 		if (cache.Extra & key) != 0 {
-			r[pluginCache[key].Name] = pluginCache[key].Run(p.printer)
+			r[pluginCache[key].Name] = pluginCache[key].Run(p)
 		}
 	}
 
