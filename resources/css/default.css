@@ -3,89 +3,29 @@ header {
   font-family: "Avenir Next", "Avenir", sans-serif;
   transition: top 0.3s;
 }
-header li {
-  padding: 1rem;
-}
-header a {
-  text-decoration: none;
-  color: #323232;
-}
-header a:visited {
-  color: #323232;
-}
-header label:hover {
-  color: #3b4a96;
-}
-.content {
-  grid-area: content;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 main {
-  display: -ms-grid;
-  display: -moz-grid;
-  display: grid;
-  grid-gap: 1rem;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(60ch, 1fr));
+  grid-area: content;
+  font-size: 1.5rem;
   color: #323232;
 }
-main h2 {
-  padding: 0 1rem 1rem 0;
-  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
-  font-size: 30px;
-  margin-bottom: -1rem;
-}
-main form {
-  background: white;
-  padding: 1rem;  
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-}
-main form input {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-size: 16px;
-}
-main form label,
-main form button {
-  font-size: 16px;
-  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
-}
+
 body {
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: 10rem auto auto;
+  grid-template-rows: 8rem auto auto;
   grid-template-areas:
     "header"
     "content"
     "footer";
-}
-main section {
-  padding: 1.5rem;
-  width: auto;
-  background-color: white;
-}
-main section h2 {
-  font-family: "Avenir Next", "Avenir", "Nunito", "Lato", sans-serif;
-  color: #323232;
-  font-size: 30px;
-}
-main section p {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 footer {
   grid-area: footer;
   padding: 1rem;
   padding-top: 2rem;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   background-color: #323232;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
@@ -97,24 +37,9 @@ footer li a {
   text-decoration: none;
   display: block;
 }
-@media all and (max-width: 800px) {
-  footer {
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-  }
-  .leftfooter {
-    order: 1;
-  }
-  .rightfooter {
-    order: 2;
-  }
-  .branding {
-    padding-top: 1rem;
-    order: 3;
-  }
-}
 footer section.branding {
+  order: 1;
+  padding-bottom: 2rem;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -123,6 +48,7 @@ footer section.branding {
   align-items: center;
 }
 footer nav.leftfooter {
+  order: 2;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -130,6 +56,7 @@ footer nav.leftfooter {
   justify-content: top;
 }
 footer nav.rightfooter {
+  order: 3;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -137,9 +64,9 @@ footer nav.rightfooter {
   justify-content: top;
 }
 footer svg {
+  width: 6rem;
+  height: 6rem;
   display: block;
-  width: 6em;
-  height: 6em;
   fill: #4b83f2;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
 }
@@ -148,4 +75,28 @@ footer nav details[open] li a {
 }
 footer nav details[open] li a:hover {
   color: #3b4a96;
+}
+@media only screen and (min-width: 800px) {
+  main {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  footer {
+    justify-content: space-evenly;
+    flex-flow: row;
+  }
+  footer section.branding {
+    order: 2;
+  }
+  footer nav.leftfooter {
+    order: 1;
+  }
+  footer nav.rightfooter {
+    order: 3;
+  }
 }

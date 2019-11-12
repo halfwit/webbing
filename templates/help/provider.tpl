@@ -31,7 +31,5 @@
 	    <h1><strong>{{.safety}}</strong></h1>
 	    <h3>{{.trust}}</h3>
 	    <p>{{.trustText}}</p>
-	    <h1>{{.seeingPatients}}</h1>
-	    <button>{{.getStartedLink}}</button>
 	</main>
 {{end}}

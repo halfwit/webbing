@@ -21,20 +21,4 @@
 	      <p>{{.paymentText}}</p>
 	    </section>
 	  </main>
-	  <aside class="showcase">
-	    <table>
-	    <tr>
-	        <th colspan="3">{{.doctorsFrom}}<!-- {{.userCountry}} --></th>
-		{{range .doctors}}
-	    <tr>
-	    <th><img src="images/{{.Image}}" width="155" height="255"/><a href="guest/invoice.html"><h4>{{.Name}}</h4></a>
-		    <p>{{.Specialty}}
-		    <p>{{.Rate}}</p>
-		</th>
-		</tr>
-		{{end}}
-		<th><a href="guest/catalog.html"><h5>{{.seeMore}}</h5></a></th>
-	    </table>
-	    </section>
-	  </aside>
 {{end}}
