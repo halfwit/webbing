@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -14,7 +15,7 @@ func init() {
 		Path:      "resetpassword",
 		Validator: Reset,
 		Redirect:  "/login.html",
-		After:     router.SendReset,
+		After:     plugins.ResetPassword,
 	}
 	router.AddPost(b)
 }

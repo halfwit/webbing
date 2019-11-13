@@ -11,7 +11,7 @@
 		</select>
 	        <button>{{.getStartedHeader}}</button>
 	    </form>
-	    <a href="profile.html">{{.getStartedLink}}</a> 
+	    <a href="TODO.html">{{.getStartedLink}}</a> 
 	    <h3>{{.providerWhy}} </h3>
 	    <p>{{.whyText}}</p>
 	    <h3>{{.control}}</h3>

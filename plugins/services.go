@@ -1,23 +1,77 @@
 package plugins
 
 import (
+	"fmt"
+
 	"github.com/olmaxmedical/olmax_go/router"
 )
 
-// ListServices - Bitmask to list services in native language
-const ListServices router.PluginMask = 2
+// Services - Bitmask to list services in native language
+const Services router.PluginMask = 12
 
 func init() {
 	b := &router.Plugin{
 		Name:     "specialties",
-		Run:      Specialties,
-		Validate: nil,
+		Run:      ListServices,
+		Validate: ValidateServices,
 	}
-	router.AddPlugin(b, ListServices)
+	router.AddPlugin(b, Services)
 }
 
-// Specialties - return a list of native language representations of our medical fields
-func Specialties(r *router.Request) map[string]interface{} {
+// ValidateServices - Ensure the specialties entered exist in our map
+func ValidateServices(r *router.Request) error {
+	s := r.Request()
+	var errs []string
+	for _, entry := range s.PostFormValue("specialty") {
+		switch string(entry) {
+		case "acutepain":
+		case "anesthesiology":
+		case "bariatric":
+		case "cardiology":
+		case "chiropractic":
+		case "chronic":
+		case "critcare":
+		case "dermatology":
+		case "emergency":
+		case "endocrinology":
+		case "otolaringology":
+		case "familymedicine":
+		case "gastro":
+		case "headneck":
+		case "hematology":
+		case "hepatology":
+		case "hyperbaric":
+		case "immunology":
+		case "diseases":
+		case "internal":
+		case "neonatal":
+		case "nephrology":
+		case "neurology":
+		case "neurosurgery":
+		case "obstetrics":
+		case "occupational":
+		case "opthamology":
+		case "orthopedics":
+		case "palliative":
+		case "pediatrics":
+		case "podiatry":
+		case "pulmonology":
+		case "radiology":
+		case "radiation":
+		case "transplants":
+			continue
+		default:
+			errs = append(errs, fmt.Sprintf("Unknown entry: %q\n", entry))
+		}
+		if len(errs) > 0 {
+			return fmt.Errorf("%s", errs)
+		}
+	}
+	return nil
+}
+
+// ListServices - return a list of native language representations of our medical fields
+func ListServices(r *router.Request) map[string]interface{} {
 	p := r.Printer()
 	return map[string]interface{}{
 		"acutepain":      p.Sprintf("Acute Pain Medicine"),

@@ -17,24 +17,20 @@ var pluginKey []PluginMask
 type Plugin struct {
 	Name     string
 	Run      func(p *Request) map[string]interface{}
-	Validate func() error
+	Validate func(p *Request) error
 }
 
 func init() {
 	pluginCache = make(map[PluginMask]*Plugin)
 }
 
-// ValidatePlugins - Run through each plugin
-// make sure that its mapping isn't redundant with any other
+// ValidatePlugins - Make sure that its mapping isn't redundant with any other
+// Plugins have external testing to validate they are correct
 func ValidatePlugins() []error {
 	errs := []error{}
 	for key, item := range pluginCache {
 		if item.Validate == nil {
 			continue
-		}
-		err := item.Validate()
-		if err != nil {
-			errs = append(errs, err)
 		}
 		if (key & DEAD) != 0 {
 			errs = append(errs, fmt.Errorf("Error registering %s: Key requested already in use", item.Name))
@@ -45,7 +41,6 @@ func ValidatePlugins() []error {
 
 // AddPlugin - Add Plugin to map by key
 func AddPlugin(p *Plugin, key PluginMask) {
-
 	if pluginCache[key] != nil {
 		key |= DEAD
 	}

@@ -14,11 +14,8 @@ import (
 
 var pagecache map[string]*Page
 
-//var countrylist []Country
-
 func init() {
 	pagecache = make(map[string]*Page)
-	//countrylist = listcountries()
 }
 
 // Access defines the access rights for a specific page
@@ -92,8 +89,10 @@ func getdata(p *Request, in string) ([]byte, error) {
 	r["header"] = header(p.printer, p.status)
 	r["footer"] = footer(p.printer)
 	r["basedir"] = getBaseDir(cache.Path)
+	// TODO(halfwit) test running each of these in a goroutine
+	// As n increases
 	for _, key := range pluginKey {
-		if (cache.Extra & key) != 0 {
+		if (cache.Extra&key) != 0 && pluginCache[key].Run != nil {
 			r[pluginCache[key].Name] = pluginCache[key].Run(p)
 		}
 	}

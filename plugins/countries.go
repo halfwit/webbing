@@ -1,6 +1,7 @@
 package plugins
 
 import (
+	"fmt"
 	"sort"
 	"strings"
 
@@ -9,8 +10,8 @@ import (
 	"golang.org/x/text/message"
 )
 
-// ListCountries - Populate a localized spinner to select country
-const ListCountries router.PluginMask = 4
+// Countries - Populate a localized spinner to select country
+const Countries router.PluginMask = 2
 
 // Country - Mapping token to internationalized country code
 type Country struct {
@@ -36,10 +37,10 @@ func init() {
 	sort.Sort(cache)
 	b := &router.Plugin{
 		Name:     "countrylist",
-		Run:      Countries,
-		Validate: nil,
+		Run:      listCountries,
+		Validate: validateCountries,
 	}
-	router.AddPlugin(b, ListCountries)
+	router.AddPlugin(b, Countries)
 }
 
 // Len - For Sort implementation
@@ -64,8 +65,7 @@ func (c *countries) Swap(i, j int) {
 	c.list[j] = tmp
 }
 
-// Countries - return a localized list of countries
-func Countries(_ *router.Request) map[string]interface{} {
+func listCountries(_ *router.Request) map[string]interface{} {
 	// TODO(halfwit): Use Request to get a localized country name
 	c := make(map[string]interface{})
 	for _, item := range cache.list {
@@ -74,21 +74,21 @@ func Countries(_ *router.Request) map[string]interface{} {
 	return c
 }
 
-// TODO: Export this so it's available to form parsing as a bitmask
-func validateCountries(p *message.Printer, countries []string) string {
-	for _, c := range countries {
-		if msg := validateCountry(p, c); msg != "" {
+func validateCountries(r *router.Request) error {
+	s := r.Request()
+	for _, c := range s.PostFormValue("country") {
+		if msg := checkCountry(r.Printer(), c); msg != nil {
 			return msg
 		}
 	}
-	return ""
+	return nil
 }
 
-func validateCountry(p *message.Printer, country string) string {
+func checkCountry(p *message.Printer, country rune) error {
 	for _, item := range cache.list {
-		if item.Name.Common == country {
-			return ""
+		if item.Name.Common == string(country) {
+			return nil
 		}
 	}
-	return p.Sprint("No country entered/nil value entered")
+	return fmt.Errorf("%s", p.Sprint("No country entered/nil value entered"))
 }

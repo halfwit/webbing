@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -15,7 +16,7 @@ func init() {
 		Path:      "doctor/application",
 		Validator: Application,
 		Redirect:  "/index.html",
-		After:     router.EmailForm | router.ValidateCountries | router.ValidateSpecialties | router.ValidateToken,
+		After:     plugins.EmailForm | plugins.Countries | plugins.Services | plugins.FormToken,
 	}
 	router.AddPost(b)
 }

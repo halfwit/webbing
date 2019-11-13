@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -15,7 +16,7 @@ func init() {
 		Path:      "doctor/profile",
 		Validator: DoctorProfile,
 		Redirect:  "/doctor/profile.html",
-		After:     router.ValidateToken | router.AddAppointment,
+		After:     plugins.FormToken | plugins.AddAppointment,
 	}
 	router.AddPost(b)
 }

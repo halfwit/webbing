@@ -12,7 +12,7 @@ func init() {
 		CSS:    "",
 		Path:   "patient/offer",
 		Data:   Createoffer,
-		Extra:  plugins.ListServices | plugins.FormErrors,
+		Extra:  plugins.Services | plugins.FormErrors,
 	}
 	router.AddPage(b)
 }

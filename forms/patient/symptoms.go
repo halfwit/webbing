@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -14,7 +15,7 @@ func init() {
 		Access:    router.PatientAuth,
 		Path:      "patient/symptoms",
 		Validator: Symptoms,
-		After:     router.EmailForm | router.WithOffer,
+		After:     plugins.EmailForm | plugins.MakeOffer,
 		Redirect:  "patient/profile.html",
 	}
 	router.AddPost(b)

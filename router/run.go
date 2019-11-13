@@ -64,6 +64,7 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 type Request struct {
 	printer *message.Printer
 	session session.Session
+	request *http.Request
 	user    string
 	status  string
 	path    string
@@ -80,6 +81,11 @@ func (r *Request) Session() session.Session {
 	return r.session
 }
 
+// Request - underlying http.Request for forms and such
+func (r *Request) Request() *http.Request {
+	return r.request
+}
+
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/" {
 		http.Redirect(w, r, "/index.html", 302)
@@ -89,6 +95,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 	p := &Request{
 		printer: userLang(r),
 		status:  status,
+		request: r,
 		user:    user,
 		role:    role,
 		session: us,

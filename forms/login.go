@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/albrow/forms"
+	"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 	"golang.org/x/text/message"
 )
@@ -12,14 +13,14 @@ func init() {
 	b := &router.Form{
 		Access:    router.GuestAuth,
 		Path:      "login",
-		Validator: Login,
-		After:     router.ValidateLogin,
+		Validator: login,
+		After:     plugins.ValidateLogin,
 		Redirect:  "/profile.html",
 	}
 	router.AddPost(b)
 }
 
-func Login(r *http.Request, p *message.Printer) []string {
+func login(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)
 	if err != nil {

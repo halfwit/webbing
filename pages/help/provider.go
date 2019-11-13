@@ -13,7 +13,7 @@ func init() {
 		CSS:    "",
 		Path:   "help/provider",
 		Data:   Provider,
-		Extra:  plugins.ListServices,
+		Extra:  plugins.Services,
 	}
 	router.AddPage(b)
 }

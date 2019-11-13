@@ -5,7 +5,7 @@ import (
 )
 
 // FormErrors - A list of errors present on a POST request
-const FormErrors router.PluginMask = 6
+const FormErrors router.PluginMask = 7
 
 func init() {
 	b := &router.Plugin{
@@ -16,7 +16,7 @@ func init() {
 	router.AddPlugin(b, FormErrors)
 }
 
-// GetFormErrors - Return all errors encountered during form parse
+// GetFormErrors - return the client a list of any errors in the form
 func GetFormErrors(r *router.Request) map[string]interface{} {
 	s := r.Session()
 	if s == nil {
