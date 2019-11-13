@@ -11,14 +11,13 @@ func init() {
 		Access: router.GuestAuth | router.DoctorAuth | router.PatientAuth,
 		CSS:    "index.css",
 		Path:   "index",
-		Data:   Index,
+		Data:   index,
 		Extra:  plugins.ListDoctors | plugins.FormErrors,
 	}
 	router.AddPage(b)
 }
 
-// Index - olmaxmedical.com/index.html
-func Index(p *message.Printer) map[string]interface{} {
+func index(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":            p.Sprintf("Olmax Medical | Welcome"),
 		"name":             p.Sprintf("Olmax Medical"),

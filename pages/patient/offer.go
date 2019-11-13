@@ -11,14 +11,13 @@ func init() {
 		Access: router.PatientAuth,
 		CSS:    "",
 		Path:   "patient/offer",
-		Data:   Createoffer,
+		Data:   offer,
 		Extra:  plugins.Services | plugins.FormErrors,
 	}
 	router.AddPage(b)
 }
 
-// Createoffer - olmaxmedical.com/patient/offer.html
-func Createoffer(p *message.Printer) map[string]interface{} {
+func offer(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":           p.Sprint("Olmax Medical | Create Offer"),
 		"mainHeader":      p.Sprint("Create An Offer"),

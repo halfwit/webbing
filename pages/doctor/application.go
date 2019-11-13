@@ -11,14 +11,13 @@ func init() {
 		Access: router.GuestAuth,
 		CSS:    "",
 		Path:   "doctor/application",
-		Data:   Application,
+		Data:   application,
 		Extra:  plugins.Countries | plugins.Services | plugins.FormErrors | plugins.FormToken,
 	}
 	router.AddPage(b)
 }
 
-// Application - olmaxmedical.com/doctor/application.html
-func Application(p *message.Printer) map[string]interface{} {
+func application(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"fullname":   p.Sprint("Full name"),
 		"user":       p.Sprint("Personal"),

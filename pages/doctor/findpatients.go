@@ -10,14 +10,13 @@ func init() {
 		Access: router.DoctorAuth,
 		CSS:    "",
 		Path:   "doctor/findpatients",
-		Data:   Findpatients,
+		Data:   findpatients,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Findpatients - olmaxmedical.com/doctor/findpatients.html
-func Findpatients(p *message.Printer) map[string]interface{} {
+func findpatients(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Find Patients"),
 		"mainHeader": p.Sprintf("Available patients"),

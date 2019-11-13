@@ -12,14 +12,13 @@ func init() {
 		Access: router.PatientAuth,
 		CSS:    "",
 		Path:   "patient/appointments",
-		Data:   Appointments,
+		Data:   appointments,
 		Extra:  0, // call function to look up appointments here
 	}
 	router.AddPage(b)
 }
 
-// Appointments - olmaxmedical.com/patient/appointments.html
-func Appointments(p *message.Printer) map[string]interface{} {
+func appointments(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Appointments"),
 		"mainHeader": p.Sprintf("You currently have no appointments pending."),

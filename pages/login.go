@@ -11,15 +11,14 @@ func init() {
 		Access: router.GuestAuth,
 		CSS:    "",
 		Path:   "login",
-		Data:   Login,
+		Data:   login,
 		Extra:  plugins.FormErrors,
 	}
-	//router.AddGet(b)
+
 	router.AddPage(b)
 }
 
-// Login - olmaxmedical.com/login.html
-func Login(p *message.Printer) map[string]interface{} {
+func login(p *message.Printer) map[string]interface{} {
 	// TODO: Also add in the error messages here
 	return map[string]interface{}{
 		"title":          p.Sprintf("Olmax Medical | Login"),

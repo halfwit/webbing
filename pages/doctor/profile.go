@@ -11,14 +11,13 @@ func init() {
 		Access: router.DoctorAuth,
 		CSS:    "",
 		Path:   "doctor/profile",
-		Data:   Profile,
+		Data:   profile,
 		Extra:  plugins.FormErrors | plugins.FormToken,
 	}
 	router.AddPage(b)
 }
 
-// Profile - olmaxmedical.com/doctor/profile.html
-func Profile(p *message.Printer) map[string]interface{} {
+func profile(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":          p.Sprint("Olmax Medical | Profile"),
 		"greetingHeader": p.Sprint("Hello "),

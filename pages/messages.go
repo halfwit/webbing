@@ -10,14 +10,13 @@ func init() {
 		Access: router.PatientAuth | router.DoctorAuth,
 		CSS:    "",
 		Path:   "messages",
-		Data:   Messages,
+		Data:   messages,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Messages - olmaxmedical.com/messages.html
-func Messages(p *message.Printer) map[string]interface{} {
+func messages(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Messages"),
 		"mainHeader": p.Sprintf("You currently have no messages."),

@@ -2,7 +2,7 @@ package plugins
 
 import "github.com/olmaxmedical/olmax_go/router"
 
-// Offer - Request a time slot with doctor
+// MakeOffer - Request a time slot with doctor
 const MakeOffer router.PluginMask = 8
 
 func init() {

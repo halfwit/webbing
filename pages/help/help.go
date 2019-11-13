@@ -10,14 +10,13 @@ func init() {
 		Access: router.GuestAuth | router.PatientAuth | router.DoctorAuth,
 		CSS:    "",
 		Path:   "help/faq",
-		Data:   Faq,
+		Data:   faq,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Faq - olmaxmedical.com/help/faq.html
-func Faq(p *message.Printer) map[string]interface{} {
+func faq(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":             p.Sprintf("Olmax Medical | Help"),
 		"mainHeader":        p.Sprintf("Olmax Medical"),

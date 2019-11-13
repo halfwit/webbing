@@ -10,14 +10,13 @@ func init() {
 		Access: router.PatientAuth | router.DoctorAuth,
 		CSS:    "",
 		Path:   "wallet",
-		Data:   Wallet,
+		Data:   wallet,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Wallet - olmaxmedical.com/wallet.html
-func Wallet(p *message.Printer) map[string]interface{} {
+func wallet(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Wallet"),
 		"mainHeader": p.Sprintf("Wallet"),

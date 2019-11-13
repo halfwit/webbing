@@ -11,14 +11,13 @@ func init() {
 		Access: router.GuestAuth,
 		CSS:    "",
 		Path:   "signup",
-		Data:   Signup,
+		Data:   signup,
 		Extra:  plugins.FormErrors,
 	}
 	router.AddPage(b)
 }
 
-// Signup - olmaxmedical.com/signup.html
-func Signup(p *message.Printer) map[string]interface{} {
+func signup(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":      p.Sprintf("Olmax Medical | Sign Up"),
 		"mainHeader": p.Sprintf("Sign Up for free"),

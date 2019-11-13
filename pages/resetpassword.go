@@ -11,14 +11,13 @@ func init() {
 		Access: router.GuestAuth,
 		CSS:    "",
 		Path:   "resetpassword",
-		Data:   ResetPassword,
+		Data:   resetPassword,
 		Extra:  plugins.FormErrors,
 	}
 	router.AddPage(b)
 }
 
-// ResetPassword - olmaxmedical.com/resetpassword.html
-func ResetPassword(p *message.Printer) map[string]interface{} {
+func resetPassword(p *message.Printer) map[string]interface{} {
 	// TODO: Also add in the error messages here
 	return map[string]interface{}{
 		"title":     p.Sprintf("Olmax Medical | Login"),

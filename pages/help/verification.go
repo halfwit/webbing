@@ -10,14 +10,13 @@ func init() {
 		Access: router.GuestAuth | router.PatientAuth | router.DoctorAuth,
 		CSS:    "",
 		Path:   "help/verification",
-		Data:   Verification,
+		Data:   verification,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Verification - olmaxmedical.com/help/verification.html
-func Verification(p *message.Printer) map[string]interface{} {
+func verification(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":        p.Sprintf("Olmax Medical | FAQ"),
 		"mainHeader":   p.Sprintf("Olmax Medical"),

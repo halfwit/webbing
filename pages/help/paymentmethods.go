@@ -10,14 +10,13 @@ func init() {
 		Access: router.GuestAuth | router.PatientAuth | router.DoctorAuth,
 		CSS:    "",
 		Path:   "help/paymentmethods",
-		Data:   Paymethod,
+		Data:   paymethod,
 		Extra:  0,
 	}
 	router.AddPage(b)
 }
 
-// Paymethod - olmaxmedical.com/help/paymentmethods.html
-func Paymethod(p *message.Printer) map[string]interface{} {
+func paymethod(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":            p.Sprint("Olmax Medical | FAQ"),
 		"mainHeader":       p.Sprint("Olmax Medical"),

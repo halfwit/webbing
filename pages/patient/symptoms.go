@@ -11,14 +11,13 @@ func init() {
 		Access: router.PatientAuth,
 		CSS:    "",
 		Path:   "patient/symptoms",
-		Data:   Symptoms,
+		Data:   symptoms,
 		Extra:  plugins.FormErrors | plugins.SessionToken,
 	}
 	router.AddPage(b)
 }
 
-// Symptoms - olmaxmedical.com/patient/symptoms.html
-func Symptoms(p *message.Printer) map[string]interface{} {
+func symptoms(p *message.Printer) map[string]interface{} {
 	return map[string]interface{}{
 		"title":                p.Sprintf("Olmax Medical | Create Profile"),
 		"createHeader":         p.Sprintf("Create Patient Profile"),
