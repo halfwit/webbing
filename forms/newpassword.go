@@ -13,14 +13,14 @@ func init() {
 	b := &router.Form{
 		Access:    router.GuestAuth,
 		Path:      "newpassword",
-		Validator: NewPassword,
+		Validator: newPassword,
 		Redirect:  "/login.html",
 		After:     plugins.ResetPassword | plugins.FormToken,
 	}
 	router.AddPost(b)
 }
 
-func NewPassword(r *http.Request, p *message.Printer) []string {
+func newPassword(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)
 	if err != nil {

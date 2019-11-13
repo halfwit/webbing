@@ -14,15 +14,14 @@ func init() {
 	b := &router.Form{
 		Access:    router.GuestAuth,
 		Path:      "doctor/application",
-		Validator: Application,
+		Validator: application,
 		Redirect:  "/index.html",
 		After:     plugins.EmailForm | plugins.Countries | plugins.Services | plugins.FormToken,
 	}
 	router.AddPost(b)
 }
 
-// Application - olmaxmedical.com/doctor/application.html
-func Application(r *http.Request, p *message.Printer) []string {
+func application(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)
 	if err != nil {

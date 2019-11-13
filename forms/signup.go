@@ -13,14 +13,14 @@ func init() {
 	b := &router.Form{
 		Access:    router.GuestAuth,
 		Path:      "signup",
-		Validator: Signin,
+		Validator: signin,
 		Redirect:  "/login.html",
 		After:     plugins.SendSignup,
 	}
 	router.AddPost(b)
 }
 
-func Signin(r *http.Request, p *message.Printer) []string {
+func signin(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)
 	if err != nil {

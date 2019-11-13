@@ -14,15 +14,14 @@ func init() {
 	b := &router.Form{
 		Access:    router.PatientAuth,
 		Path:      "patient/symptoms",
-		Validator: Symptoms,
+		Validator: symptoms,
 		After:     plugins.EmailForm | plugins.MakeOffer,
 		Redirect:  "patient/profile.html",
 	}
 	router.AddPost(b)
 }
 
-// Symptoms - olmaxmedical.com/patient/symptoms.html
-func Symptoms(r *http.Request, p *message.Printer) []string {
+func symptoms(r *http.Request, p *message.Printer) []string {
 	var errors []string
 	data, err := forms.Parse(r)
 	if err != nil {
