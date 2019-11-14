@@ -11,7 +11,7 @@ import (
 )
 
 // Countries - Populate a localized spinner to select country
-const Countries router.PluginMask = 2
+const Countries router.PluginMask = 1 << 2
 
 // Country - Mapping token to internationalized country code
 type Country struct {
@@ -36,7 +36,7 @@ func init() {
 	}
 	sort.Sort(cache)
 	b := &router.Plugin{
-		Name:     "countrylist",
+		Name:     "country",
 		Run:      listCountries,
 		Validate: validateCountries,
 	}

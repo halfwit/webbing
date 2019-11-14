@@ -15,7 +15,7 @@ func init() {
 		Access:    router.PatientAuth,
 		Path:      "patient/symptoms",
 		Validator: symptoms,
-		After:     plugins.EmailForm | plugins.MakeOffer,
+		After:     plugins.EmailForm,
 		Redirect:  "patient/profile.html",
 	}
 	router.AddPost(b)

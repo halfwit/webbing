@@ -7,13 +7,14 @@ import (
 	"github.com/olmaxmedical/olmax_go/router"
 )
 
+//TODO(halfwit) Set up in memory tokens in db as well as
 var tokens []string
 
 // SessionToken - An in-memory token to allow a client to track
-const SessionToken router.PluginMask = 13
+const SessionToken router.PluginMask = 1 << 13
 
 // FormToken - A database-persisted one time use token to relate forms to POST requests
-const FormToken router.PluginMask = 14
+const FormToken router.PluginMask = 1 << 14
 
 func init() {
 	b := &router.Plugin{

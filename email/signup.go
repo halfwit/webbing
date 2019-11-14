@@ -13,8 +13,8 @@ import (
 	"golang.org/x/text/message"
 )
 
-// This will change!
-var url = "http://192.168.1.101"
+// TODO(halfwit) Update with whichever TLD we land on
+var url = "https://olmaxmedical.com"
 
 // SendSignup - email our prospective clients and create tokens
 func SendSignup(first, last, email, pass string, p *message.Printer) {

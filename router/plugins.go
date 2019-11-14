@@ -8,7 +8,7 @@ import (
 type PluginMask uint32
 
 // DEAD is a magic string to indicate a non-unique plugin key
-const DEAD PluginMask = 0x0666000
+const DEAD PluginMask = 1
 
 var pluginCache map[PluginMask]*Plugin
 var pluginKey []PluginMask

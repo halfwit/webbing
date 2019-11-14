@@ -10,29 +10,29 @@ import (
 )
 
 // EmailForm - Patient form to gmail
-const EmailForm router.PluginMask = 4
+const EmailForm router.PluginMask = 1 << 4
 
 // SendSignup - Send account creation validation email
-const SendSignup router.PluginMask = 5
+const SendSignup router.PluginMask = 1 << 5
 
 // SendReset - Send password reset email
-const SendReset router.PluginMask = 6
+const SendReset router.PluginMask = 1 << 6
 
 func init() {
 	b := &router.Plugin{
-		Name:     "Email client information form",
+		Name:     "emailform",
 		Run:      nil,
 		Validate: emailForm,
 	}
 	router.AddPlugin(b, EmailForm)
 	c := &router.Plugin{
-		Name:     "Send signup email",
+		Name:     "signupEmail",
 		Run:      nil,
 		Validate: signupEmail,
 	}
 	router.AddPlugin(c, SendSignup)
 	d := &router.Plugin{
-		Name:     "Send password reset email",
+		Name:     "resetPassword",
 		Run:      nil,
 		Validate: resetPassword,
 	}

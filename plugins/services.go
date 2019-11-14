@@ -7,7 +7,7 @@ import (
 )
 
 // Services - Bitmask to list services in native language
-const Services router.PluginMask = 12
+const Services router.PluginMask = 1 << 12
 
 func init() {
 	b := &router.Plugin{
