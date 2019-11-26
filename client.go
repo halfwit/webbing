@@ -10,9 +10,9 @@ import (
 	_ "github.com/olmaxmedical/olmax_go/pages/doctor"
 	_ "github.com/olmaxmedical/olmax_go/pages/help"
 	_ "github.com/olmaxmedical/olmax_go/pages/patient"
+	_ "github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/router"
 
-	//"github.com/olmaxmedical/olmax_go/plugins"
 	"github.com/olmaxmedical/olmax_go/session"
 )
 
