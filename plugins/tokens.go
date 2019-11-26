@@ -19,35 +19,32 @@ const FormToken router.PluginMask = 1 << 14
 func init() {
 	b := &router.Plugin{
 		Name:     "sessionToken",
-		Run:      NewSessionToken,
-		Validate: ValidateToken,
+		Run:      newSessionToken,
+		Validate: validateToken,
 	}
 	router.AddPlugin(b, SessionToken)
 	c := &router.Plugin{
 		Name:     "formToken",
-		Run:      NewFormToken,
-		Validate: ValidateToken,
+		Run:      newFormToken,
+		Validate: validateToken,
 	}
 	router.AddPlugin(c, FormToken)
 }
 
-// NewSessionToken returns a unique session token
-func NewSessionToken(r *router.Request) map[string]interface{} {
+func newSessionToken(r *router.Request) map[string]interface{} {
 	return map[string]interface{}{
 		"token": newToken(),
 	}
 }
 
-// NewFormToken returns a unique token associated with a client's form entry session
 // TODO(halfwit) - database
-func NewFormToken(r *router.Request) map[string]interface{} {
+func newFormToken(r *router.Request) map[string]interface{} {
 	return map[string]interface{}{
 		"token": newToken(),
 	}
 }
 
-// ValidateToken - Verify token exists
-func ValidateToken(r *router.Request) error {
+func validateToken(r *router.Request) error {
 	s := r.Request()
 	if s == nil {
 		return errors.New("Invalid session")

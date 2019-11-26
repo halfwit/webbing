@@ -2,6 +2,68 @@
     "language": "en-US",
     "messages": [
         {
+            "id": "No selection for question {I}",
+            "message": "No selection for question {I}",
+            "translation": "No selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid selection for question {I}",
+            "message": "Invalid selection for question {I}",
+            "translation": "Invalid selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Valid email required",
+            "message": "Valid email required",
+            "translation": "Valid email required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid email",
+            "message": "Invalid email",
+            "translation": "Invalid email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Full name required",
+            "message": "Full name required",
+            "translation": "Full name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Full name must be at least 2 characters",
+            "message": "Full name must be at least 2 characters",
+            "translation": "Full name must be at least 2 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Olmax Medical | Appointments",
             "message": "Olmax Medical | Appointments",
             "translation": "Olmax Medical | Appointments",
@@ -229,452 +291,6 @@
             "fuzzy": true
         },
         {
-            "id": "FAQ",
-            "message": "FAQ",
-            "translation": "FAQ",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Help",
-            "message": "Help",
-            "translation": "Help",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Quality Healthcare",
-            "message": "Quality Healthcare",
-            "translation": "Quality Healthcare",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Payment Methods",
-            "message": "Payment Methods",
-            "translation": "Payment Methods",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Prices and Fees",
-            "message": "Prices and Fees",
-            "translation": "Prices and Fees",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Verification",
-            "message": "Verification",
-            "translation": "Verification",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Appointments",
-            "message": "Appointments",
-            "translation": "Appointments",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Legal",
-            "message": "Legal",
-            "translation": "Legal",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Privacy Policy",
-            "message": "Privacy Policy",
-            "translation": "Privacy Policy",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Work with us!",
-            "message": "Work with us!",
-            "translation": "Work with us!",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Become A Partner",
-            "message": "Become A Partner",
-            "translation": "Become A Partner",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Copyright 2017, 2018, 2019",
-            "message": "Copyright 2017, 2018, 2019",
-            "translation": "Copyright 2017, 2018, 2019",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Bookings",
-            "message": "Olmax Medical | Bookings",
-            "translation": "Olmax Medical | Bookings",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Available patients",
-            "message": "Available patients",
-            "translation": "Available patients",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Find Patients",
-            "message": "Olmax Medical | Find Patients",
-            "translation": "Olmax Medical | Find Patients",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No selection for {I}",
-            "message": "No selection for {I}",
-            "translation": "No selection for {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]s",
-                    "type": "string",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Invalid selection for {I}",
-            "message": "Invalid selection for {I}",
-            "translation": "Invalid selection for {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]s",
-                    "type": "string",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Acute Pain Medicine",
-            "message": "Acute Pain Medicine",
-            "translation": "Acute Pain Medicine",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Anesthesiology",
-            "message": "Anesthesiology",
-            "translation": "Anesthesiology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Bariatric Surgery",
-            "message": "Bariatric Surgery",
-            "translation": "Bariatric Surgery",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Cardiology",
-            "message": "Cardiology",
-            "translation": "Cardiology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Chiropractics",
-            "message": "Chiropractics",
-            "translation": "Chiropractics",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Chronic Pain",
-            "message": "Chronic Pain",
-            "translation": "Chronic Pain",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Critical Care",
-            "message": "Critical Care",
-            "translation": "Critical Care",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Dermatology",
-            "message": "Dermatology",
-            "translation": "Dermatology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Emergency Medicine",
-            "message": "Emergency Medicine",
-            "translation": "Emergency Medicine",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Endocrinology",
-            "message": "Endocrinology",
-            "translation": "Endocrinology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Ear Nose and Throat",
-            "message": "Ear Nose and Throat",
-            "translation": "Ear Nose and Throat",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Family Medicine",
-            "message": "Family Medicine",
-            "translation": "Family Medicine",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Gastrointestinology",
-            "message": "Gastrointestinology",
-            "translation": "Gastrointestinology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Head and Neck",
-            "message": "Head and Neck",
-            "translation": "Head and Neck",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Hematology and Oncology",
-            "message": "Hematology and Oncology",
-            "translation": "Hematology and Oncology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Hepatology",
-            "message": "Hepatology",
-            "translation": "Hepatology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Hyperbaric",
-            "message": "Hyperbaric",
-            "translation": "Hyperbaric",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Immunology",
-            "message": "Immunology",
-            "translation": "Immunology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Infectious Diseases",
-            "message": "Infectious Diseases",
-            "translation": "Infectious Diseases",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Internal Medicine",
-            "message": "Internal Medicine",
-            "translation": "Internal Medicine",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Neonatology",
-            "message": "Neonatology",
-            "translation": "Neonatology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Nephrology",
-            "message": "Nephrology",
-            "translation": "Nephrology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Neurology",
-            "message": "Neurology",
-            "translation": "Neurology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Neurosurgery",
-            "message": "Neurosurgery",
-            "translation": "Neurosurgery",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Obstetrics and Gynecology",
-            "message": "Obstetrics and Gynecology",
-            "translation": "Obstetrics and Gynecology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Occupational Medicine",
-            "message": "Occupational Medicine",
-            "translation": "Occupational Medicine",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Opthamology",
-            "message": "Opthamology",
-            "translation": "Opthamology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Orthopedic Surgery",
-            "message": "Orthopedic Surgery",
-            "translation": "Orthopedic Surgery",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Palliative Care",
-            "message": "Palliative Care",
-            "translation": "Palliative Care",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Pediatrics",
-            "message": "Pediatrics",
-            "translation": "Pediatrics",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Podiatry",
-            "message": "Podiatry",
-            "translation": "Podiatry",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Pulmonology",
-            "message": "Pulmonology",
-            "translation": "Pulmonology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Radiology",
-            "message": "Radiology",
-            "translation": "Radiology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Radiaton Oncology",
-            "message": "Radiaton Oncology",
-            "translation": "Radiaton Oncology",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Transplant Surgery",
-            "message": "Transplant Surgery",
-            "translation": "Transplant Surgery",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No selection for question {I}",
-            "message": "No selection for question {I}",
-            "translation": "No selection for question {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Invalid selection for question {I}",
-            "message": "Invalid selection for question {I}",
-            "translation": "Invalid selection for question {I}",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Valid email required",
-            "message": "Valid email required",
-            "translation": "Valid email required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Invalid email",
-            "message": "Invalid email",
-            "translation": "Invalid email",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Full name required",
-            "message": "Full name required",
-            "translation": "Full name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Full name must be at least 2 characters",
-            "message": "Full name must be at least 2 characters",
-            "translation": "Full name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
             "id": "Olmax Medical | Welcome",
             "message": "Olmax Medical | Welcome",
             "translation": "Olmax Medical | Welcome",
@@ -825,6 +441,13 @@
             "id": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
             "message": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
             "translation": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Copyright 2017, 2018, 2019",
+            "message": "Copyright 2017, 2018, 2019",
+            "translation": "Copyright 2017, 2018, 2019",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -1039,52 +662,114 @@
             "fuzzy": true
         },
         {
-            "id": "Password required",
-            "message": "Password required",
-            "translation": "Password required",
+            "id": "FAQ",
+            "message": "FAQ",
+            "translation": "FAQ",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Password must be at least 8 characters",
-            "message": "Password must be at least 8 characters",
-            "translation": "Password must be at least 8 characters",
+            "id": "Help",
+            "message": "Help",
+            "translation": "Help",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Re-enter same password",
-            "message": "Re-enter same password",
-            "translation": "Re-enter same password",
+            "id": "Quality Healthcare",
+            "message": "Quality Healthcare",
+            "translation": "Quality Healthcare",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "First name required",
-            "message": "First name required",
-            "translation": "First name required",
+            "id": "Payment Methods",
+            "message": "Payment Methods",
+            "translation": "Payment Methods",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "First name must be at least 2 characters",
-            "message": "First name must be at least 2 characters",
-            "translation": "First name must be at least 2 characters",
+            "id": "Prices and Fees",
+            "message": "Prices and Fees",
+            "translation": "Prices and Fees",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Last name required",
-            "message": "Last name required",
-            "translation": "Last name required",
+            "id": "Verification",
+            "message": "Verification",
+            "translation": "Verification",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Last name must be at least 2 characters",
-            "message": "Last name must be at least 2 characters",
-            "translation": "Last name must be at least 2 characters",
+            "id": "Appointments",
+            "message": "Appointments",
+            "translation": "Appointments",
             "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Legal",
+            "message": "Legal",
+            "translation": "Legal",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Privacy Policy",
+            "message": "Privacy Policy",
+            "translation": "Privacy Policy",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Work with us!",
+            "message": "Work with us!",
+            "translation": "Work with us!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Become A Partner",
+            "message": "Become A Partner",
+            "translation": "Become A Partner",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No selection for {I}",
+            "message": "No selection for {I}",
+            "translation": "No selection for {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid selection for {I}",
+            "message": "Invalid selection for {I}",
+            "translation": "Invalid selection for {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
             "fuzzy": true
         },
         {
@@ -1686,6 +1371,321 @@
             "id": "Please refer to the following help page:",
             "message": "Please refer to the following help page:",
             "translation": "Please refer to the following help page:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Acute Pain Medicine",
+            "message": "Acute Pain Medicine",
+            "translation": "Acute Pain Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Anesthesiology",
+            "message": "Anesthesiology",
+            "translation": "Anesthesiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Bariatric Surgery",
+            "message": "Bariatric Surgery",
+            "translation": "Bariatric Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Cardiology",
+            "message": "Cardiology",
+            "translation": "Cardiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Chiropractics",
+            "message": "Chiropractics",
+            "translation": "Chiropractics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Chronic Pain",
+            "message": "Chronic Pain",
+            "translation": "Chronic Pain",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Critical Care",
+            "message": "Critical Care",
+            "translation": "Critical Care",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dermatology",
+            "message": "Dermatology",
+            "translation": "Dermatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Emergency Medicine",
+            "message": "Emergency Medicine",
+            "translation": "Emergency Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Endocrinology",
+            "message": "Endocrinology",
+            "translation": "Endocrinology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Ear Nose and Throat",
+            "message": "Ear Nose and Throat",
+            "translation": "Ear Nose and Throat",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Family Medicine",
+            "message": "Family Medicine",
+            "translation": "Family Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Gastrointestinology",
+            "message": "Gastrointestinology",
+            "translation": "Gastrointestinology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Head and Neck",
+            "message": "Head and Neck",
+            "translation": "Head and Neck",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hematology and Oncology",
+            "message": "Hematology and Oncology",
+            "translation": "Hematology and Oncology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hepatology",
+            "message": "Hepatology",
+            "translation": "Hepatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hyperbaric",
+            "message": "Hyperbaric",
+            "translation": "Hyperbaric",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Immunology",
+            "message": "Immunology",
+            "translation": "Immunology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Infectious Diseases",
+            "message": "Infectious Diseases",
+            "translation": "Infectious Diseases",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Internal Medicine",
+            "message": "Internal Medicine",
+            "translation": "Internal Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neonatology",
+            "message": "Neonatology",
+            "translation": "Neonatology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Nephrology",
+            "message": "Nephrology",
+            "translation": "Nephrology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neurology",
+            "message": "Neurology",
+            "translation": "Neurology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Neurosurgery",
+            "message": "Neurosurgery",
+            "translation": "Neurosurgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Obstetrics and Gynecology",
+            "message": "Obstetrics and Gynecology",
+            "translation": "Obstetrics and Gynecology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Occupational Medicine",
+            "message": "Occupational Medicine",
+            "translation": "Occupational Medicine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Opthamology",
+            "message": "Opthamology",
+            "translation": "Opthamology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orthopedic Surgery",
+            "message": "Orthopedic Surgery",
+            "translation": "Orthopedic Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Palliative Care",
+            "message": "Palliative Care",
+            "translation": "Palliative Care",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pediatrics",
+            "message": "Pediatrics",
+            "translation": "Pediatrics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Podiatry",
+            "message": "Podiatry",
+            "translation": "Podiatry",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pulmonology",
+            "message": "Pulmonology",
+            "translation": "Pulmonology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Radiology",
+            "message": "Radiology",
+            "translation": "Radiology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Radiaton Oncology",
+            "message": "Radiaton Oncology",
+            "translation": "Radiaton Oncology",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Transplant Surgery",
+            "message": "Transplant Surgery",
+            "translation": "Transplant Surgery",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Bookings",
+            "message": "Olmax Medical | Bookings",
+            "translation": "Olmax Medical | Bookings",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Available patients",
+            "message": "Available patients",
+            "translation": "Available patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Find Patients",
+            "message": "Olmax Medical | Find Patients",
+            "translation": "Olmax Medical | Find Patients",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password required",
+            "message": "Password required",
+            "translation": "Password required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password must be at least 8 characters",
+            "message": "Password must be at least 8 characters",
+            "translation": "Password must be at least 8 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Re-enter same password",
+            "message": "Re-enter same password",
+            "translation": "Re-enter same password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First name required",
+            "message": "First name required",
+            "translation": "First name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First name must be at least 2 characters",
+            "message": "First name must be at least 2 characters",
+            "translation": "First name must be at least 2 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last name required",
+            "message": "Last name required",
+            "translation": "Last name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last name must be at least 2 characters",
+            "message": "Last name must be at least 2 characters",
+            "translation": "Last name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },

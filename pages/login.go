@@ -14,7 +14,6 @@ func init() {
 		Data:   login,
 		Extra:  plugins.FormErrors,
 	}
-
 	router.AddPage(b)
 }
 

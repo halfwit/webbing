@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-
+	// Call our init functions to add our items
 	_ "github.com/olmaxmedical/olmax_go/forms"
 	_ "github.com/olmaxmedical/olmax_go/forms/doctor"
 	_ "github.com/olmaxmedical/olmax_go/forms/patient"
@@ -11,20 +11,20 @@ import (
 	_ "github.com/olmaxmedical/olmax_go/pages/help"
 	_ "github.com/olmaxmedical/olmax_go/pages/patient"
 	_ "github.com/olmaxmedical/olmax_go/plugins"
-	"github.com/olmaxmedical/olmax_go/router"
 
+	"github.com/olmaxmedical/olmax_go/router"
 	"github.com/olmaxmedical/olmax_go/session"
 )
 
 //go:generate gotext -srclang=en-US update -out=catalog.go -lang=en-US
 
 func main() {
-	sessions, err := session.NewManager("default", "sessions", 3600)
+	sessions, err := session.NewManager("default", "sessions", 360)
 	if err != nil {
 		log.Fatalf("Unable to initialize manager %v", err)
 	}
-	//BUG(halfwit) This is session timeouts, I didn't write this logic and it's very, very broken
-	//go sessions.GC()
+
+	go sessions.GC()
 
 	errs := router.ValidatePages()
 	if len(errs) > 0 {
