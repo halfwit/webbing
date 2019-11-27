@@ -50,7 +50,6 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 	p := userLang(r)
 	user, _, us, _ := getUser(d, w, r)
 	token := email.NextResetToken(r.URL.Path[7:], user)
-	fmt.Println(r.URL.Path[7:], token)
 	if token == "" {
 		us.Set("errors", [1]string{p.Sprint("Token expired")})
 		return
@@ -165,6 +164,9 @@ func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string,
 	}
 	if !ok3 {
 		role = db.GuestAuth
+	}
+	if status == "true" {
+		us.Set("token", db.NewToken())
 	}
 	return user, status, us, role
 }

@@ -110,7 +110,9 @@ func (manager *Manager) GC() {
 	manager.lock.Lock()
 	defer manager.lock.Unlock()
 	manager.provider.GC(manager.maxlifetime)
-	time.AfterFunc(time.Duration(manager.maxlifetime), func() { manager.GC() })
+	time.AfterFunc(10*time.Second, func() {
+		manager.GC()
+	})
 }
 
 func (manager *Manager) sessionID() string {

@@ -38,8 +38,10 @@ func login(s *router.Request) error {
 		us.Set("username", user)
 		us.Set("login", "true")
 		us.Set("role", db.UserRole(user))
+		us.Set("token", db.NewToken())
 		return nil
 	}
+
 	return errors.New(p.Sprint("Invalid login"))
 }
 

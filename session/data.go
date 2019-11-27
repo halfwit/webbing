@@ -92,10 +92,10 @@ func (pder *Default) GC(maxlifetime int64) {
 	for {
 		element := pder.list.Back()
 		if element == nil {
-			break
+			return
 		}
 		if (element.Value.(*Store).atime.Unix() + maxlifetime) >= time.Now().Unix() {
-			break
+			return
 		}
 		pder.list.Remove(element)
 		delete(pder.sessions, element.Value.(*Store).sid)
