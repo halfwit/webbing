@@ -1,0 +1,56 @@
+# provider.html
+[ ] provider.tpl change link from TODO.html
+
+# legal.html (nemo)
+[ ] Consult with lawyer
+[ ] Create legal.html
+[ ] convert html to templates/legal.tpl + pages/legal.go
+
+# privacy.html (nemo) - privacy policy
+[ ] Consult with lawyer
+[ ] Create privacy.html
+[ ] Convert html to templates/privacy.tpl + pages/privacy.go
+
+# help/provider.html (nemo)
+[ ] Create help/provider.html
+[ ] Convert html to templates/help/provider.html and pages/help/provider.go
+
+# messages.html
+[ ] URL encoded token to link
+[ ] Validate user login corellates to token IDs
+
+# patient/symptoms.html
+[ ] URL encoded token to link
+[ ] Validate user login and forward secrecy based on user IDs
+[ ] Send URL encoded link via email and wait for authorized login to pages
+
+# login.html
+[ ] Redirect to login page for any gated page and stash redirect link in our map
+[ ] Redirect on successful auth to page 
+
+# doctor/bookings.html
+[ ] URL encoded token to link based on specific booking in question
+
+# doctor/profile.html
+[ ] Link to messages
+[ ] unread messages shown
+[ ] List of bookings
+
+# patient/appointments.html
+[ ] URL encoded token to link based on specific appointment
+
+# patient/profile.html
+[ ] Link to messages
+[ ] Unread messages shown
+[ ] List of appointments upcoming
+
+# patient/offer 
+[ ] URL encododed token linking to specific doctor
+
+# patient/search
+[ ] List of doctors matching query
+
+# footer template
+[ ] Call toll free - update number
+[ ] Email - update Email
+[ ] Link from "Become A Partner" link to doctor/application.html

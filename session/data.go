@@ -2,6 +2,7 @@ package session
 
 import (
 	"container/list"
+	"log"
 	"sync"
 	"time"
 )
@@ -87,6 +88,7 @@ func (pder *Default) Destroy(sid string) error {
 
 // GC - Clean up all expired sessions
 func (pder *Default) GC(maxlifetime int64) {
+	log.Println("Starting GC sweep")
 	pder.lock.Lock()
 	defer pder.lock.Unlock()
 	for {
