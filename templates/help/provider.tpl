@@ -11,6 +11,7 @@
 		</select>
 	        <button>{{.getStartedHeader}}</button>
 	    </form>
+		<!--TODO change link from TODO.html-->
 	    <a href="TODO.html">{{.getStartedLink}}</a> 
 	    <h3>{{.providerWhy}} </h3>
 	    <p>{{.whyText}}</p>

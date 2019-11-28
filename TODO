@@ -1,56 +1,84 @@
-# provider.html
-[ ] provider.tpl change link from TODO.html
+TODO (halfwit, nemo) - change link from TODO.html
+[ ] plugin/earn.go: URL encoding such as `?specialty=myspecialty&country=mycountry` add to map[string]interface{} sent to pages/earn.go
+[ ] pages/earn.go: Internationalize data
+[ ] templates/earn.tpl: Simple page layout
 
-# legal.html (nemo)
-[ ] Consult with lawyer
-[ ] Create legal.html
-[ ] convert html to templates/legal.tpl + pages/legal.go
+TODO (nemo, halfwit) legal.html - articulating the legal policy
+[ ] general: design legal.html
+[ ] pages/legal.go: Pull data from legal.html for internationalization
+[ ] templates/legal.tpl: convert from html
+[ ] general: consult with lawyer
 
-# privacy.html (nemo) - privacy policy
-[ ] Consult with lawyer
-[ ] Create privacy.html
-[ ] Convert html to templates/privacy.tpl + pages/privacy.go
+TODO (nemo, halfwit) privacy.html - articulating the privacy policy
+[ ] general: design privacy.html
+[ ] pages/privacy.go: Pull data from privacy.html for internationalization
+[ ] templates/privacy.tpl: convert from html
+[ ] general: consult with lawyer
 
-# help/provider.html (nemo)
-[ ] Create help/provider.html
-[ ] Convert html to templates/help/provider.html and pages/help/provider.go
+TODO (nemo, halfwit) help/provider.html - steps for becoming a provider
+[ ] general: design help/provider.html
+[ ] pages/help/provider.go: Pull data from privacy.html for internationalization
+[ ] pages/help/provider.tpl: convert from html
 
-# messages.html
-[ ] URL encoded token to link
-[ ] Validate user login corellates to token IDs
+TODO (nemo, halfwit) messages.html - message thread with other user
+[ ] plugins/messages.go: URL encoding such as '?id=21987402180982098'
+[ ] plugins/messages.go: Use token to target specific message thread
+[ ] plugins/messages.go: Validate token matches with user ID
+[ ] pages/messages.go: Boiler plate internationalization
+[ ] templates/messages.tpl: convert from messages.html
 
-# patient/symptoms.html
-[ ] URL encoded token to link
-[ ] Validate user login and forward secrecy based on user IDs
-[ ] Send URL encoded link via email and wait for authorized login to pages
+TODO (halfwit) patient/symptoms.html
+[ ] plugins/symptoms.go: Validate user login
 
-# login.html
-[ ] Redirect to login page for any gated page and stash redirect link in our map
-[ ] Redirect on successful auth to page 
+TODO (halfwit) send email to client for form submission
+[ ] transactions/symptoms.go: Send URL encoded link via email and wait for authorized login to pages
 
-# doctor/bookings.html
-[ ] URL encoded token to link based on specific booking in question
+TODO (halfwit) login.html - We want to redirect back to the inaccessible page after successful (re) login
+[ ] router/pages.go: On no "access" to page, redirect to login
+[ ] pages/login.go: Check map for "redirect" member. Remove After: struct member
+[ ] forms/login.go: Verify "redirect" is set and follow
 
-# doctor/profile.html
-[ ] Link to messages
-[ ] unread messages shown
-[ ] List of bookings
+TODO (halfwit) doctor/bookings.html - Look up details of a specific booking from profile
+[ ] plugins/bookings.go: URL encodidng such as '?id=1320984392184298'
+[ ] plugins/bookings.go: Use token to add booking data to map
+[ ] pages/doctor/bookings.go: Boiler plate internationalization
+[ ] templates/doctor/bookings.tpl: convert from doctor/bookings.html
 
-# patient/appointments.html
-[ ] URL encoded token to link based on specific appointment
+TODO (halfwit) doctor/profile.html - List bookings, messages
+[ ] plugins/messages.go: Use User ID to fetch list of messages
+[ ] plugins/bookings.go: Use User ID to fetch list of bookings
+[ ] pages/doctor/profile.go: Boiler plate internationalization
+[ ] templates/doctor/profile.tpl: convert from doctor/profile.html
 
-# patient/profile.html
-[ ] Link to messages
-[ ] Unread messages shown
-[ ] List of appointments upcoming
+TODO (halfwit) patient/profile.html - List appointments, messages
+[ ] plugins/messages.go: Use User ID to fetch list of messages
+[ ] plugins/appointments.go: Use User ID to fetch list of appointments
+[ ] pages/patient/profile.go: Boiler plate internationalization
+[ ] template/patient/profile.tpl: convert from patient/profile.html
 
-# patient/offer 
-[ ] URL encododed token linking to specific doctor
+TODO (halfwit) messages - embeddable messages list
+[ ] template/messages.tpl: All messages
+[ ] template/message.tpl: Single thread
 
-# patient/search
-[ ] List of doctors matching query
+TODO (halfwit) patient/appointment.html - View details of a single appointment
+[ ] plugins/appointments.go: URL encoding such as '?id=21092198409'
+[ ] plugins/appointments.go: Use token to add booking data to map
+[ ] pages/patient/appointment.go: Boiler plate internationalization
+[ ] templates/patient/appointment.tpl: convert from patient/appointment.html
 
-# footer template
-[ ] Call toll free - update number
-[ ] Email - update Email
-[ ] Link from "Become A Partner" link to doctor/application.html
+TODO (halfwit) patient/offer.html - Create an offer to book time with a doctor
+[ ] plugins/offer.go: URL encoding such as '?id=1298749827'
+[ ] plugins/offer.go: Use token to add details of offer to map
+[ ] pages/patient/offer.go: Boiler plate internationalization
+[ ] templates/patient/offer.tpl: convert from patient/offer.html
+
+TODO (halfwit) search.html - Query and responses for doctor searches
+[ ] plugins/search.go: URL encoding such as '?query=foobarbaz'
+[ ] plugins/search.go: Use query= to perform search and add to map
+[ ] pages/search.go: Boiler plate internationalization
+[ ] templates/search.tpl: If results are nil, show normal search page
+
+TODO (halfwit) Update footer template
+[ ] templates/footer.tpl: Update Call toll free
+[ ] templates/footer.tpl: Update Email
+[ ] templates/footer.tpl: Link from "Become A Partner" to doctor/application.html
