@@ -100,6 +100,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 		session: us,
 		path:    r.URL.Path[1:],
 	}
+
 	switch r.Method {
 	case "GET":
 		get(p, w)
@@ -111,7 +112,6 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 	d.manager.Destroy(w, r)
 	http.Redirect(w, r, "/index.html", 302)
-
 }
 
 func post(p *Request, us session.Session, w http.ResponseWriter, r *http.Request) {
@@ -139,6 +139,11 @@ func get(p *Request, w http.ResponseWriter) {
 		data, err = getdata(p, "patient")
 	default:
 		data, err = getdata(p, "guest")
+	}
+	if err != nil && err.Error() == "Unauthorized" {
+		p.Session().Set("redirect", p.path)
+		http.Redirect(w, p.Request(), "/login.html", 302)
+		return
 	}
 	if err != nil {
 		http.Error(w, "Service Unavailable", 503)
@@ -175,7 +180,12 @@ func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string,
 func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
 	user, status, us, role := getUser(d, w, r)
 	if status == "false" {
-		http.Error(w, "Unauthorized", 401)
+		http.Redirect(w, r, "/login.html", 302)
+		return
+	}
+	if rd, ok := us.Get("redirect").(string); ok {
+		us.Delete("redirect")
+		http.Redirect(w, r, "/"+rd, 302)
 		return
 	}
 	p := &Request{

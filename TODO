@@ -2,6 +2,12 @@ TODO (halfwit, nemo) - change link from TODO.html on help/provider.html
 [ ] plugin/earn.go: URL encoding such as `?specialty=myspecialty&country=mycountry` add to map[string]interface{} sent to pages/earn.go
 [ ] pages/earn.go: Internationalize data
 [ ] templates/earn.tpl: Simple page layout
+[ ] db/search.go: Lookup based on query for price
+
+TODO (nemo, halfwit) partner.html - Become A Partner page
+[ ] general: design partner.html
+[ ] pages/partner.go: Pull data from partner.html for internationalization
+[ ] templates/partner.tpl: convert from html
 
 TODO (nemo, halfwit) legal.html - articulating the legal policy
 [ ] general: design legal.html
@@ -22,21 +28,21 @@ TODO (nemo, halfwit) help/provider.html - steps for becoming a provider
 
 TODO (nemo, halfwit) messages.html - message thread with other user
 [ ] plugins/messages.go: URL encoding such as '?id=21987402180982098'
-[ ] plugins/messages.go: Use token to target specific message thread
+[ ] plugins/messages.go: Use token to target specific message thread from db
 [ ] plugins/messages.go: Validate token matches with user ID
 [ ] pages/messages.go: Boiler plate internationalization
 [ ] templates/messages.tpl: convert from messages.html
 
 TODO (halfwit) patient/symptoms.html
-[ ] plugins/symptoms.go: Validate user login
+[x] plugins/login.go: Validate user login
 
-TODO (halfwit) send email to client for form submission
+TODO (halfwit) send email to client for form submission after transaction completed
 [ ] transactions/symptoms.go: Send URL encoded link via email and wait for authorized login to pages
 
 TODO (halfwit) login.html - We want to redirect back to the inaccessible page after successful (re) login
-[ ] router/pages.go: On no "access" to page, redirect to login
-[ ] pages/login.go: Check map for "redirect" member. Remove After: struct member
-[ ] forms/login.go: Verify "redirect" is set and follow
+[x] router/pages.go: On no "access" to page, redirect to login
+[x] pages/login.go: Check map for "redirect" member. Remove After: struct member
+[x] forms/login.go: Verify "redirect" is set and follow
 
 TODO (halfwit) doctor/bookings.html - Look up details of a specific booking from profile
 [ ] plugins/bookings.go: URL encodidng such as '?id=1320984392184298'
@@ -81,4 +87,4 @@ TODO (halfwit) search.html - Query and responses for doctor searches
 TODO (halfwit) Update footer template
 [ ] templates/footer.tpl: Update Call toll free
 [ ] templates/footer.tpl: Update Email
-[ ] templates/footer.tpl: Link from "Become A Partner" to doctor/application.html
+[x] templates/footer.tpl: Link from "Become A Partner" to partner.html

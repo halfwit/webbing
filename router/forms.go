@@ -27,10 +27,6 @@ func AddPost(f *Form) {
 	formlist[f.Path+".html"] = f
 }
 
-// We want do redo this logic top down instead
-// Set a message in the plugin itself as the return error message
-// And on error, use it
-
 func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []string) {
 	var errors []string
 	form, ok := formlist[p.path]

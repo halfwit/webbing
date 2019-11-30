@@ -3,6 +3,7 @@ package router
 import (
 	"bufio"
 	"bytes"
+	"errors"
 	"fmt"
 	"html/template"
 	"path"
@@ -82,7 +83,7 @@ func getdata(p *Request, in string) ([]byte, error) {
 		return nil, fmt.Errorf("No such page: %s", p.path)
 	}
 	if uint8(p.role)&uint8(cache.Access) == 0 {
-		return nil, fmt.Errorf("Unauthorized")
+		return nil, errors.New("Unauthorized")
 	}
 	r := cache.Data(p.printer)
 	r["css"] = cache.CSS
