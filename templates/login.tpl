@@ -1,6 +1,6 @@
 {{define "content"}}
 	<main>
-            <h3>{{.greeting}}</h3>
+            <h3>{{if .redirect }}{{.continue}}{{else}}{{.greeting}}{{end}}</h3>
 	      {{range .errors}}
 	      <p style="color: red" class="errtext">{{.}}</p>
 	      {{end}}

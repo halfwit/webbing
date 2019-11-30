@@ -98,6 +98,9 @@ func getdata(p *Request, in string) ([]byte, error) {
 	}
 	if p.session != nil {
 		r["username"] = p.session.Get("username")
+		if _, ok := p.session.Get("redirect").(string); ok {
+			r["redirect"] = true
+		}
 	}
 	return cache.render(r)
 }

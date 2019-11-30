@@ -20,11 +20,12 @@ func init() {
 func login(p *message.Printer) map[string]interface{} {
 	// TODO: Also add in the error messages here
 	return map[string]interface{}{
-		"title":          p.Sprintf("Olmax Medical | Login"),
-		"greeting":       p.Sprintf("Welcome back!"),
-		"email":          p.Sprintf("Email:"),
-		"password":       p.Sprintf("Password:"),
-		"forgotPassword": p.Sprintf("Forgot your password?"),
-		"login":          p.Sprintf("Login"),
+		"title":          p.Sprint("Olmax Medical | Login"),
+		"continue":       p.Sprint("Please login to continue"),
+		"greeting":       p.Sprint("Welcome back!"),
+		"email":          p.Sprint("Email:"),
+		"password":       p.Sprint("Password:"),
+		"forgotPassword": p.Sprint("Forgot your password?"),
+		"login":          p.Sprint("Login"),
 	}
 }
