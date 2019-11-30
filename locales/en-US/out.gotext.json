@@ -2,37 +2,24 @@
     "language": "en-US",
     "messages": [
         {
-            "id": "No selection for question {I}",
-            "message": "No selection for question {I}",
-            "translation": "No selection for question {I}",
+            "id": "Password required",
+            "message": "Password required",
+            "translation": "Password required",
             "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
             "fuzzy": true
         },
         {
-            "id": "Invalid selection for question {I}",
-            "message": "Invalid selection for question {I}",
-            "translation": "Invalid selection for question {I}",
+            "id": "Password must be at least 8 characters",
+            "message": "Password must be at least 8 characters",
+            "translation": "Password must be at least 8 characters",
             "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "I",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "i"
-                }
-            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Re-enter same password",
+            "message": "Re-enter same password",
+            "translation": "Re-enter same password",
+            "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
@@ -50,614 +37,30 @@
             "fuzzy": true
         },
         {
-            "id": "Full name required",
-            "message": "Full name required",
-            "translation": "Full name required",
+            "id": "First name required",
+            "message": "First name required",
+            "translation": "First name required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Full name must be at least 2 characters",
-            "message": "Full name must be at least 2 characters",
-            "translation": "Full name must be at least 2 characters",
+            "id": "First name must be at least 2 characters",
+            "message": "First name must be at least 2 characters",
+            "translation": "First name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "Olmax Medical | Appointments",
-            "message": "Olmax Medical | Appointments",
-            "translation": "Olmax Medical | Appointments",
+            "id": "Last name required",
+            "message": "Last name required",
+            "translation": "Last name required",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "You currently have no appointments pending.",
-            "message": "You currently have no appointments pending.",
-            "translation": "You currently have no appointments pending.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "message": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "translation": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "Htmlhelpa",
-                    "string": "%[1]s",
-                    "type": "html/template.HTML",
-                    "underlyingType": "string",
-                    "argNum": 1,
-                    "expr": "template.HTML(`\u003ca href=\"help.html\"\u003ehelp\u003c/a\u003e`)"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Profile",
-            "message": "Olmax Medical | Profile",
-            "translation": "Olmax Medical | Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Hello",
-            "message": "Hello",
-            "translation": "Hello",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Create Profile",
-            "message": "Olmax Medical | Create Profile",
-            "translation": "Olmax Medical | Create Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Create Patient Profile",
-            "message": "Create Patient Profile",
-            "translation": "Create Patient Profile",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please submit some information regarding your consult.",
-            "message": "Please submit some information regarding your consult.",
-            "translation": "Please submit some information regarding your consult.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "When were you born?",
-            "message": "When were you born?",
-            "translation": "When were you born?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What is your biological gender?",
-            "message": "What is your biological gender?",
-            "translation": "What is your biological gender?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "message": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "translation": "Please give a brief statement regarding the main reason you would like to see your doctor:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "When did your symptoms start?",
-            "message": "When did your symptoms start?",
-            "translation": "When did your symptoms start?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "message": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "translation": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "How long have these symptoms lasted?",
-            "message": "How long have these symptoms lasted?",
-            "translation": "How long have these symptoms lasted?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "message": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "translation": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What makes your symptoms better, and What makes them worse?",
-            "message": "What makes your symptoms better, and What makes them worse?",
-            "translation": "What makes your symptoms better, and What makes them worse?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Does your pain travel or radiate to another part of your body?",
-            "message": "Does your pain travel or radiate to another part of your body?",
-            "translation": "Does your pain travel or radiate to another part of your body?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Have you taken any medications for these symptoms and how much have they worked?",
-            "message": "Have you taken any medications for these symptoms and how much have they worked?",
-            "translation": "Have you taken any medications for these symptoms and how much have they worked?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any fevers or Chills?",
-            "message": "Any fevers or Chills?",
-            "translation": "Any fevers or Chills?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any weight gain or weight loss?",
-            "message": "Any weight gain or weight loss?",
-            "translation": "Any weight gain or weight loss?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any changes in vision?",
-            "message": "Any changes in vision?",
-            "translation": "Any changes in vision?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any lung issues?",
-            "message": "Any lung issues?",
-            "translation": "Any lung issues?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any heart problems?",
-            "message": "Any heart problems?",
-            "translation": "Any heart problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any intestinal problems?",
-            "message": "Any intestinal problems?",
-            "translation": "Any intestinal problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any kidney problems?",
-            "message": "Any kidney problems?",
-            "translation": "Any kidney problems?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any problems with muscles or bones?",
-            "message": "Any problems with muscles or bones?",
-            "translation": "Any problems with muscles or bones?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "message": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "translation": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "message": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "translation": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Male",
-            "message": "Male",
-            "translation": "Male",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Female",
-            "message": "Female",
-            "translation": "Female",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please check any of the following if you have experienced in the last 6 weeks:",
-            "message": "Please check any of the following if you have experienced in the last 6 weeks:",
-            "translation": "Please check any of the following if you have experienced in the last 6 weeks:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Welcome",
-            "message": "Olmax Medical | Welcome",
-            "translation": "Olmax Medical | Welcome",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical",
-            "message": "Olmax Medical",
-            "translation": "Olmax Medical",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Country",
-            "message": "Country",
-            "translation": "Country",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Specialty",
-            "message": "Specialty",
-            "translation": "Specialty",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Find a Doctor",
-            "message": "Find a Doctor",
-            "translation": "Find a Doctor",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Appointment Dates:",
-            "message": "Appointment Dates:",
-            "translation": "Appointment Dates:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "From:",
-            "message": "From:",
-            "translation": "From:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "To:",
-            "message": "To:",
-            "translation": "To:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Appointment Times",
-            "message": "Appointment Times",
-            "translation": "Appointment Times",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Start Time:",
-            "message": "Start Time:",
-            "translation": "Start Time:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "End Time:",
-            "message": "End Time:",
-            "translation": "End Time:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Search",
-            "message": "Search",
-            "translation": "Search",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Who We Are",
-            "message": "Who We Are",
-            "translation": "Who We Are",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
-            "message": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
-            "translation": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Second Opinions",
-            "message": "Second Opinions",
-            "translation": "Second Opinions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
-            "message": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
-            "translation": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Anonymity",
-            "message": "Anonymity",
-            "translation": "Anonymity",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
-            "message": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
-            "translation": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Access to Physicians from around the world",
-            "message": "Access to Physicians from around the world",
-            "translation": "Access to Physicians from around the world",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
-            "message": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
-            "translation": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Payment",
-            "message": "Payment",
-            "translation": "Payment",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
-            "message": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
-            "translation": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Copyright 2017, 2018, 2019",
-            "message": "Copyright 2017, 2018, 2019",
-            "translation": "Copyright 2017, 2018, 2019",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "See More",
-            "message": "See More",
-            "translation": "See More",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What are patients saying about our doctors from",
-            "message": "What are patients saying about our doctors from",
-            "translation": "What are patients saying about our doctors from",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Login",
-            "message": "Olmax Medical | Login",
-            "translation": "Olmax Medical | Login",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Welcome back!",
-            "message": "Welcome back!",
-            "translation": "Welcome back!",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Email:",
-            "message": "Email:",
-            "translation": "Email:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Password:",
-            "message": "Password:",
-            "translation": "Password:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Forgot your password?",
-            "message": "Forgot your password?",
-            "translation": "Forgot your password?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Login",
-            "message": "Login",
-            "translation": "Login",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Messages",
-            "message": "Olmax Medical | Messages",
-            "translation": "Olmax Medical | Messages",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "You currently have no messages.",
-            "message": "You currently have no messages.",
-            "translation": "You currently have no messages.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Previous messages: Click here",
-            "message": "Previous messages: Click here",
-            "translation": "Previous messages: Click here",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Enter Email",
-            "message": "Enter Email",
-            "translation": "Enter Email",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "We will send a reset code to the email provided",
-            "message": "We will send a reset code to the email provided",
-            "translation": "We will send a reset code to the email provided",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Reset",
-            "message": "Reset",
-            "translation": "Reset",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Sign Up",
-            "message": "Olmax Medical | Sign Up",
-            "translation": "Olmax Medical | Sign Up",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Sign Up for free",
-            "message": "Sign Up for free",
-            "translation": "Sign Up for free",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "First Name:",
-            "message": "First Name:",
-            "translation": "First Name:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Enter your first name",
-            "message": "Enter your first name",
-            "translation": "Enter your first name",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Enter your last name",
-            "message": "Enter your last name",
-            "translation": "Enter your last name",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Last Name:",
-            "message": "Last Name:",
-            "translation": "Last Name:",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Enter a valid email",
-            "message": "Enter a valid email",
-            "translation": "Enter a valid email",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Enter password (8+ chars)",
-            "message": "Enter password (8+ chars)",
-            "translation": "Enter password (8+ chars)",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Sign Up",
-            "message": "Sign Up",
-            "translation": "Sign Up",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Olmax Medical | Wallet",
-            "message": "Olmax Medical | Wallet",
-            "translation": "Olmax Medical | Wallet",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Wallet",
-            "message": "Wallet",
-            "translation": "Wallet",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "0 BTC",
-            "message": "0 BTC",
-            "translation": "0 BTC",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "NO FUNDS CURRENTLY HELD IN ESCROW",
-            "message": "NO FUNDS CURRENTLY HELD IN ESCROW",
-            "translation": "NO FUNDS CURRENTLY HELD IN ESCROW",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Deposit Funds",
-            "message": "Deposit Funds",
-            "translation": "Deposit Funds",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Send only Bitcoin (BTC) to this address",
-            "message": "Send only Bitcoin (BTC) to this address",
-            "translation": "Send only Bitcoin (BTC) to this address",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
-            "message": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
-            "translation": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "id": "Last name must be at least 2 characters",
+            "message": "Last name must be at least 2 characters",
+            "translation": "Last name must be at least 2 characters",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -739,6 +142,41 @@
             "fuzzy": true
         },
         {
+            "id": "Copyright 2017, 2018, 2019",
+            "message": "Copyright 2017, 2018, 2019",
+            "translation": "Copyright 2017, 2018, 2019",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Subject: Olmax Medical - Reset Your Password",
+            "message": "Subject: Olmax Medical - Reset Your Password",
+            "translation": "Subject: Olmax Medical - Reset Your Password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please click the following link to reset your password",
+            "message": "Please click the following link to reset your password",
+            "translation": "Please click the following link to reset your password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Subject: Olmax Medical - Verify your new account",
+            "message": "Subject: Olmax Medical - Verify your new account",
+            "translation": "Subject: Olmax Medical - Verify your new account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please click the following link to finalize your account creation",
+            "message": "Please click the following link to finalize your account creation",
+            "translation": "Please click the following link to finalize your account creation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "No selection for {I}",
             "message": "No selection for {I}",
             "translation": "No selection for {I}",
@@ -776,6 +214,13 @@
             "id": "Olmax Medical | FAQ",
             "message": "Olmax Medical | FAQ",
             "translation": "Olmax Medical | FAQ",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical",
+            "message": "Olmax Medical",
+            "translation": "Olmax Medical",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -1207,6 +652,13 @@
             "fuzzy": true
         },
         {
+            "id": "Specialty",
+            "message": "Specialty",
+            "translation": "Specialty",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Become A Provider",
             "message": "Become A Provider",
             "translation": "Become A Provider",
@@ -1620,6 +1072,610 @@
             "fuzzy": true
         },
         {
+            "id": "Olmax Medical | Welcome",
+            "message": "Olmax Medical | Welcome",
+            "translation": "Olmax Medical | Welcome",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Country",
+            "message": "Country",
+            "translation": "Country",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Find a Doctor",
+            "message": "Find a Doctor",
+            "translation": "Find a Doctor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointment Dates:",
+            "message": "Appointment Dates:",
+            "translation": "Appointment Dates:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "From:",
+            "message": "From:",
+            "translation": "From:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "To:",
+            "message": "To:",
+            "translation": "To:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Appointment Times",
+            "message": "Appointment Times",
+            "translation": "Appointment Times",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Start Time:",
+            "message": "Start Time:",
+            "translation": "Start Time:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "End Time:",
+            "message": "End Time:",
+            "translation": "End Time:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Search",
+            "message": "Search",
+            "translation": "Search",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Who We Are",
+            "message": "Who We Are",
+            "translation": "Who We Are",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "message": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "translation": "Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of \u003ci\u003elaissez-fairedes\u003c/i\u003e (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Second Opinions",
+            "message": "Second Opinions",
+            "translation": "Second Opinions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "message": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "translation": "Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Anonymity",
+            "message": "Anonymity",
+            "translation": "Anonymity",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "message": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "translation": "Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Access to Physicians from around the world",
+            "message": "Access to Physicians from around the world",
+            "translation": "Access to Physicians from around the world",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "message": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "translation": "Physicians from around the world will be able to join our network, see patients from anywhere at anytime.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payment",
+            "message": "Payment",
+            "translation": "Payment",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "message": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "translation": "Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "See More",
+            "message": "See More",
+            "translation": "See More",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What are patients saying about our doctors from",
+            "message": "What are patients saying about our doctors from",
+            "translation": "What are patients saying about our doctors from",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Messages",
+            "message": "Olmax Medical | Messages",
+            "translation": "Olmax Medical | Messages",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You currently have no messages.",
+            "message": "You currently have no messages.",
+            "translation": "You currently have no messages.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Previous messages: Click here",
+            "message": "Previous messages: Click here",
+            "translation": "Previous messages: Click here",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Login",
+            "message": "Olmax Medical | Login",
+            "translation": "Olmax Medical | Login",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter Email",
+            "message": "Enter Email",
+            "translation": "Enter Email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We will send a reset code to the email provided",
+            "message": "We will send a reset code to the email provided",
+            "translation": "We will send a reset code to the email provided",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Email:",
+            "message": "Email:",
+            "translation": "Email:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Reset",
+            "message": "Reset",
+            "translation": "Reset",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Sign Up",
+            "message": "Olmax Medical | Sign Up",
+            "translation": "Olmax Medical | Sign Up",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sign Up for free",
+            "message": "Sign Up for free",
+            "translation": "Sign Up for free",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "First Name:",
+            "message": "First Name:",
+            "translation": "First Name:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your first name",
+            "message": "Enter your first name",
+            "translation": "Enter your first name",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your last name",
+            "message": "Enter your last name",
+            "translation": "Enter your last name",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Last Name:",
+            "message": "Last Name:",
+            "translation": "Last Name:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter a valid email",
+            "message": "Enter a valid email",
+            "translation": "Enter a valid email",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password:",
+            "message": "Password:",
+            "translation": "Password:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter password (8+ chars)",
+            "message": "Enter password (8+ chars)",
+            "translation": "Enter password (8+ chars)",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sign Up",
+            "message": "Sign Up",
+            "translation": "Sign Up",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Wallet",
+            "message": "Olmax Medical | Wallet",
+            "translation": "Olmax Medical | Wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "0 BTC",
+            "message": "0 BTC",
+            "translation": "0 BTC",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "message": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "translation": "NO FUNDS CURRENTLY HELD IN ESCROW",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Deposit Funds",
+            "message": "Deposit Funds",
+            "translation": "Deposit Funds",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Send only Bitcoin (BTC) to this address",
+            "message": "Send only Bitcoin (BTC) to this address",
+            "translation": "Send only Bitcoin (BTC) to this address",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "message": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "translation": "Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No selection for question {I}",
+            "message": "No selection for question {I}",
+            "translation": "No selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid selection for question {I}",
+            "message": "Invalid selection for question {I}",
+            "translation": "Invalid selection for question {I}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "I",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "i"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Full name required",
+            "message": "Full name required",
+            "translation": "Full name required",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Full name must be at least 2 characters",
+            "message": "Full name must be at least 2 characters",
+            "translation": "Full name must be at least 2 characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Appointments",
+            "message": "Olmax Medical | Appointments",
+            "translation": "Olmax Medical | Appointments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You currently have no appointments pending.",
+            "message": "You currently have no appointments pending.",
+            "translation": "You currently have no appointments pending.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "message": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translation": "If you have submitted payment, and do not see appointment scheduled on this page; please refer to the {Htmlhelpa} section.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Htmlhelpa",
+                    "string": "%[1]s",
+                    "type": "html/template.HTML",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "template.HTML(`\u003ca href=\"help.html\"\u003ehelp\u003c/a\u003e`)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Profile",
+            "message": "Olmax Medical | Profile",
+            "translation": "Olmax Medical | Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hello",
+            "message": "Hello",
+            "translation": "Hello",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Olmax Medical | Create Profile",
+            "message": "Olmax Medical | Create Profile",
+            "translation": "Olmax Medical | Create Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create Patient Profile",
+            "message": "Create Patient Profile",
+            "translation": "Create Patient Profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please submit some information regarding your consult.",
+            "message": "Please submit some information regarding your consult.",
+            "translation": "Please submit some information regarding your consult.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "When were you born?",
+            "message": "When were you born?",
+            "translation": "When were you born?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What is your biological gender?",
+            "message": "What is your biological gender?",
+            "translation": "What is your biological gender?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "message": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "translation": "Please give a brief statement regarding the main reason you would like to see your doctor:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "When did your symptoms start?",
+            "message": "When did your symptoms start?",
+            "translation": "When did your symptoms start?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "message": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "translation": "Where are your symptoms located? \u003ci\u003epart of your body\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How long have these symptoms lasted?",
+            "message": "How long have these symptoms lasted?",
+            "translation": "How long have these symptoms lasted?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "message": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "translation": "How would you characterize your symptoms? \u003ci\u003eSharp, Dull, Ache, twisting, ets.\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What makes your symptoms better, and What makes them worse?",
+            "message": "What makes your symptoms better, and What makes them worse?",
+            "translation": "What makes your symptoms better, and What makes them worse?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Does your pain travel or radiate to another part of your body?",
+            "message": "Does your pain travel or radiate to another part of your body?",
+            "translation": "Does your pain travel or radiate to another part of your body?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Have you taken any medications for these symptoms and how much have they worked?",
+            "message": "Have you taken any medications for these symptoms and how much have they worked?",
+            "translation": "Have you taken any medications for these symptoms and how much have they worked?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any fevers or Chills?",
+            "message": "Any fevers or Chills?",
+            "translation": "Any fevers or Chills?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any weight gain or weight loss?",
+            "message": "Any weight gain or weight loss?",
+            "translation": "Any weight gain or weight loss?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any changes in vision?",
+            "message": "Any changes in vision?",
+            "translation": "Any changes in vision?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any lung issues?",
+            "message": "Any lung issues?",
+            "translation": "Any lung issues?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any heart problems?",
+            "message": "Any heart problems?",
+            "translation": "Any heart problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any intestinal problems?",
+            "message": "Any intestinal problems?",
+            "translation": "Any intestinal problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any kidney problems?",
+            "message": "Any kidney problems?",
+            "translation": "Any kidney problems?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any problems with muscles or bones?",
+            "message": "Any problems with muscles or bones?",
+            "translation": "Any problems with muscles or bones?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "message": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "translation": "Any nervous system problmes? \u003ci\u003eStrokes\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "message": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "translation": "Any psychiatric problems? \u003ci\u003eDepression, anxiety\u003c/i\u003e",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Male",
+            "message": "Male",
+            "translation": "Male",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Female",
+            "message": "Female",
+            "translation": "Female",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "message": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "translation": "Please check any of the following if you have experienced in the last 6 weeks:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Olmax Medical | Bookings",
             "message": "Olmax Medical | Bookings",
             "translation": "Olmax Medical | Bookings",
@@ -1637,83 +1693,6 @@
             "id": "Olmax Medical | Find Patients",
             "message": "Olmax Medical | Find Patients",
             "translation": "Olmax Medical | Find Patients",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Password required",
-            "message": "Password required",
-            "translation": "Password required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Password must be at least 8 characters",
-            "message": "Password must be at least 8 characters",
-            "translation": "Password must be at least 8 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Re-enter same password",
-            "message": "Re-enter same password",
-            "translation": "Re-enter same password",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "First name required",
-            "message": "First name required",
-            "translation": "First name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "First name must be at least 2 characters",
-            "message": "First name must be at least 2 characters",
-            "translation": "First name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Last name required",
-            "message": "Last name required",
-            "translation": "Last name required",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Last name must be at least 2 characters",
-            "message": "Last name must be at least 2 characters",
-            "translation": "Last name must be at least 2 characters",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Subject: Olmax Medical - Reset Your Password",
-            "message": "Subject: Olmax Medical - Reset Your Password",
-            "translation": "Subject: Olmax Medical - Reset Your Password",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please click the following link to reset your password",
-            "message": "Please click the following link to reset your password",
-            "translation": "Please click the following link to reset your password",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Subject: Olmax Medical - Verify your new account",
-            "message": "Subject: Olmax Medical - Verify your new account",
-            "translation": "Subject: Olmax Medical - Verify your new account",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Please click the following link to finalize your account creation",
-            "message": "Please click the following link to finalize your account creation",
-            "translation": "Please click the following link to finalize your account creation",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         }
