@@ -1,4 +1,4 @@
-TODO (halfwit, nemo) - change link from TODO.html
+TODO (halfwit, nemo) - change link from TODO.html on help/provider.html
 [ ] plugin/earn.go: URL encoding such as `?specialty=myspecialty&country=mycountry` add to map[string]interface{} sent to pages/earn.go
 [ ] pages/earn.go: Internationalize data
 [ ] templates/earn.tpl: Simple page layout
