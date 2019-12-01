@@ -33,16 +33,8 @@ TODO (nemo, halfwit) messages.html - message thread with other user
 [ ] pages/messages.go: Boiler plate internationalization
 [ ] templates/messages.tpl: convert from messages.html
 
-TODO (halfwit) patient/symptoms.html
-[x] plugins/login.go: Validate user login
-
 TODO (halfwit) send email to client for form submission after transaction completed
 [ ] transactions/symptoms.go: Send URL encoded link via email and wait for authorized login to pages
-
-TODO (halfwit) login.html - We want to redirect back to the inaccessible page after successful (re) login
-[x] router/pages.go: On no "access" to page, redirect to login
-[x] pages/login.go: Check map for "redirect" member. Remove After: struct member
-[x] forms/login.go: Verify "redirect" is set and follow
 
 TODO (halfwit) doctor/bookings.html - Look up details of a specific booking from profile
 [ ] plugins/bookings.go: URL encodidng such as '?id=1320984392184298'
@@ -88,3 +80,12 @@ TODO (halfwit) Update footer template
 [ ] templates/footer.tpl: Update Call toll free
 [ ] templates/footer.tpl: Update Email
 [x] templates/footer.tpl: Link from "Become A Partner" to partner.html
+
+TODO (dba) - Database
+[ ] db/messages.go: General message, from a to b at time 
+[ ] db/tokons.go: Token linked to customer/doctor/possibly wallet 
+[ ] db/doctors.go: Specialty Name Country/countries Rate [...]
+[ ] db/patient.go: Name Country
+[ ] db/appointments.go: link doctor + patient @ time 
+[ ] db/wallet.go: link appointment + wallet
+ 
