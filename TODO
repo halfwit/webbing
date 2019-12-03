@@ -88,4 +88,8 @@ TODO (dba) - Database
 [ ] db/patient.go: Name Country
 [ ] db/appointments.go: link doctor + patient @ time 
 [ ] db/wallet.go: link appointment + wallet
- 
+
+TODO (halfwit) - Cookie pop up
+[ ] We use cookies to track login sessions, etc popup
+
+TODO (halfwit) - TLS + SSL certs for the whole site
