@@ -31,10 +31,30 @@ func Route(manager *session.Manager) error {
 	mux.HandleFunc("/logout.html", d.logout)
 	mux.HandleFunc("/profile.html", d.profile)
 	mux.HandleFunc("/", d.normal)
+	/* Pending certificates - from https://github.com/denji/golang-tls (creative commons)
+	cfg := &tls.Config{
+		MinVersion: tls.VersionTLS12,
+		CurvePreferences: []tls.CurveID{tls.CurveP521, tls.CurveP384, tls.CurveP256},
+		PreferServerCipherSuites: true,
+		CipherSuites: []int16{
+			tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+            tls.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,
+            tls.TLS_RSA_WITH_AES_256_GCM_SHA384,
+            tls.TLS_RSA_WITH_AES_256_CBC_SHA,
+        },
+	}
+	srv := &http.Server{
+		Addr: ":443",
+		Handler: mux,
+		TLSConfig: cfg,
+		TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
+	}
+	return srv.ListenAndServeTLS("tls.crt", "tls.key") */
 	return http.ListenAndServe(":8080", mux)
 }
 
 func (d *handle) activate(w http.ResponseWriter, r *http.Request) {
+	//w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
 	if len(r.URL.Path) != 46 && r.URL.Path[:9] != "/activate" {
 		http.Error(w, "Bad Request", 400)
 		return
@@ -86,6 +106,7 @@ func (r *Request) Request() *http.Request {
 }
 
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
+	//w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
 	if r.URL.Path == "/" {
 		http.Redirect(w, r, "/index.html", 302)
 		return
@@ -111,6 +132,7 @@ func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
 
 func (d *handle) logout(w http.ResponseWriter, r *http.Request) {
 	d.manager.Destroy(w, r)
+	//w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
 	http.Redirect(w, r, "/index.html", 302)
 }
 
@@ -178,6 +200,7 @@ func getUser(d *handle, w http.ResponseWriter, r *http.Request) (string, string,
 
 // TODO: This will require actual client data from the database to populate the page
 func (d *handle) profile(w http.ResponseWriter, r *http.Request) {
+	//w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
 	user, status, us, role := getUser(d, w, r)
 	if status == "false" {
 		http.Redirect(w, r, "/login.html", 302)

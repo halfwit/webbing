@@ -2,9 +2,9 @@
 	<main>
 	<h1>{{.mainHeader}}</h1>
 	<h2>{{.paymentHeader}}</h2>
-		<p>{{.paymentBody}}<a href="https:/bitcoin.org">Bitcoin</a></p>
+		<p>{{.paymentBody}} <a href="https:/bitcoin.org">Bitcoin</a></p>
 	<h4>{{.whatBTCHeader}}</h4>
-		<p>{{.whatBTCBody}}<a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a></p>
+		<p>{{.whatBTCBody}} <a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a></p>
 		<br>
 	<h4>{{.chargedHeader}}</h4>
 		<p>{{.chargedBody}}</p>

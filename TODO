@@ -93,3 +93,5 @@ TODO (halfwit) - Cookie pop up
 [ ] We use cookies to track login sessions, etc popup
 
 TODO (halfwit) - TLS + SSL certs for the whole site
+[x] Create local certs for testing
+[x] Move to tls functions - commented out for now
