@@ -1,5 +1,3 @@
 client
-vscode.code-workspace
-.DS_Store
 work.code-workspace
 *.pem
