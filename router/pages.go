@@ -82,7 +82,7 @@ func ValidatePages() []error {
 			path:    item.Path + ".html",
 			role:    db.PatientAuth | db.DoctorAuth | db.GuestAuth,
 		}
-		_, err = getdata(p, "")
+		_, err = getData(p, "")
 		if err != nil {
 			errs = append(errs, err)
 		}
@@ -95,11 +95,11 @@ func getpage(p *Request, w http.ResponseWriter) {
 	var err error
 	switch db.UserRole(p.user) {
 	case db.DoctorAuth:
-		data, err = getdata(p, "doctor")
+		data, err = getData(p, "doctor")
 	case db.PatientAuth:
-		data, err = getdata(p, "patient")
+		data, err = getData(p, "patient")
 	default:
-		data, err = getdata(p, "guest")
+		data, err = getData(p, "guest")
 	}
 	if err != nil && err.Error() == "Unauthorized" {
 		p.Session().Set("redirect", p.path)
@@ -113,7 +113,7 @@ func getpage(p *Request, w http.ResponseWriter) {
 	fmt.Fprintf(w, "%s", data)
 }
 
-func getdata(p *Request, in string) ([]byte, error) {
+func getData(p *Request, in string) ([]byte, error) {
 	cache, ok := pagecache[p.path]
 	if !ok {
 		return nil, fmt.Errorf("No such page: %s", p.path)

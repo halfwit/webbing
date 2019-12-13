@@ -28,7 +28,7 @@ func AddPost(f *Form) {
 	formlist[f.Path+".html"] = f
 }
 
-func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []string) {
+func parseForm(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []string) {
 	var errors []string
 	form, ok := formlist[p.path]
 	if !ok {
@@ -50,7 +50,7 @@ func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []str
 }
 
 func postform(p *Request, us session.Session, w http.ResponseWriter, r *http.Request) {
-	form, errors := parseform(p, w, r)
+	form, errors := parseForm(p, w, r)
 	if len(errors) > 0 && errors[0] != "nil" {
 		// NOTE(halfwit) this stashes previous entries, but does not work
 		// on multipart forms (with file uploads)

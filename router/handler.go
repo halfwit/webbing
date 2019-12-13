@@ -7,6 +7,7 @@ import (
 	"github.com/olmaxmedical/olmax_go/db"
 	"github.com/olmaxmedical/olmax_go/email"
 	"github.com/olmaxmedical/olmax_go/session"
+	"golang.org/x/text/message"
 )
 
 // Handle specific endpoints
@@ -27,7 +28,7 @@ func (d *handler) normal(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/index.html", 302)
 		return
 	}
-	user, status, us, role := getUser(d, w, r)
+	user, status, us, role := d.getUser(w, r)
 	p := &Request{
 		printer: userLang(r),
 		status:  status,
@@ -49,7 +50,7 @@ func (d *handler) normal(w http.ResponseWriter, r *http.Request) {
 // TODO: This will require actual client data from the database to populate the page
 func (d *handler) profile(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
-	user, status, us, role := getUser(d, w, r)
+	user, status, us, role := d.getUser(w, r)
 	if status == "false" {
 		http.Redirect(w, r, "/login.html", 302)
 		return
@@ -75,14 +76,14 @@ func (d *handler) profile(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		p.path = "doctor/profile.html"
-		data, err = getdata(p, "doctor")
+		data, err = getData(p, "doctor")
 	case db.PatientAuth:
 		if role != db.PatientAuth {
 			http.Error(w, "Unauthorized", 401)
 			return
 		}
 		p.path = "patient/profile.html"
-		data, err = getdata(p, "patient")
+		data, err = getData(p, "patient")
 	default:
 		http.Error(w, "Forbidden", 403)
 		return
@@ -109,7 +110,7 @@ func (d *handler) reset(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	p := userLang(r)
-	user, _, us, _ := getUser(d, w, r)
+	user, _, us, _ := d.getUser(w, r)
 	token := email.NextResetToken(r.URL.Path[7:], user)
 	if token == "" {
 		us.Set("errors", [1]string{p.Sprint("Token expired")})
@@ -118,4 +119,29 @@ func (d *handler) reset(w http.ResponseWriter, r *http.Request) {
 	us.Set("token", token)
 	r.URL.Path = "/newpassword.html"
 	d.normal(w, r)
+}
+
+func (d *handler) getUser(w http.ResponseWriter, r *http.Request) (string, string, session.Session, db.Access) {
+	us := d.manager.Start(w, r)
+	user, ok1 := us.Get("username").(string)
+	status, ok2 := us.Get("login").(string)
+	role, ok3 := us.Get("role").(db.Access)
+	if !ok1 || !ok2 || status != "true" {
+		status = "false"
+	}
+	if !ok3 {
+		role = db.GuestAuth
+	}
+	if status == "true" {
+		us.Set("token", db.NewToken())
+	}
+	return user, status, us, role
+}
+
+// Some utility functions that are shared across pages and forms
+func userLang(r *http.Request) *message.Printer {
+	accept := r.Header.Get("Accept-Language")
+	lang := r.FormValue("lang")
+	tag := message.MatchLanguage(lang, accept)
+	return message.NewPrinter(tag)
 }
