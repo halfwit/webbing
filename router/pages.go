@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"os"
 	"path"
 	"strings"
 
@@ -53,13 +54,25 @@ func ValidatePages() []error {
 	fd := path.Join("templates", "footer.tpl")
 	ed := path.Join("templates", "errors.tpl")
 	ld := path.Join("templates", "layout.tpl")
+	extra, err := os.Open(path.Join("templates", "plugins"))
+	if err != nil {
+		errs = append(errs, errors.New("Unable to locate templates/plugins"))
+		return errs
+	}
+	dirs, err := extra.Readdirnames(0)
+	for n, dir := range dirs {
+		dirs[n] = path.Join("templates", "plugins", dir)
+	}
+	// TODO(halfwit) Validate our plugin templates here as well
+	dirs = append(dirs, hd, fd, ed, ld)
 	printer := message.NewPrinter(message.MatchLanguage("en"))
 	for _, item := range pagecache {
 		var err error
 		tp := path.Join("templates", item.Path) + ".tpl"
-
 		t := template.New(path.Base(tp))
-		item.tmpl, err = t.ParseFiles(tp, hd, ed, fd, ld)
+		// TODO(halfwit) Contemplate only adding templates for plugins each page uses
+		item.tmpl, _ = t.ParseFiles(dirs...)
+		item.tmpl, err = t.ParseFiles(tp)
 		if err != nil {
 			errs = append(errs, fmt.Errorf("parsing in %s - %v", path.Dir(item.Path), err))
 			continue

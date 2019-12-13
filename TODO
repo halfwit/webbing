@@ -40,7 +40,7 @@ TODO (halfwit) doctor/bookings.html - Look up details of a specific booking from
 [ ] plugins/bookings.go: URL encodidng such as '?id=1320984392184298'
 [ ] plugins/bookings.go: Use token to add booking data to map
 [ ] pages/doctor/bookings.go: Boiler plate internationalization
-[ ] templates/doctor/bookings.tpl: convert from doctor/bookings.html
+[ ] templates/doctor/bookings.tpl: create table for data coming back from bookings (nest template) 
 
 TODO (halfwit) doctor/profile.html - List bookings, messages
 [ ] plugins/messages.go: Use User ID to fetch list of messages
@@ -62,7 +62,7 @@ TODO (halfwit) patient/appointment.html - View details of a single appointment
 [ ] plugins/appointments.go: URL encoding such as '?id=21092198409'
 [ ] plugins/appointments.go: Use token to add booking data to map
 [ ] pages/patient/appointment.go: Boiler plate internationalization
-[ ] templates/patient/appointment.tpl: convert from patient/appointment.html
+[ ] templates/patient/appointment.tpl: create table for listing appointments (nest template)
 
 TODO (halfwit) patient/offer.html - Create an offer to book time with a doctor
 [ ] plugins/offer.go: URL encoding such as '?id=1298749827'
@@ -95,3 +95,5 @@ TODO (halfwit) - Cookie pop up
 TODO (halfwit) - TLS + SSL certs for the whole site
 [x] Create local certs for testing
 [x] Move to tls functions - commented out for now
+[ ] Purchase cert from CA
+[ ] Sign and use for site

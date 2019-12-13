@@ -2,12 +2,7 @@
 	<main>
 	 <h2>{{.mainHeader}}</h2>
 	 <form action="findspecialty">
-		<label for="Specialty">{{.specialty}}</label>
-	 	<select name="Specialty">
-		{{range $id, $name := .specialties}}
-			<option value="{{$id}}">{{$name}}</option>
-		{{end}}
-		</select>
+		{{template "specialty" .specialties}}
 		<br/>
 		<label for="Amount">{{.bcu}} <i>({{.rate}})</i></label>
 		<input type="text" name="Amount" size="15" maxlength="10" />
