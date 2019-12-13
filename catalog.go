@@ -35,502 +35,448 @@ func init() {
 }
 
 var messageKeyToIndex = map[string]int{
-	"-View all":                             83,
-	"0 BTC":                                 193,
-	"1.) Go to Edit Profile.":               39,
-	"1.) Go to your Notification Settings.": 44,
-	"1.) Remove Olmax messages from your spam list":                                                                  51,
-	"2.) Add nemo@olmax.com, halfwit@olmax.com, and services@olmax.com to your personal email address book":          52,
-	"2.) Look for the \"Email Settings\" field. Make sure you have chosen the email types you want to receive.":      45,
-	"2.) Look for the Email Address field. Make sure your address is correct.":                                       40,
-	"3.) After adding or removing checkmarks from the right boxes, scroll to the bottom of the page and click Save.": 46,
-	"3.) If it is incorrect, add the correct address and click Save.":                                                41,
-	"Access to Physicians from around the world":                                                                     167,
-	"Acute Pain Medicine": 116,
-	"All Olmax physicians must: submit a profile photo, medical diplomas, residency certification or equivalent, verify their phone, email, government ID, and background checks. Patients and physicians can each publish reviews after visit conclusions keeping everyone accountable and respectful.": 110,
-	"All payments will be done via ":                       84,
-	"Anesthesiology":                                       117,
-	"Anonymity":                                            165,
-	"Any changes in vision?":                               222,
-	"Any fevers or Chills?":                                220,
-	"Any heart problems?":                                  224,
-	"Any intestinal problems?":                             225,
-	"Any kidney problems?":                                 226,
-	"Any lung issues?":                                     223,
-	"Any nervous system problmes? <i>Strokes</i>":          228,
-	"Any problems with muscles or bones?":                  227,
-	"Any psychiatric problems? <i>Depression, anxiety</i>": 229,
-	"Any weight gain or weight loss?":                      221,
-	"Appointment Dates:":                                   154,
-	"Appointment Requests":                                 29,
-	"Appointment Times":                                    157,
-	"Appointments":                                         15,
-	"Available patients":                                   234,
-	"Bariatric Surgery":                                    118,
-	"Become A Partner":                                     19,
-	"Become A Provider":                                    92,
-	"Bitcoin must be paid in full upon deployment or acceptance of contract.": 63,
-	"Can I pay with any currency?":                                            64,
-	"Cardiology":                                                              119,
-	"Check your email notification settings":                                  42,
-	"Check your spam and other email filters":                                 49,
-	"Chiropractics":                                                           120,
-	"Chronic Pain":                                                            121,
-	"Communicate with patients via 3rd party applications, or personal telephone.": 105,
-	"Contacting A Physician":     80,
-	"Contacting Physician":       58,
-	"Copyright 2017, 2018, 2019": 20,
-	"Country":                    152,
-	"Create Patient Profile":     208,
-	"Create your profile":        102,
-	"Critical Care":              122,
-	"Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account.": 54,
-	"Deposit Funds": 195,
-	"Dermatology":   123,
-	"Do I need to pay before scheduling an appointment?":             60,
-	"Does your pain travel or radiate to another part of your body?": 218,
-	"Ear Nose and Throat":          126,
-	"Email:":                       179,
-	"Emergency Medicine":           124,
-	"End Time:":                    159,
-	"Endocrinology":                125,
-	"Enter Email":                  177,
-	"Enter a valid email":          187,
-	"Enter password (8+ chars)":    189,
-	"Enter your first name":        184,
-	"Enter your last name":         185,
-	"FAQ":                          9,
-	"Family Medicine":              127,
-	"Female":                       231,
-	"Find a Doctor":                153,
-	"Find out what you could earn": 93,
-	"First Name:":                  183,
-	"First name must be at least 2 characters": 6,
-	"First name required":                      5,
-	"From:":                                    155,
-	"Full name must be at least 2 characters":  201,
-	"Full name required":                       200,
-	"Gastrointestinology":                      128,
-	"Get Paid":                                 106,
-	"Get Started":                              94,
-	"Have you taken any medications for these symptoms and how much have they worked?": 219,
-	"Head and Neck":           129,
-	"Hello ":                  206,
-	"Help":                    10,
-	"Hematology and Oncology": 130,
-	"Hepatology":              131,
-	"How can I add another appointment or business address to my receipt?": 74,
-	"How can we help?":                                                                   68,
-	"How do I edit or remove a payment method?":                                          71,
-	"How do I make an appointment on Olmax?":                                             82,
-	"How do I use Bitcoin to pay?":                                                       73,
-	"How do I verify my phone number?":                                                   75,
-	"How is the price determined for my appointment?":                                    79,
-	"How long have these symptoms lasted?":                                               215,
-	"How to become an Olmax Provider":                                                    101,
-	"How would you characterize your symptoms? <i>Sharp, Dull, Ache, twisting, ets.</i>": 216,
-	"Hyperbaric": 132,
-	"I am a patient. How do I check the status of my appointment?": 30,
-	"I did not recieve an email confirming nor denying my request": 36,
-	"If you do not recieve a confimation email by 12 hrs, then a full refund will be returned to your bitcoin account along with an email stating that an appointment could not be made":                33,
-	"If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.</br>Check for issues with your email service provider.": 53,
-	"If you have submitted payment, and do not see appointment scheduled on this page; please refer to the %s section.":                                                                                 204,
-	"If you recieve an email confirming a cancelation of decline, bitcoin will be returned to your account infull, then you may seek another appointment":                                               35,
-	"If your country blocks Olmax Medical?": 55,
-	"Immunology":                            133,
-	"Infectious Diseases":                   134,
-	"Internal Medicine":                     135,
-	"Invalid email":                         4,
-	"Invalid selection for %s":              26,
-	"Invalid selection for question %d":     199,
-	"It's free and easy to create a profile on Olmax. Describe your resume, how many patients you can accomodate, set your own times, and add photos and details about yourself.": 103,
-	"It's possible your email provider mistakenly sent our messages to your spam or junk folder. To avoid this:":                                                                  50,
-	"Last Name:": 186,
-	"Last name must be at least 2 characters": 8,
-	"Last name required":                      7,
-	"Legal":                                   16,
-	"Make sure your email address is correct": 37,
-	"Male":                              230,
-	"NO FUNDS CURRENTLY HELD IN ESCROW": 194,
-	"Neonatology":                       136,
-	"Nephrology":                        137,
-	"Neurology":                         138,
-	"Neurosurgery":                      139,
-	"No":                                89,
-	"No matter what your specialty, Olmax makes it simple and secure to reach millions of patients looking for doctors with unique skills and specialties, just like yours.": 96,
-	"No selection for %s":          25,
-	"No selection for question %d": 198,
-	"No.":                          65,
-	"Obstetrics and Gynecology":    140,
-	"Occupational Medicine":        141,
-	"Olmax Medical":                28,
-	"Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of <i>laissez-fairedes</i> (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.": 162,
-	"Olmax Medical | Appointments":      202,
-	"Olmax Medical | Become A Provider": 90,
-	"Olmax Medical | Bookings":          233,
-	"Olmax Medical | Create Profile":    207,
-	"Olmax Medical | FAQ":               27,
-	"Olmax Medical | Find Patients":     235,
-	"Olmax Medical | Help":              67,
-	"Olmax Medical | Login":             176,
-	"Olmax Medical | Messages":          173,
-	"Olmax Medical | Our Doctors":       57,
-	"Olmax Medical | Profile":           205,
-	"Olmax Medical | Sign Up":           181,
-	"Olmax Medical | Wallet":            191,
-	"Olmax Medical | Welcome":           151,
-	"Olmax is built on trust":           109,
-	"Olmax offers tools, service tips, 24/7 support, and an on-line community of experienced physicians for questions and sharing ideas for success.":                                                                                                                                          100,
-	"Olmax's secure payment system means you will never see a patient without compensation, or have to deal with money directly. Patienst are charged before appointments, and you are paid after the visit is completed. We embrace the future, therefore payments will be via Bitcoin only.": 107,
-	"Once an appointment request is submitted, the physician has 4 to 12 hrs to replay. Depending on the urgency. If you would like a reply within 4 hr for urgent consults, an extra fee can be payed. Otherwise doctors have 12 hrs to reply to appointment request.":                        31,
-	"Once you have submitted a phone number, you can either receive a text message or call with a confirmation number.":                                                                                                                                                                        113,
-	"Opthamology":                            142,
-	"Orthopedic Surgery":                     143,
-	"Palliative Care":                        144,
-	"Password must be at least 8 characters": 1,
-	"Password required":                      0,
-	"Password:":                              188,
-	"Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.": 166,
-	"Payment":         169,
-	"Payment Methods": 12,
-	"Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.": 170,
-	"Pediatrics": 145,
-	"Physicians from around the world will be able to join our network, see patients from anywhere at anytime.": 168,
-	"Please check any of the following if you have experienced in the last 6 weeks:":                            232,
-	"Please click the following link to finalize your account creation ":                                        24,
-	"Please click the following link to reset your password ":                                                   22,
-	"Please give a brief statement regarding the main reason you would like to see your doctor:":                212,
-	"Please refer to the following help page: ":                                                                 115,
-	"Please submit some information regarding your consult.":                                                    209,
-	"Podiatry":                      146,
-	"Previous messages: Click here": 175,
-	"Prices & Fees":                 78,
-	"Prices and Fees":               13,
-	"Prices and fees are for the most part determined by doctors and patients.": 87,
-	"Prices are set by who deploys the contract (doctor or patient). Fees are structured in a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 mins. All new consults must be a minimum of 2 units, and repeat visits can be 1 unit.": 88,
-	"Privacy Policy": 17,
-	"Profile information such as government ID, diplomas, phone numbers, and emails will will be verified before being posted on Olmax Medical website.": 112,
-	"Pulmonology":            147,
-	"Quality Healthcare":     11,
-	"Radiaton Oncology":      149,
-	"Radiology":              148,
-	"Re-enter same password": 2,
-	"Reset":                  180,
-	"Safety on Olmax":        108,
-	"Search":                 160,
-	"Search all messages in your email inbox": 47,
-	"Second Opinions":                         163,
-	"See More":                                171,
-	"Send only Bitcoin (BTC) to this address": 196,
-	"Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.": 197,
-	"Should I clear my schedule if I have no heard back from my doctor?":                            32,
-	"Should I clear my schedule if I have not heard back from the doctor?":                          70,
-	"Sign Up":          190,
-	"Sign Up for free": 182,
-	"Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire": 164,
-	"Sometimes emails can get lost in your inbox. In your email account, search for terms like \"Olmax Medical\", \"Appointment\", \"Verification\", or other words related to the email you're looking for.": 48,
-	"Specialty":             91,
-	"Start Time:":           158,
-	"Start seeing patients": 111,
-	"Subject: Olmax Medical - Reset Your Password\n\n":     21,
-	"Subject: Olmax Medical - Verify your new account\n\n": 23,
-	"Suggested Topics":     69,
-	"To:":                  156,
-	"Transplant Surgery":   150,
-	"Valid email required": 3,
-	"Verification":         14,
-	"Wallet":               192,
-	"We may be sending emails to an old or incorrect email address. To see or change the email address associated with your account, log in to your Olmax account from a desktop computer and follow the steps below:": 38,
-	"We will send a reset code to the email provided": 178,
-	"We'll only send the emails you tell us you want. To check your email notification settings, log in to your Olmax account from a desktop computer and follow the steps below:": 43,
-	"We're there at every step":                                      99,
-	"Welcome patients":                                               104,
-	"What are patients saying about our doctors from":                172,
-	"What does each appointment status mean?":                        81,
-	"What happens if my appointment request is declined or expires?": 34,
-	"What is Bitcoin?":                                               72,
-	"What is Bitcoin? ":                                              85,
-	"What is a Verified Medical License?":                            77,
-	"What is your biological gender?":                                211,
-	"What makes your symptoms better, and What makes them worse?":    217,
-	"When did your symptoms start?":                                  213,
-	"When were you born?":                                            210,
-	"When will I be charged?":                                        62,
-	"Where are your symptoms located? <i>part of your body</i>":      214,
-	"Who We Are":                              161,
-	"Why become a provider on Olmax?":         95,
-	"Why did I not get a notification email?": 114,
-	"Why didn't I get my email notification?": 76,
-	"With Olmax, you're in full control of your availability, prices, medical management, and how you interact with patients. You can set appointment times and handle the process however you like.": 98,
-	"Work with us!": 18,
-	"Yes, you must submit payment in order to secure appointment contract. Your payment will be held in escrow until the visit is finalized. Once you submit fees, we will contact the physician and give him or her your medical information. The doctor will then confirm appointment, and an email or text will be sent to you, along with the physicians contact information. Fees are structured in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equivalent to 15 min, time spent in visit will be pre-determined, and visits going longer that what was agreed upon will not cost extra. All new consults must be a minimum of 2 units, and repeat visits can be a minimum of 1 unit.": 61,
-	"You can bypass their firewall using tunnel software such as a VPN or Tor software. See the following for more information: ":   86,
-	"You can bypass their firewall using tunnel software such as a VPN,  or Tor software. See the following for more information: ": 56,
-	"You can bypass their firewall using tunnel software such as a VPN, or Tor software. See the following for more information: ":  66,
-	"You currently have no appointments pending.":                                    203,
-	"You currently have no messages.":                                                174,
-	"You may make contact with your doctor as soon as the appointment is confirmed.": 59,
-	"You're in control": 97,
+	"-View all":                             129,
+	"0 BTC":                                 64,
+	"1.) Go to Edit Profile.":               83,
+	"1.) Go to your Notification Settings.": 88,
+	"1.) Remove Olmax messages from your spam list":                                                                  95,
+	"2.) Add nemo@olmax.com, halfwit@olmax.com, and services@olmax.com to your personal email address book":          96,
+	"2.) Look for the \"Email Settings\" field. Make sure you have chosen the email types you want to receive.":      89,
+	"2.) Look for the Email Address field. Make sure your address is correct.":                                       84,
+	"3.) After adding or removing checkmarks from the right boxes, scroll to the bottom of the page and click Save.": 90,
+	"3.) If it is incorrect, add the correct address and click Save.":                                                85,
+	"Access to Physicians from around the world":                                                                     37,
+	"All Olmax physicians must: submit a profile photo, medical diplomas, residency certification or equivalent, verify their phone, email, government ID, and background checks. Patients and physicians can each publish reviews after visit conclusions keeping everyone accountable and respectful.": 155,
+	"All payments will be done via ":                       130,
+	"Anonymity":                                            35,
+	"Any changes in vision?":                               181,
+	"Any fevers or Chills?":                                179,
+	"Any heart problems?":                                  183,
+	"Any intestinal problems?":                             184,
+	"Any kidney problems?":                                 185,
+	"Any lung issues?":                                     182,
+	"Any nervous system problmes? <i>Strokes</i>":          187,
+	"Any problems with muscles or bones?":                  186,
+	"Any psychiatric problems? <i>Depression, anxiety</i>": 188,
+	"Any weight gain or weight loss?":                      180,
+	"Appointment Dates:":                                   24,
+	"Appointment Requests":                                 73,
+	"Appointment Times":                                    27,
+	"Appointments":                                         196,
+	"Available patients":                                   70,
+	"Become A Partner":                                     200,
+	"Become A Provider":                                    137,
+	"Bitcoin must be paid in full upon deployment or acceptance of contract.":      107,
+	"Can I pay with any currency?":                                                 108,
+	"Check your email notification settings":                                       86,
+	"Check your spam and other email filters":                                      93,
+	"Communicate with patients via 3rd party applications, or personal telephone.": 150,
+	"Contacting A Physician":                                                       126,
+	"Contacting Physician":                                                         102,
+	"Copyright 2017, 2018, 2019":                                                   41,
+	"Country":                                                                      21,
+	"Create Patient Profile":                                                       167,
+	"Create your profile":                                                          147,
+	"Depending on your provider, emails can take up to a few hours to be delivered. If undelivered or delayed emails continue to be an issue, check with your provider to see if there are any configuration issues or problems with their network that might be affecting your account.": 98,
+	"Deposit Funds": 66,
+	"Do I need to pay before scheduling an appointment?":             104,
+	"Does your pain travel or radiate to another part of your body?": 177,
+	"Email:":                       50,
+	"End Time:":                    29,
+	"Enter Email":                  48,
+	"Enter a valid email":          58,
+	"Enter password (8+ chars)":    60,
+	"Enter your first name":        55,
+	"Enter your last name":         56,
+	"FAQ":                          192,
+	"Female":                       190,
+	"Find a Doctor":                23,
+	"Find out what you could earn": 138,
+	"First Name:":                  54,
+	"First name must be at least 2 characters": 10,
+	"First name required":                      9,
+	"From:":                                    25,
+	"Full name must be at least 2 characters":  16,
+	"Full name required":                       15,
+	"Get Paid":                                 151,
+	"Get Started":                              139,
+	"Have you taken any medications for these symptoms and how much have they worked?": 178,
+	"Hello ": 165,
+	"Help":   193,
+	"How can I add another appointment or business address to my receipt?": 119,
+	"How can we help?":                                                                   112,
+	"How do I edit or remove a payment method?":                                          116,
+	"How do I make an appointment on Olmax?":                                             128,
+	"How do I use Bitcoin to pay?":                                                       118,
+	"How do I verify my phone number?":                                                   121,
+	"How is the price determined for my appointment?":                                    125,
+	"How long have these symptoms lasted?":                                               174,
+	"How to become an Olmax Provider":                                                    146,
+	"How would you characterize your symptoms? <i>Sharp, Dull, Ache, twisting, ets.</i>": 175,
+	"I am a patient. How do I check the status of my appointment?":                       74,
+	"I did not recieve an email confirming nor denying my request":                       80,
+	"If you do not recieve a confimation email by 12 hrs, then a full refund will be returned to your bitcoin account along with an email stating that an appointment could not be made":                77,
+	"If you have other filters or routing rules in your email account that may have sorted Olmax emails elsewhere, be sure to check those, too.</br>Check for issues with your email service provider.": 97,
+	"If you have submitted payment, and do not see appointment scheduled on this page; please refer to the %s section.":                                                                                 163,
+	"If you recieve an email confirming a cancelation of decline, bitcoin will be returned to your account infull, then you may seek another appointment":                                               79,
+	"If your country blocks Olmax Medical?": 99,
+	"Invalid email":                         8,
+	"Invalid selection for %s":              18,
+	"Invalid selection for question %d":     14,
+	"It's free and easy to create a profile on Olmax. Describe your resume, how many patients you can accomodate, set your own times, and add photos and details about yourself.": 148,
+	"It's possible your email provider mistakenly sent our messages to your spam or junk folder. To avoid this:":                                                                  94,
+	"Last Name:": 57,
+	"Last name must be at least 2 characters": 12,
+	"Last name required":                      11,
+	"Legal":                                   197,
+	"Make sure your email address is correct": 81,
+	"Male":                              189,
+	"NO FUNDS CURRENTLY HELD IN ESCROW": 65,
+	"No":                                135,
+	"No matter what your specialty, Olmax makes it simple and secure to reach millions of patients looking for doctors with unique skills and specialties, just like yours.": 141,
+	"No selection for %s":          17,
+	"No selection for question %d": 13,
+	"No.":                          109,
+	"Olmax Medical":                20,
+	"Olmax Medical is a world wide network of physicians and patients that enables them to communicate, meet virtually, and negotiate payment on a peer to peer basis, without the interference of insurance giants. We provide a platform where the economics of <i>laissez-fairedes</i> (free-trade) will allow both physicians and patients to negotiate fee for service. Our website provide a platform where both patients and doctors form around the world can deploy customized contracts describing, in detail, the terms of health care. The cost, time, and duration of virtual clinic visits will be pre-determined on contracts posted on our website. The contracts are written by either doctor or patient. Contracts can be created, bought, and sold by anyone, because we believe health care should be available to everyone. It will be our work to investigate and verify physician status. Once doctors are verified, patients will have the opportunity to rate physician performance and bedside manners.": 32,
+	"Olmax Medical | Appointments":      161,
+	"Olmax Medical | Become A Provider": 136,
+	"Olmax Medical | Bookings":          69,
+	"Olmax Medical | Create Profile":    166,
+	"Olmax Medical | FAQ":               72,
+	"Olmax Medical | Find Patients":     71,
+	"Olmax Medical | Help":              111,
+	"Olmax Medical | Login":             47,
+	"Olmax Medical | Messages":          44,
+	"Olmax Medical | Our Doctors":       101,
+	"Olmax Medical | Profile":           164,
+	"Olmax Medical | Sign Up":           52,
+	"Olmax Medical | Wallet":            62,
+	"Olmax Medical | Welcome":           19,
+	"Olmax is built on trust":           154,
+	"Olmax offers tools, service tips, 24/7 support, and an on-line community of experienced physicians for questions and sharing ideas for success.":                                                                                                                                          145,
+	"Olmax's secure payment system means you will never see a patient without compensation, or have to deal with money directly. Patienst are charged before appointments, and you are paid after the visit is completed. We embrace the future, therefore payments will be via Bitcoin only.": 152,
+	"Once an appointment request is submitted, the physician has 4 to 12 hrs to replay. Depending on the urgency. If you would like a reply within 4 hr for urgent consults, an extra fee can be payed. Otherwise doctors have 12 hrs to reply to appointment request.":                        75,
+	"Once you have submitted a phone number, you can either receive a text message or call with a confirmation number.":                                                                                                                                                                        158,
+	"Password must be at least 8 characters": 5,
+	"Password required":                      4,
+	"Password:":                              59,
+	"Patients will be encouraged to use anonymous names. Medical records are kept between patients and physicians, they are not stored on our servers.": 36,
+	"Payment":         39,
+	"Payment Methods": 115,
+	"Payments will be made with Bitcoin. Minimal fees will be charged by our website for holding the cryptocurrency until clinical visits are complete.": 40,
+	"Physicians from around the world will be able to join our network, see patients from anywhere at anytime.":                                          38,
+	"Please check any of the following if you have experienced in the last 6 weeks:":                                                                     191,
+	"Please click the following link to finalize your account creation ":                                                                                 3,
+	"Please click the following link to reset your password ":                                                                                            1,
+	"Please give a brief statement regarding the main reason you would like to see your doctor:":                                                         171,
+	"Please refer to the following help page: ":                                                                                                          160,
+	"Please submit some information regarding your consult.":                                                                                             168,
+	"Previous messages: Click here":                                                                                                                      46,
+	"Prices & Fees":                                                                                                                                      124,
+	"Prices and Fees":                                                                                                                                    195,
+	"Prices and fees are for the most part determined by doctors and patients.":                                                                          133,
+	"Prices are set by who deploys the contract (doctor or patient). Fees are structured in a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 mins. All new consults must be a minimum of 2 units, and repeat visits can be 1 unit.": 134,
+	"Privacy Policy": 198,
+	"Profile information such as government ID, diplomas, phone numbers, and emails will will be verified before being posted on Olmax Medical website.": 157,
+	"Quality Healthcare":     194,
+	"Re-enter same password": 6,
+	"Reset":                  51,
+	"Safety on Olmax":        153,
+	"Search":                 30,
+	"Search all messages in your email inbox": 91,
+	"Second Opinions":                         33,
+	"See More":                                42,
+	"Send only Bitcoin (BTC) to this address": 67,
+	"Sending any other digital asset, including Bitcoin Cash (BCH), will result in permanent loss.": 68,
+	"Should I clear my schedule if I have no heard back from my doctor?":                            76,
+	"Should I clear my schedule if I have not heard back from the doctor?":                          114,
+	"Sign Up":          61,
+	"Sign Up for free": 53,
+	"Since the time of Hippocrates, patients and doctors were limited to serving and receiving care from physician in their more local community. With our platform patients will not be tied to HMOs or managed health care. In other words, insurance companies or government decisions will no longer chain patients to the type and quality of health care they receive. Doctors with extremely rare specialties will be able to serve communities thousands of miles away from them, and from the comfort of their home if they so desire": 34,
+	"Sometimes emails can get lost in your inbox. In your email account, search for terms like \"Olmax Medical\", \"Appointment\", \"Verification\", or other words related to the email you're looking for.": 92,
+	"Specialty":             22,
+	"Start Time:":           28,
+	"Start seeing patients": 156,
+	"Subject: Olmax Medical - Reset Your Password\n\n":     0,
+	"Subject: Olmax Medical - Verify your new account\n\n": 2,
+	"Suggested Topics":     113,
+	"To:":                  26,
+	"Valid email required": 7,
+	"Verification":         120,
+	"Wallet":               63,
+	"We may be sending emails to an old or incorrect email address. To see or change the email address associated with your account, log in to your Olmax account from a desktop computer and follow the steps below:": 82,
+	"We will send a reset code to the email provided": 49,
+	"We'll only send the emails you tell us you want. To check your email notification settings, log in to your Olmax account from a desktop computer and follow the steps below:": 87,
+	"We're there at every step":                                      144,
+	"Welcome patients":                                               149,
+	"What are patients saying about our doctors from":                43,
+	"What does each appointment status mean?":                        127,
+	"What happens if my appointment request is declined or expires?": 78,
+	"What is Bitcoin?":                                               117,
+	"What is Bitcoin? ":                                              131,
+	"What is a Verified Medical License?":                            123,
+	"What is your biological gender?":                                170,
+	"What makes your symptoms better, and What makes them worse?":    176,
+	"When did your symptoms start?":                                  172,
+	"When were you born?":                                            169,
+	"When will I be charged?":                                        106,
+	"Where are your symptoms located? <i>part of your body</i>":      173,
+	"Who We Are":                              31,
+	"Why become a provider on Olmax?":         140,
+	"Why did I not get a notification email?": 159,
+	"Why didn't I get my email notification?": 122,
+	"With Olmax, you're in full control of your availability, prices, medical management, and how you interact with patients. You can set appointment times and handle the process however you like.": 143,
+	"Work with us!": 199,
+	"Yes, you must submit payment in order to secure appointment contract. Your payment will be held in escrow until the visit is finalized. Once you submit fees, we will contact the physician and give him or her your medical information. The doctor will then confirm appointment, and an email or text will be sent to you, along with the physicians contact information. Fees are structured in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equivalent to 15 min, time spent in visit will be pre-determined, and visits going longer that what was agreed upon will not cost extra. All new consults must be a minimum of 2 units, and repeat visits can be a minimum of 1 unit.": 105,
+	"You can bypass their firewall using tunnel software such as a VPN or Tor software. See the following for more information: ":   132,
+	"You can bypass their firewall using tunnel software such as a VPN,  or Tor software. See the following for more information: ": 100,
+	"You can bypass their firewall using tunnel software such as a VPN, or Tor software. See the following for more information: ":  110,
+	"You currently have no appointments pending.":                                    162,
+	"You currently have no messages.":                                                45,
+	"You may make contact with your doctor as soon as the appointment is confirmed.": 103,
+	"You're in control": 142,
 }
 
-var en_USIndex = []uint32{ // 237 elements
+var en_USIndex = []uint32{ // 202 elements
 	// Entry 0 - 1F
-	0x00000000, 0x00000012, 0x00000039, 0x00000050,
-	0x00000065, 0x00000073, 0x00000087, 0x000000b0,
-	0x000000c3, 0x000000eb, 0x000000ef, 0x000000f4,
-	0x00000107, 0x00000117, 0x00000127, 0x00000134,
-	0x00000141, 0x00000147, 0x00000156, 0x00000164,
-	0x00000175, 0x00000190, 0x000001c3, 0x000001ff,
-	0x00000236, 0x0000027d, 0x00000294, 0x000002b0,
-	0x000002c4, 0x000002d2, 0x000002e7, 0x00000324,
+	0x00000000, 0x00000033, 0x0000006f, 0x000000a6,
+	0x000000ed, 0x000000ff, 0x00000126, 0x0000013d,
+	0x00000152, 0x00000160, 0x00000174, 0x0000019d,
+	0x000001b0, 0x000001d8, 0x000001f8, 0x0000021d,
+	0x00000230, 0x00000258, 0x0000026f, 0x0000028b,
+	0x000002a3, 0x000002b1, 0x000002b9, 0x000002c3,
+	0x000002d1, 0x000002e4, 0x000002ea, 0x000002ee,
+	0x00000300, 0x0000030c, 0x00000316, 0x0000031d,
 	// Entry 20 - 3F
-	0x00000426, 0x00000469, 0x0000051c, 0x0000055b,
-	0x000005ef, 0x0000062c, 0x00000654, 0x00000725,
-	0x0000073d, 0x00000786, 0x000007c6, 0x000007ed,
-	0x0000089a, 0x000008c0, 0x00000928, 0x00000997,
-	0x000009bf, 0x00000a81, 0x00000aa9, 0x00000b14,
-	0x00000b42, 0x00000ba8, 0x00000c6a, 0x00000d7e,
-	0x00000da4, 0x00000e26, 0x00000e42, 0x00000e57,
-	0x00000ea6, 0x00000ed9, 0x00001187, 0x0000119f,
+	0x00000328, 0x00000705, 0x00000715, 0x0000091f,
+	0x00000929, 0x000009bb, 0x000009e6, 0x00000a50,
+	0x00000a58, 0x00000aeb, 0x00000b06, 0x00000b0f,
+	0x00000b3f, 0x00000b58, 0x00000b78, 0x00000b96,
+	0x00000bac, 0x00000bb8, 0x00000be8, 0x00000bef,
+	0x00000bf5, 0x00000c0d, 0x00000c1e, 0x00000c2a,
+	0x00000c40, 0x00000c55, 0x00000c60, 0x00000c74,
+	0x00000c7e, 0x00000c98, 0x00000ca0, 0x00000cb7,
 	// Entry 40 - 5F
-	0x000011e7, 0x00001204, 0x00001208, 0x00001289,
-	0x0000129e, 0x000012af, 0x000012c0, 0x00001305,
-	0x0000132f, 0x00001340, 0x0000135d, 0x000013a2,
-	0x000013c3, 0x000013eb, 0x0000140f, 0x0000141d,
-	0x0000144d, 0x00001464, 0x0000148c, 0x000014b3,
-	0x000014bd, 0x000014e0, 0x000014f6, 0x00001576,
-	0x000015c0, 0x000016b3, 0x000016b6, 0x000016d8,
-	0x000016e2, 0x000016f4, 0x00001711, 0x0000171d,
+	0x00000cbe, 0x00000cc4, 0x00000ce6, 0x00000cf4,
+	0x00000d1c, 0x00000d7a, 0x00000d93, 0x00000da6,
+	0x00000dc4, 0x00000dd8, 0x00000ded, 0x00000e2a,
+	0x00000f2c, 0x00000f6f, 0x00001022, 0x00001061,
+	0x000010f5, 0x00001132, 0x0000115a, 0x0000122b,
+	0x00001243, 0x0000128c, 0x000012cc, 0x000012f3,
+	0x000013a0, 0x000013c6, 0x0000142e, 0x0000149d,
+	0x000014c5, 0x00001587, 0x000015af, 0x0000161a,
 	// Entry 60 - 7F
-	0x0000173d, 0x000017e4, 0x000017f6, 0x000018b6,
-	0x000018d0, 0x00001960, 0x00001980, 0x00001994,
-	0x00001a40, 0x00001a51, 0x00001a9e, 0x00001aa7,
-	0x00001bc0, 0x00001bd0, 0x00001be8, 0x00001d0b,
-	0x00001d21, 0x00001db4, 0x00001e26, 0x00001e4e,
-	0x00001e7c, 0x00001e90, 0x00001e9f, 0x00001eb1,
-	0x00001ebc, 0x00001eca, 0x00001ed7, 0x00001ee5,
-	0x00001ef1, 0x00001f04, 0x00001f12, 0x00001f26,
+	0x00001648, 0x000016ae, 0x00001770, 0x00001884,
+	0x000018aa, 0x0000192c, 0x00001948, 0x0000195d,
+	0x000019ac, 0x000019df, 0x00001c8d, 0x00001ca5,
+	0x00001ced, 0x00001d0a, 0x00001d0e, 0x00001d8f,
+	0x00001da4, 0x00001db5, 0x00001dc6, 0x00001e0b,
+	0x00001e1b, 0x00001e45, 0x00001e56, 0x00001e73,
+	0x00001eb8, 0x00001ec5, 0x00001ee6, 0x00001f0e,
+	0x00001f32, 0x00001f40, 0x00001f70, 0x00001f87,
 	// Entry 80 - 9F
-	0x00001f36, 0x00001f4a, 0x00001f58, 0x00001f70,
-	0x00001f7b, 0x00001f86, 0x00001f91, 0x00001fa5,
-	0x00001fb7, 0x00001fc3, 0x00001fce, 0x00001fd8,
-	0x00001fe5, 0x00001fff, 0x00002015, 0x00002021,
-	0x00002034, 0x00002044, 0x0000204f, 0x00002058,
-	0x00002064, 0x0000206e, 0x00002080, 0x00002093,
-	0x000020ab, 0x000020b3, 0x000020c1, 0x000020d4,
-	0x000020da, 0x000020de, 0x000020f0, 0x000020fc,
+	0x00001faf, 0x00001fd6, 0x00001fe0, 0x00002003,
+	0x00002019, 0x00002099, 0x000020e3, 0x000021d6,
+	0x000021d9, 0x000021fb, 0x0000220d, 0x0000222a,
+	0x00002236, 0x00002256, 0x000022fd, 0x0000230f,
+	0x000023cf, 0x000023e9, 0x00002479, 0x00002499,
+	0x000024ad, 0x00002559, 0x0000256a, 0x000025b7,
+	0x000025c0, 0x000026d9, 0x000026e9, 0x00002701,
+	0x00002824, 0x0000283a, 0x000028cd, 0x0000293f,
 	// Entry A0 - BF
-	0x00002106, 0x0000210d, 0x00002118, 0x000024f5,
-	0x00002505, 0x0000270f, 0x00002719, 0x000027ab,
-	0x000027d6, 0x00002840, 0x00002848, 0x000028db,
-	0x000028e4, 0x00002914, 0x0000292d, 0x0000294d,
-	0x0000296b, 0x00002981, 0x0000298d, 0x000029bd,
-	0x000029c4, 0x000029ca, 0x000029e2, 0x000029f3,
-	0x000029ff, 0x00002a15, 0x00002a2a, 0x00002a35,
-	0x00002a49, 0x00002a53, 0x00002a6d, 0x00002a75,
+	0x00002967, 0x00002995, 0x000029b2, 0x000029de,
+	0x00002a53, 0x00002a6b, 0x00002a76, 0x00002a95,
+	0x00002aac, 0x00002ae3, 0x00002af7, 0x00002b17,
+	0x00002b72, 0x00002b90, 0x00002bca, 0x00002bef,
+	0x00002c42, 0x00002c7e, 0x00002cbd, 0x00002d0e,
+	0x00002d24, 0x00002d44, 0x00002d5b, 0x00002d6c,
+	0x00002d80, 0x00002d99, 0x00002dae, 0x00002dd2,
+	0x00002dfe, 0x00002e33, 0x00002e38, 0x00002e3f,
 	// Entry C0 - DF
-	0x00002a8c, 0x00002a93, 0x00002a99, 0x00002abb,
-	0x00002ac9, 0x00002af1, 0x00002b4f, 0x00002b6f,
-	0x00002b94, 0x00002ba7, 0x00002bcf, 0x00002bec,
-	0x00002c18, 0x00002c8d, 0x00002ca5, 0x00002cb0,
-	0x00002ccf, 0x00002ce6, 0x00002d1d, 0x00002d31,
-	0x00002d51, 0x00002dac, 0x00002dca, 0x00002e04,
-	0x00002e29, 0x00002e7c, 0x00002eb8, 0x00002ef7,
-	0x00002f48, 0x00002f5e, 0x00002f7e, 0x00002f95,
-	// Entry E0 - FF
-	0x00002fa6, 0x00002fba, 0x00002fd3, 0x00002fe8,
-	0x0000300c, 0x00003038, 0x0000306d, 0x00003072,
-	0x00003079, 0x000030c8, 0x000030e1, 0x000030f4,
-	0x00003112,
-} // Size: 972 bytes
+	0x00002e8e, 0x00002e92, 0x00002e97, 0x00002eaa,
+	0x00002eba, 0x00002ec7, 0x00002ecd, 0x00002edc,
+	0x00002eea, 0x00002efb,
+} // Size: 832 bytes
 
-const en_USData string = "" + // Size: 12562 bytes
-	"\x02Password required\x02Password must be at least 8 characters\x02Re-en" +
-	"ter same password\x02Valid email required\x02Invalid email\x02First name" +
-	" required\x02First name must be at least 2 characters\x02Last name requi" +
-	"red\x02Last name must be at least 2 characters\x02FAQ\x02Help\x02Quality" +
-	" Healthcare\x02Payment Methods\x02Prices and Fees\x02Verification\x02App" +
-	"ointments\x02Legal\x02Privacy Policy\x02Work with us!\x02Become A Partne" +
-	"r\x02Copyright 2017, 2018, 2019\x04\x00\x02\x0a\x0a-\x02Subject: Olmax M" +
-	"edical - Reset Your Password\x04\x00\x01 7\x02Please click the following" +
-	" link to reset your password\x04\x00\x02\x0a\x0a1\x02Subject: Olmax Medi" +
-	"cal - Verify your new account\x04\x00\x01 B\x02Please click the followin" +
-	"g link to finalize your account creation\x02No selection for %[1]s\x02In" +
-	"valid selection for %[1]s\x02Olmax Medical | FAQ\x02Olmax Medical\x02App" +
-	"ointment Requests\x02I am a patient. How do I check the status of my app" +
-	"ointment?\x02Once an appointment request is submitted, the physician has" +
-	" 4 to 12 hrs to replay. Depending on the urgency. If you would like a re" +
-	"ply within 4 hr for urgent consults, an extra fee can be payed. Otherwis" +
-	"e doctors have 12 hrs to reply to appointment request.\x02Should I clear" +
-	" my schedule if I have no heard back from my doctor?\x02If you do not re" +
-	"cieve a confimation email by 12 hrs, then a full refund will be returned" +
-	" to your bitcoin account along with an email stating that an appointment" +
-	" could not be made\x02What happens if my appointment request is declined" +
-	" or expires?\x02If you recieve an email confirming a cancelation of decl" +
-	"ine, bitcoin will be returned to your account infull, then you may seek " +
-	"another appointment\x02I did not recieve an email confirming nor denying" +
-	" my request\x02Make sure your email address is correct\x02We may be send" +
-	"ing emails to an old or incorrect email address. To see or change the em" +
-	"ail address associated with your account, log in to your Olmax account f" +
-	"rom a desktop computer and follow the steps below:\x021.) Go to Edit Pro" +
-	"file.\x022.) Look for the Email Address field. Make sure your address is" +
-	" correct.\x023.) If it is incorrect, add the correct address and click S" +
-	"ave.\x02Check your email notification settings\x02We'll only send the em" +
-	"ails you tell us you want. To check your email notification settings, lo" +
-	"g in to your Olmax account from a desktop computer and follow the steps " +
-	"below:\x021.) Go to your Notification Settings.\x022.) Look for the \x22" +
-	"Email Settings\x22 field. Make sure you have chosen the email types you " +
-	"want to receive.\x023.) After adding or removing checkmarks from the rig" +
-	"ht boxes, scroll to the bottom of the page and click Save.\x02Search all" +
-	" messages in your email inbox\x02Sometimes emails can get lost in your i" +
-	"nbox. In your email account, search for terms like \x22Olmax Medical\x22" +
-	", \x22Appointment\x22, \x22Verification\x22, or other words related to t" +
-	"he email you're looking for.\x02Check your spam and other email filters" +
-	"\x02It's possible your email provider mistakenly sent our messages to yo" +
-	"ur spam or junk folder. To avoid this:\x021.) Remove Olmax messages from" +
-	" your spam list\x022.) Add nemo@olmax.com, halfwit@olmax.com, and servic" +
-	"es@olmax.com to your personal email address book\x02If you have other fi" +
-	"lters or routing rules in your email account that may have sorted Olmax " +
-	"emails elsewhere, be sure to check those, too.</br>Check for issues with" +
-	" your email service provider.\x02Depending on your provider, emails can " +
-	"take up to a few hours to be delivered. If undelivered or delayed emails" +
-	" continue to be an issue, check with your provider to see if there are a" +
-	"ny configuration issues or problems with their network that might be aff" +
-	"ecting your account.\x02If your country blocks Olmax Medical?\x04\x00" +
-	"\x01 }\x02You can bypass their firewall using tunnel software such as a " +
-	"VPN,  or Tor software. See the following for more information:\x02Olmax " +
-	"Medical | Our Doctors\x02Contacting Physician\x02You may make contact wi" +
-	"th your doctor as soon as the appointment is confirmed.\x02Do I need to " +
-	"pay before scheduling an appointment?\x02Yes, you must submit payment in" +
-	" order to secure appointment contract. Your payment will be held in escr" +
-	"ow until the visit is finalized. Once you submit fees, we will contact t" +
-	"he physician and give him or her your medical information. The doctor wi" +
-	"ll then confirm appointment, and an email or text will be sent to you, a" +
-	"long with the physicians contact information. Fees are structured in amo" +
-	"unt of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) is equival" +
-	"ent to 15 min, time spent in visit will be pre-determined, and visits go" +
-	"ing longer that what was agreed upon will not cost extra. All new consul" +
-	"ts must be a minimum of 2 units, and repeat visits can be a minimum of 1" +
-	" unit.\x02When will I be charged?\x02Bitcoin must be paid in full upon d" +
-	"eployment or acceptance of contract.\x02Can I pay with any currency?\x02" +
-	"No.\x04\x00\x01 |\x02You can bypass their firewall using tunnel software" +
-	" such as a VPN, or Tor software. See the following for more information:" +
-	"\x02Olmax Medical | Help\x02How can we help?\x02Suggested Topics\x02Shou" +
-	"ld I clear my schedule if I have not heard back from the doctor?\x02How " +
-	"do I edit or remove a payment method?\x02What is Bitcoin?\x02How do I us" +
-	"e Bitcoin to pay?\x02How can I add another appointment or business addre" +
-	"ss to my receipt?\x02How do I verify my phone number?\x02Why didn't I ge" +
-	"t my email notification?\x02What is a Verified Medical License?\x02Price" +
-	"s & Fees\x02How is the price determined for my appointment?\x02Contactin" +
-	"g A Physician\x02What does each appointment status mean?\x02How do I mak" +
-	"e an appointment on Olmax?\x02-View all\x04\x00\x01 \x1e\x02All payments" +
-	" will be done via\x04\x00\x01 \x11\x02What is Bitcoin?\x04\x00\x01 {\x02" +
-	"You can bypass their firewall using tunnel software such as a VPN or Tor" +
-	" software. See the following for more information:\x02Prices and fees ar" +
-	"e for the most part determined by doctors and patients.\x02Prices are se" +
-	"t by who deploys the contract (doctor or patient). Fees are structured i" +
-	"n a amount of bitcoin (BTC) per unit. In which a unit of time equals 15 " +
-	"mins. All new consults must be a minimum of 2 units, and repeat visits c" +
-	"an be 1 unit.\x02No\x02Olmax Medical | Become A Provider\x02Specialty" +
-	"\x02Become A Provider\x02Find out what you could earn\x02Get Started\x02" +
-	"Why become a provider on Olmax?\x02No matter what your specialty, Olmax " +
-	"makes it simple and secure to reach millions of patients looking for doc" +
-	"tors with unique skills and specialties, just like yours.\x02You're in c" +
-	"ontrol\x02With Olmax, you're in full control of your availability, price" +
-	"s, medical management, and how you interact with patients. You can set a" +
-	"ppointment times and handle the process however you like.\x02We're there" +
-	" at every step\x02Olmax offers tools, service tips, 24/7 support, and an" +
-	" on-line community of experienced physicians for questions and sharing i" +
-	"deas for success.\x02How to become an Olmax Provider\x02Create your prof" +
-	"ile\x02It's free and easy to create a profile on Olmax. Describe your re" +
-	"sume, how many patients you can accomodate, set your own times, and add " +
-	"photos and details about yourself.\x02Welcome patients\x02Communicate wi" +
-	"th patients via 3rd party applications, or personal telephone.\x02Get Pa" +
-	"id\x02Olmax's secure payment system means you will never see a patient w" +
-	"ithout compensation, or have to deal with money directly. Patienst are c" +
-	"harged before appointments, and you are paid after the visit is complete" +
-	"d. We embrace the future, therefore payments will be via Bitcoin only." +
-	"\x02Safety on Olmax\x02Olmax is built on trust\x02All Olmax physicians m" +
-	"ust: submit a profile photo, medical diplomas, residency certification o" +
-	"r equivalent, verify their phone, email, government ID, and background c" +
-	"hecks. Patients and physicians can each publish reviews after visit conc" +
-	"lusions keeping everyone accountable and respectful.\x02Start seeing pat" +
-	"ients\x02Profile information such as government ID, diplomas, phone numb" +
-	"ers, and emails will will be verified before being posted on Olmax Medic" +
-	"al website.\x02Once you have submitted a phone number, you can either re" +
-	"ceive a text message or call with a confirmation number.\x02Why did I no" +
-	"t get a notification email?\x04\x00\x01 )\x02Please refer to the followi" +
-	"ng help page:\x02Acute Pain Medicine\x02Anesthesiology\x02Bariatric Surg" +
-	"ery\x02Cardiology\x02Chiropractics\x02Chronic Pain\x02Critical Care\x02D" +
-	"ermatology\x02Emergency Medicine\x02Endocrinology\x02Ear Nose and Throat" +
-	"\x02Family Medicine\x02Gastrointestinology\x02Head and Neck\x02Hematolog" +
-	"y and Oncology\x02Hepatology\x02Hyperbaric\x02Immunology\x02Infectious D" +
-	"iseases\x02Internal Medicine\x02Neonatology\x02Nephrology\x02Neurology" +
-	"\x02Neurosurgery\x02Obstetrics and Gynecology\x02Occupational Medicine" +
-	"\x02Opthamology\x02Orthopedic Surgery\x02Palliative Care\x02Pediatrics" +
-	"\x02Podiatry\x02Pulmonology\x02Radiology\x02Radiaton Oncology\x02Transpl" +
-	"ant Surgery\x02Olmax Medical | Welcome\x02Country\x02Find a Doctor\x02Ap" +
-	"pointment Dates:\x02From:\x02To:\x02Appointment Times\x02Start Time:\x02" +
-	"End Time:\x02Search\x02Who We Are\x02Olmax Medical is a world wide netwo" +
-	"rk of physicians and patients that enables them to communicate, meet vir" +
-	"tually, and negotiate payment on a peer to peer basis, without the inter" +
-	"ference of insurance giants. We provide a platform where the economics o" +
-	"f <i>laissez-fairedes</i> (free-trade) will allow both physicians and pa" +
-	"tients to negotiate fee for service. Our website provide a platform wher" +
-	"e both patients and doctors form around the world can deploy customized " +
-	"contracts describing, in detail, the terms of health care. The cost, tim" +
-	"e, and duration of virtual clinic visits will be pre-determined on contr" +
-	"acts posted on our website. The contracts are written by either doctor o" +
-	"r patient. Contracts can be created, bought, and sold by anyone, because" +
-	" we believe health care should be available to everyone. It will be our " +
-	"work to investigate and verify physician status. Once doctors are verifi" +
-	"ed, patients will have the opportunity to rate physician performance and" +
-	" bedside manners.\x02Second Opinions\x02Since the time of Hippocrates, p" +
-	"atients and doctors were limited to serving and receiving care from phys" +
-	"ician in their more local community. With our platform patients will not" +
-	" be tied to HMOs or managed health care. In other words, insurance compa" +
-	"nies or government decisions will no longer chain patients to the type a" +
-	"nd quality of health care they receive. Doctors with extremely rare spec" +
-	"ialties will be able to serve communities thousands of miles away from t" +
-	"hem, and from the comfort of their home if they so desire\x02Anonymity" +
-	"\x02Patients will be encouraged to use anonymous names. Medical records " +
-	"are kept between patients and physicians, they are not stored on our ser" +
-	"vers.\x02Access to Physicians from around the world\x02Physicians from a" +
-	"round the world will be able to join our network, see patients from anyw" +
-	"here at anytime.\x02Payment\x02Payments will be made with Bitcoin. Minim" +
-	"al fees will be charged by our website for holding the cryptocurrency un" +
-	"til clinical visits are complete.\x02See More\x02What are patients sayin" +
-	"g about our doctors from\x02Olmax Medical | Messages\x02You currently ha" +
-	"ve no messages.\x02Previous messages: Click here\x02Olmax Medical | Logi" +
-	"n\x02Enter Email\x02We will send a reset code to the email provided\x02E" +
-	"mail:\x02Reset\x02Olmax Medical | Sign Up\x02Sign Up for free\x02First N" +
-	"ame:\x02Enter your first name\x02Enter your last name\x02Last Name:\x02E" +
-	"nter a valid email\x02Password:\x02Enter password (8+ chars)\x02Sign Up" +
-	"\x02Olmax Medical | Wallet\x02Wallet\x020 BTC\x02NO FUNDS CURRENTLY HELD" +
-	" IN ESCROW\x02Deposit Funds\x02Send only Bitcoin (BTC) to this address" +
-	"\x02Sending any other digital asset, including Bitcoin Cash (BCH), will " +
-	"result in permanent loss.\x02No selection for question %[1]d\x02Invalid " +
-	"selection for question %[1]d\x02Full name required\x02Full name must be " +
-	"at least 2 characters\x02Olmax Medical | Appointments\x02You currently h" +
-	"ave no appointments pending.\x02If you have submitted payment, and do no" +
-	"t see appointment scheduled on this page; please refer to the %[1]s sect" +
-	"ion.\x02Olmax Medical | Profile\x04\x00\x01 \x06\x02Hello\x02Olmax Medic" +
-	"al | Create Profile\x02Create Patient Profile\x02Please submit some info" +
-	"rmation regarding your consult.\x02When were you born?\x02What is your b" +
-	"iological gender?\x02Please give a brief statement regarding the main re" +
-	"ason you would like to see your doctor:\x02When did your symptoms start?" +
-	"\x02Where are your symptoms located? <i>part of your body</i>\x02How lon" +
-	"g have these symptoms lasted?\x02How would you characterize your symptom" +
-	"s? <i>Sharp, Dull, Ache, twisting, ets.</i>\x02What makes your symptoms " +
-	"better, and What makes them worse?\x02Does your pain travel or radiate t" +
-	"o another part of your body?\x02Have you taken any medications for these" +
-	" symptoms and how much have they worked?\x02Any fevers or Chills?\x02Any" +
-	" weight gain or weight loss?\x02Any changes in vision?\x02Any lung issue" +
-	"s?\x02Any heart problems?\x02Any intestinal problems?\x02Any kidney prob" +
-	"lems?\x02Any problems with muscles or bones?\x02Any nervous system probl" +
-	"mes? <i>Strokes</i>\x02Any psychiatric problems? <i>Depression, anxiety<" +
-	"/i>\x02Male\x02Female\x02Please check any of the following if you have e" +
-	"xperienced in the last 6 weeks:\x02Olmax Medical | Bookings\x02Available" +
-	" patients\x02Olmax Medical | Find Patients"
+const en_USData string = "" + // Size: 12027 bytes
+	"\x04\x00\x02\x0a\x0a-\x02Subject: Olmax Medical - Reset Your Password" +
+	"\x04\x00\x01 7\x02Please click the following link to reset your password" +
+	"\x04\x00\x02\x0a\x0a1\x02Subject: Olmax Medical - Verify your new accoun" +
+	"t\x04\x00\x01 B\x02Please click the following link to finalize your acco" +
+	"unt creation\x02Password required\x02Password must be at least 8 charact" +
+	"ers\x02Re-enter same password\x02Valid email required\x02Invalid email" +
+	"\x02First name required\x02First name must be at least 2 characters\x02L" +
+	"ast name required\x02Last name must be at least 2 characters\x02No selec" +
+	"tion for question %[1]d\x02Invalid selection for question %[1]d\x02Full " +
+	"name required\x02Full name must be at least 2 characters\x02No selection" +
+	" for %[1]s\x02Invalid selection for %[1]s\x02Olmax Medical | Welcome\x02" +
+	"Olmax Medical\x02Country\x02Specialty\x02Find a Doctor\x02Appointment Da" +
+	"tes:\x02From:\x02To:\x02Appointment Times\x02Start Time:\x02End Time:" +
+	"\x02Search\x02Who We Are\x02Olmax Medical is a world wide network of phy" +
+	"sicians and patients that enables them to communicate, meet virtually, a" +
+	"nd negotiate payment on a peer to peer basis, without the interference o" +
+	"f insurance giants. We provide a platform where the economics of <i>lais" +
+	"sez-fairedes</i> (free-trade) will allow both physicians and patients to" +
+	" negotiate fee for service. Our website provide a platform where both pa" +
+	"tients and doctors form around the world can deploy customized contracts" +
+	" describing, in detail, the terms of health care. The cost, time, and du" +
+	"ration of virtual clinic visits will be pre-determined on contracts post" +
+	"ed on our website. The contracts are written by either doctor or patient" +
+	". Contracts can be created, bought, and sold by anyone, because we belie" +
+	"ve health care should be available to everyone. It will be our work to i" +
+	"nvestigate and verify physician status. Once doctors are verified, patie" +
+	"nts will have the opportunity to rate physician performance and bedside " +
+	"manners.\x02Second Opinions\x02Since the time of Hippocrates, patients a" +
+	"nd doctors were limited to serving and receiving care from physician in " +
+	"their more local community. With our platform patients will not be tied " +
+	"to HMOs or managed health care. In other words, insurance companies or g" +
+	"overnment decisions will no longer chain patients to the type and qualit" +
+	"y of health care they receive. Doctors with extremely rare specialties w" +
+	"ill be able to serve communities thousands of miles away from them, and " +
+	"from the comfort of their home if they so desire\x02Anonymity\x02Patient" +
+	"s will be encouraged to use anonymous names. Medical records are kept be" +
+	"tween patients and physicians, they are not stored on our servers.\x02Ac" +
+	"cess to Physicians from around the world\x02Physicians from around the w" +
+	"orld will be able to join our network, see patients from anywhere at any" +
+	"time.\x02Payment\x02Payments will be made with Bitcoin. Minimal fees wil" +
+	"l be charged by our website for holding the cryptocurrency until clinica" +
+	"l visits are complete.\x02Copyright 2017, 2018, 2019\x02See More\x02What" +
+	" are patients saying about our doctors from\x02Olmax Medical | Messages" +
+	"\x02You currently have no messages.\x02Previous messages: Click here\x02" +
+	"Olmax Medical | Login\x02Enter Email\x02We will send a reset code to the" +
+	" email provided\x02Email:\x02Reset\x02Olmax Medical | Sign Up\x02Sign Up" +
+	" for free\x02First Name:\x02Enter your first name\x02Enter your last nam" +
+	"e\x02Last Name:\x02Enter a valid email\x02Password:\x02Enter password (8" +
+	"+ chars)\x02Sign Up\x02Olmax Medical | Wallet\x02Wallet\x020 BTC\x02NO F" +
+	"UNDS CURRENTLY HELD IN ESCROW\x02Deposit Funds\x02Send only Bitcoin (BTC" +
+	") to this address\x02Sending any other digital asset, including Bitcoin " +
+	"Cash (BCH), will result in permanent loss.\x02Olmax Medical | Bookings" +
+	"\x02Available patients\x02Olmax Medical | Find Patients\x02Olmax Medical" +
+	" | FAQ\x02Appointment Requests\x02I am a patient. How do I check the sta" +
+	"tus of my appointment?\x02Once an appointment request is submitted, the " +
+	"physician has 4 to 12 hrs to replay. Depending on the urgency. If you wo" +
+	"uld like a reply within 4 hr for urgent consults, an extra fee can be pa" +
+	"yed. Otherwise doctors have 12 hrs to reply to appointment request.\x02S" +
+	"hould I clear my schedule if I have no heard back from my doctor?\x02If " +
+	"you do not recieve a confimation email by 12 hrs, then a full refund wil" +
+	"l be returned to your bitcoin account along with an email stating that a" +
+	"n appointment could not be made\x02What happens if my appointment reques" +
+	"t is declined or expires?\x02If you recieve an email confirming a cancel" +
+	"ation of decline, bitcoin will be returned to your account infull, then " +
+	"you may seek another appointment\x02I did not recieve an email confirmin" +
+	"g nor denying my request\x02Make sure your email address is correct\x02W" +
+	"e may be sending emails to an old or incorrect email address. To see or " +
+	"change the email address associated with your account, log in to your Ol" +
+	"max account from a desktop computer and follow the steps below:\x021.) G" +
+	"o to Edit Profile.\x022.) Look for the Email Address field. Make sure yo" +
+	"ur address is correct.\x023.) If it is incorrect, add the correct addres" +
+	"s and click Save.\x02Check your email notification settings\x02We'll onl" +
+	"y send the emails you tell us you want. To check your email notification" +
+	" settings, log in to your Olmax account from a desktop computer and foll" +
+	"ow the steps below:\x021.) Go to your Notification Settings.\x022.) Look" +
+	" for the \x22Email Settings\x22 field. Make sure you have chosen the ema" +
+	"il types you want to receive.\x023.) After adding or removing checkmarks" +
+	" from the right boxes, scroll to the bottom of the page and click Save." +
+	"\x02Search all messages in your email inbox\x02Sometimes emails can get " +
+	"lost in your inbox. In your email account, search for terms like \x22Olm" +
+	"ax Medical\x22, \x22Appointment\x22, \x22Verification\x22, or other word" +
+	"s related to the email you're looking for.\x02Check your spam and other " +
+	"email filters\x02It's possible your email provider mistakenly sent our m" +
+	"essages to your spam or junk folder. To avoid this:\x021.) Remove Olmax " +
+	"messages from your spam list\x022.) Add nemo@olmax.com, halfwit@olmax.co" +
+	"m, and services@olmax.com to your personal email address book\x02If you " +
+	"have other filters or routing rules in your email account that may have " +
+	"sorted Olmax emails elsewhere, be sure to check those, too.</br>Check fo" +
+	"r issues with your email service provider.\x02Depending on your provider" +
+	", emails can take up to a few hours to be delivered. If undelivered or d" +
+	"elayed emails continue to be an issue, check with your provider to see i" +
+	"f there are any configuration issues or problems with their network that" +
+	" might be affecting your account.\x02If your country blocks Olmax Medica" +
+	"l?\x04\x00\x01 }\x02You can bypass their firewall using tunnel software " +
+	"such as a VPN,  or Tor software. See the following for more information:" +
+	"\x02Olmax Medical | Our Doctors\x02Contacting Physician\x02You may make " +
+	"contact with your doctor as soon as the appointment is confirmed.\x02Do " +
+	"I need to pay before scheduling an appointment?\x02Yes, you must submit " +
+	"payment in order to secure appointment contract. Your payment will be he" +
+	"ld in escrow until the visit is finalized. Once you submit fees, we will" +
+	" contact the physician and give him or her your medical information. The" +
+	" doctor will then confirm appointment, and an email or text will be sent" +
+	" to you, along with the physicians contact information. Fees are structu" +
+	"red in amount of bitcoin (BTC) per unit(U) time (BTC/U). Every unit (U) " +
+	"is equivalent to 15 min, time spent in visit will be pre-determined, and" +
+	" visits going longer that what was agreed upon will not cost extra. All " +
+	"new consults must be a minimum of 2 units, and repeat visits can be a mi" +
+	"nimum of 1 unit.\x02When will I be charged?\x02Bitcoin must be paid in f" +
+	"ull upon deployment or acceptance of contract.\x02Can I pay with any cur" +
+	"rency?\x02No.\x04\x00\x01 |\x02You can bypass their firewall using tunne" +
+	"l software such as a VPN, or Tor software. See the following for more in" +
+	"formation:\x02Olmax Medical | Help\x02How can we help?\x02Suggested Topi" +
+	"cs\x02Should I clear my schedule if I have not heard back from the docto" +
+	"r?\x02Payment Methods\x02How do I edit or remove a payment method?\x02Wh" +
+	"at is Bitcoin?\x02How do I use Bitcoin to pay?\x02How can I add another " +
+	"appointment or business address to my receipt?\x02Verification\x02How do" +
+	" I verify my phone number?\x02Why didn't I get my email notification?" +
+	"\x02What is a Verified Medical License?\x02Prices & Fees\x02How is the p" +
+	"rice determined for my appointment?\x02Contacting A Physician\x02What do" +
+	"es each appointment status mean?\x02How do I make an appointment on Olma" +
+	"x?\x02-View all\x04\x00\x01 \x1e\x02All payments will be done via\x04" +
+	"\x00\x01 \x11\x02What is Bitcoin?\x04\x00\x01 {\x02You can bypass their " +
+	"firewall using tunnel software such as a VPN or Tor software. See the fo" +
+	"llowing for more information:\x02Prices and fees are for the most part d" +
+	"etermined by doctors and patients.\x02Prices are set by who deploys the " +
+	"contract (doctor or patient). Fees are structured in a amount of bitcoin" +
+	" (BTC) per unit. In which a unit of time equals 15 mins. All new consult" +
+	"s must be a minimum of 2 units, and repeat visits can be 1 unit.\x02No" +
+	"\x02Olmax Medical | Become A Provider\x02Become A Provider\x02Find out w" +
+	"hat you could earn\x02Get Started\x02Why become a provider on Olmax?\x02" +
+	"No matter what your specialty, Olmax makes it simple and secure to reach" +
+	" millions of patients looking for doctors with unique skills and special" +
+	"ties, just like yours.\x02You're in control\x02With Olmax, you're in ful" +
+	"l control of your availability, prices, medical management, and how you " +
+	"interact with patients. You can set appointment times and handle the pro" +
+	"cess however you like.\x02We're there at every step\x02Olmax offers tool" +
+	"s, service tips, 24/7 support, and an on-line community of experienced p" +
+	"hysicians for questions and sharing ideas for success.\x02How to become " +
+	"an Olmax Provider\x02Create your profile\x02It's free and easy to create" +
+	" a profile on Olmax. Describe your resume, how many patients you can acc" +
+	"omodate, set your own times, and add photos and details about yourself." +
+	"\x02Welcome patients\x02Communicate with patients via 3rd party applicat" +
+	"ions, or personal telephone.\x02Get Paid\x02Olmax's secure payment syste" +
+	"m means you will never see a patient without compensation, or have to de" +
+	"al with money directly. Patienst are charged before appointments, and yo" +
+	"u are paid after the visit is completed. We embrace the future, therefor" +
+	"e payments will be via Bitcoin only.\x02Safety on Olmax\x02Olmax is buil" +
+	"t on trust\x02All Olmax physicians must: submit a profile photo, medical" +
+	" diplomas, residency certification or equivalent, verify their phone, em" +
+	"ail, government ID, and background checks. Patients and physicians can e" +
+	"ach publish reviews after visit conclusions keeping everyone accountable" +
+	" and respectful.\x02Start seeing patients\x02Profile information such as" +
+	" government ID, diplomas, phone numbers, and emails will will be verifie" +
+	"d before being posted on Olmax Medical website.\x02Once you have submitt" +
+	"ed a phone number, you can either receive a text message or call with a " +
+	"confirmation number.\x02Why did I not get a notification email?\x04\x00" +
+	"\x01 )\x02Please refer to the following help page:\x02Olmax Medical | Ap" +
+	"pointments\x02You currently have no appointments pending.\x02If you have" +
+	" submitted payment, and do not see appointment scheduled on this page; p" +
+	"lease refer to the %[1]s section.\x02Olmax Medical | Profile\x04\x00\x01" +
+	" \x06\x02Hello\x02Olmax Medical | Create Profile\x02Create Patient Profi" +
+	"le\x02Please submit some information regarding your consult.\x02When wer" +
+	"e you born?\x02What is your biological gender?\x02Please give a brief st" +
+	"atement regarding the main reason you would like to see your doctor:\x02" +
+	"When did your symptoms start?\x02Where are your symptoms located? <i>par" +
+	"t of your body</i>\x02How long have these symptoms lasted?\x02How would " +
+	"you characterize your symptoms? <i>Sharp, Dull, Ache, twisting, ets.</i>" +
+	"\x02What makes your symptoms better, and What makes them worse?\x02Does " +
+	"your pain travel or radiate to another part of your body?\x02Have you ta" +
+	"ken any medications for these symptoms and how much have they worked?" +
+	"\x02Any fevers or Chills?\x02Any weight gain or weight loss?\x02Any chan" +
+	"ges in vision?\x02Any lung issues?\x02Any heart problems?\x02Any intesti" +
+	"nal problems?\x02Any kidney problems?\x02Any problems with muscles or bo" +
+	"nes?\x02Any nervous system problmes? <i>Strokes</i>\x02Any psychiatric p" +
+	"roblems? <i>Depression, anxiety</i>\x02Male\x02Female\x02Please check an" +
+	"y of the following if you have experienced in the last 6 weeks:\x02FAQ" +
+	"\x02Help\x02Quality Healthcare\x02Prices and Fees\x02Appointments\x02Leg" +
+	"al\x02Privacy Policy\x02Work with us!\x02Become A Partner"
 
-	// Total table size 13534 bytes (13KiB); checksum: EC642357
+	// Total table size 12859 bytes (12KiB); checksum: 7AF75C4C
