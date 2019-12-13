@@ -1,6 +1,6 @@
 {{define "content"}}
 	<main>
-	        {{template "errors" .errors}}
+	    {{template "errors" .errors}}
 		<label for="application">{{.offer}}</label>
 		<form id="application" method="post" enctype="multipart/form-data" boundary="VAL">
 			<h4>{{.area}}</h4>

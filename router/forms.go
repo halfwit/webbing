@@ -40,7 +40,6 @@ func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []str
 	for _, key := range pluginKey {
 		if (form.After&key) != 0 && pluginCache[key].Validate != nil {
 			if e := pluginCache[key].Validate(p); e != nil {
-				fmt.Fprintf(w, "%q\n", e)
 				errors = append(errors, fmt.Sprint(e))
 				return nil, errors
 			}

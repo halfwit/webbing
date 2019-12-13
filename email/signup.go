@@ -14,7 +14,7 @@ import (
 )
 
 // TODO(halfwit) Update with whichever TLD we land on
-var url = "https://olmaxmedical.com"
+var url = "https://medical.olmax.dev"
 
 // SendSignup - email our prospective clients and create tokens
 func SendSignup(first, last, email, pass string, p *message.Printer) {

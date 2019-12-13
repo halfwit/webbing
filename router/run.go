@@ -131,6 +131,7 @@ func post(p *Request, us session.Session, w http.ResponseWriter, r *http.Request
 		// NOTE(halfwit) this stashes previous entries, but does not work
 		// on multipart forms (with file uploads)
 		us.Set("errors", errors)
+		// Maybe store form args instead here in session
 		url := fmt.Sprintf("%s?%s", r.URL.String(), r.Form.Encode())
 		http.Redirect(w, r, url, 302)
 	}

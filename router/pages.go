@@ -52,7 +52,6 @@ func ValidatePages() []error {
 	var errs []error
 	hd := path.Join("templates", "header.tpl")
 	fd := path.Join("templates", "footer.tpl")
-	ed := path.Join("templates", "errors.tpl")
 	ld := path.Join("templates", "layout.tpl")
 	extra, err := os.Open(path.Join("templates", "plugins"))
 	if err != nil {
@@ -64,7 +63,7 @@ func ValidatePages() []error {
 		dirs[n] = path.Join("templates", "plugins", dir)
 	}
 	// TODO(halfwit) Validate our plugin templates here as well
-	dirs = append(dirs, hd, fd, ed, ld)
+	dirs = append(dirs, hd, fd, ld)
 	printer := message.NewPrinter(message.MatchLanguage("en"))
 	for _, item := range pagecache {
 		var err error

@@ -1,9 +1,7 @@
 {{define "content"}}
 	<main>
             <h3>{{if .redirect }}{{.continue}}{{else}}{{.greeting}}{{end}}</h3>
-	      {{range .errors}}
-	      <p style="color: red" class="errtext">{{.}}</p>
-	      {{end}}
+	      {{template "errors" .errors}}
 	      <form method="post" action="login.html">
 			<label for="email">{{.email}}*</label>
 			<input type="email" name="email" id="email" required autocomplete="off"/><br>

@@ -1,9 +1,7 @@
 {{define "content"}}
 	<main>
 		<h2>{{.mainHeader}}</h2>
-		{{range .errors}}
-		<p style="color: red" class="errtext">{{.}}</p>
-	        {{end}}
+		{{template "errors" .errors}}
 		<form method="post" action="signup.html">
 			<label for="fname">{{.fname}}*</label>
 			<input type="text" name="fname" id="fname" placeholder="{{.fnameph}}" required autocomplete="off" autofocus/><br>
