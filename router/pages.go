@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"net/http"
 	"os"
 	"path"
 	"strings"
@@ -87,6 +88,29 @@ func ValidatePages() []error {
 		}
 	}
 	return errs
+}
+
+func getpage(p *Request, w http.ResponseWriter) {
+	var data []byte
+	var err error
+	switch db.UserRole(p.user) {
+	case db.DoctorAuth:
+		data, err = getdata(p, "doctor")
+	case db.PatientAuth:
+		data, err = getdata(p, "patient")
+	default:
+		data, err = getdata(p, "guest")
+	}
+	if err != nil && err.Error() == "Unauthorized" {
+		p.Session().Set("redirect", p.path)
+		http.Redirect(w, p.Request(), "/login.html", 302)
+		return
+	}
+	if err != nil {
+		http.Error(w, "Service Unavailable", 503)
+		return
+	}
+	fmt.Fprintf(w, "%s", data)
 }
 
 func getdata(p *Request, in string) ([]byte, error) {

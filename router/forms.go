@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/olmaxmedical/olmax_go/session"
 	"golang.org/x/text/message"
 )
 
@@ -46,4 +47,20 @@ func parseform(p *Request, w http.ResponseWriter, r *http.Request) (*Form, []str
 		}
 	}
 	return form, errors
+}
+
+func postform(p *Request, us session.Session, w http.ResponseWriter, r *http.Request) {
+	form, errors := parseform(p, w, r)
+	if len(errors) > 0 && errors[0] != "nil" {
+		// NOTE(halfwit) this stashes previous entries, but does not work
+		// on multipart forms (with file uploads)
+		us.Set("errors", errors)
+		// Maybe store form args instead here in session
+		url := fmt.Sprintf("%s?%s", r.URL.String(), r.Form.Encode())
+		http.Redirect(w, r, url, 302)
+	}
+	if form != nil {
+		us.Set("errors", []string{})
+		http.Redirect(w, r, form.Redirect, 302)
+	}
 }
