@@ -34,9 +34,9 @@ func Route(manager *session.Manager) error {
 	mux.HandleFunc("/", d.normal)
 	//from https://github.com/denji/golang-tls (creative commons)
 	srv := &http.Server{
-		Addr: ":8443",
-		Handler: mux,
-		TLSConfig: getTlsConfig(),
+		Addr:         ":8443",
+		Handler:      mux,
+		TLSConfig:    getTlsConfig(),
 		TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
 	}
 	return srv.ListenAndServeTLS("cert.pem", "key.pem")
@@ -66,32 +66,6 @@ func (d *handle) reset(w http.ResponseWriter, r *http.Request) {
 	us.Set("token", token)
 	r.URL.Path = "/newpassword.html"
 	d.normal(w, r)
-}
-
-// Request represents an incoming GET/POST
-type Request struct {
-	printer *message.Printer
-	session session.Session
-	request *http.Request
-	user    string
-	status  string
-	path    string
-	role    db.Access
-}
-
-// Printer - returns the client's localized printer handler
-func (r *Request) Printer() *message.Printer {
-	return r.printer
-}
-
-// Session - returns the client's session
-func (r *Request) Session() session.Session {
-	return r.session
-}
-
-// Request - underlying http.Request for forms and such
-func (r *Request) Request() *http.Request {
-	return r.request
 }
 
 func (d *handle) normal(w http.ResponseWriter, r *http.Request) {
