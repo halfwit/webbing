@@ -65,9 +65,11 @@ func (c *countries) Swap(i, j int) {
 	c.list[j] = tmp
 }
 
-func listCountries(_ *router.Request) map[string]interface{} {
+func listCountries(r *router.Request) map[string]interface{} {
+	p := r.Printer()
 	// TODO(halfwit): Use Request to get a localized country name
 	c := make(map[string]interface{})
+	c["label"] = p.Sprint("Select country/countries")
 	for _, item := range cache.list {
 		c[item.Name.Common] = item.Name.Common
 	}

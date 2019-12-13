@@ -1,8 +1,8 @@
 {{define "specialty"}}				
-<label for="Specialty">{{.specialty}}</label>
-	<select name="Specialty">
-        {{range $id, $name := .}}
-		<option value="{{$id}}">{{$name}}</option>
-	    {{end}}		
-    </select>
+<label for="Specialty">{{.label}}</label>
+<select name="Specialty" id="specialty" multiple required>
+    {{range $id, $name := .}}
+	<option value="{{$id}}">{{$name}}</option>
+	{{end}}		
+</select>
 {{end}}

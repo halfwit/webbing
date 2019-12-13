@@ -11,6 +11,6 @@
 			<input type="password" name="pass" id="pass" minlength="8" required autocomplete="off"/><br>
 			<p class="forgot"><a href="resetpassword.html">{{.forgotPassword}}</a></p>
 			<button type="submit" class="button button-block"/>{{.login}}</button>
-          	    </form>
+          </form>
 	</main>
 {{end}}

@@ -9,6 +9,6 @@
 			<label for="email">{{.email}}*</label>
 			<input type="email" name="email" id="email" required autocomplete="off"/><br>
 			<button type="submit" class="button button-block"/>{{.sendreset}}</button>
-          	    </form>
+          </form>
 	</main>
 {{end}}

@@ -25,7 +25,6 @@ func application(p *message.Printer) map[string]interface{} {
 		"title":      p.Sprint("Olmax Medical | Application"),
 		"offer":      p.Sprint("Create A New Offer"),
 		"area":       p.Sprint("Location and specialties"),
-		"doccountry": p.Sprint("What country or countries do you practice medicine?"),
 		"docspecial": p.Sprint("What is your specialty, or specialties?"),
 		"gender":     p.Sprint("What is your biological gender?"),
 		"male":       p.Sprint("Male"),

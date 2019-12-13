@@ -11,6 +11,6 @@
 			<laber for="reenter">{{.reenter}}*</label>
 			<input type="password" name="reenter" id="reenter" required autocomplete="off"/><br>
 			<button type="submit" class="button button-block"/>{{.update}}</button>
-          	    </form>
+          </form>
 	</main>
 {{end}}

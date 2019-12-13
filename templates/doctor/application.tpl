@@ -5,19 +5,9 @@
 		<form id="application" method="post" enctype="multipart/form-data" boundary="VAL">
 			<h4>{{.area}}</h4>
 			<fieldset>
-				<label for="country">{{.doccountry}}</label>
-				<select name="country" id="country" multiple required>
-		    		{{range $id, $name := .countrylist}}
-					<option value="{{$id}}">{{$name}}</option>
-  	          		{{end}}
-				</select>
+				{{template "country" .country}}
 				<br><!-- clean up the formatting on some browsers -->
-				<label for="specialty">{{.docspecial}}</label>	   
-		 		<select name="specialty" id="specialty" multiple required>
-				{{range $id, $name := .specialties}}
-					<option value="{{$id}}">{{$name}}</option>
-				{{end}}
-				</select>
+				{{template "specialty" .specialties}}
 			</fieldset>
 			<h4>{{.gender}}</h4>
 			<fieldset>

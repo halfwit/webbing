@@ -47,7 +47,7 @@ func AddPage(p *Page) {
 	pagecache[p.Path+".html"] = p
 }
 
-// ValidatePages - Walk all our templates and finally return applicable errors as an array
+// ValidatePages - Walk all our templates, test them, and finally return applicable errors as an array
 func ValidatePages() []error {
 	var errs []error
 	hd := path.Join("templates", "header.tpl")

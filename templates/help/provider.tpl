@@ -3,12 +3,7 @@
 	    <h2>{{.mainHeader}}</h2>
 	    <h3>{{.earn}}</h3>
 	    <form method="post">
-	        <p>{{.specialtyHeader}}</p>
-	        <select name="specialty">
-		    {{range $id, $name := .specialties}}
-		    <option value="{{$id}}">{{$name}}</option>
-		    {{end}}
-		</select>
+			{{template "specialty" .specialties}}
 	        <button>{{.getStartedHeader}}</button>
 	    </form>
 		<!--TODO change link from TODO.html-->
