@@ -11,7 +11,6 @@ import (
 )
 
 // Handle specific endpoints
-
 type handler struct {
 	manager *session.Manager
 }
@@ -138,7 +137,6 @@ func (d *handler) getUser(w http.ResponseWriter, r *http.Request) (string, strin
 	return user, status, us, role
 }
 
-// Some utility functions that are shared across pages and forms
 func userLang(r *http.Request) *message.Printer {
 	accept := r.Header.Get("Accept-Language")
 	lang := r.FormValue("lang")
