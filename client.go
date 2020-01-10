@@ -17,6 +17,7 @@ import (
 )
 
 //go:generate gotext -srclang=en-US update -out=catalog.go -lang=en-US
+// use a working dir instead, passed in as an argument instead
 
 func main() {
 	sessions, err := session.NewManager("default", "sessions", 360)

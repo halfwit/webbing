@@ -11,7 +11,7 @@ import (
 )
 
 // Countries - Populate a localized spinner to select country
-const Countries router.PluginMask = 1 << 2
+const Countries router.PluginMask = 1 << 3
 
 // Country - Mapping token to internationalized country code
 type Country struct {

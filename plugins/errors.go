@@ -5,7 +5,7 @@ import (
 )
 
 // FormErrors - A list of errors present on a POST request
-const FormErrors router.PluginMask = 1 << 7
+const FormErrors router.PluginMask = 1 << 8
 
 func init() {
 	b := &router.Plugin{

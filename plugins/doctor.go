@@ -5,7 +5,7 @@ import (
 )
 
 // ListDoctors - Bitmask to list doctors of in client country
-const ListDoctors router.PluginMask = 1 << 3
+const ListDoctors router.PluginMask = 1 << 4
 
 type doctor struct {
 	Image     string

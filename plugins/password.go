@@ -8,10 +8,10 @@ import (
 )
 
 // ValidateLogin - Check user/pass combo exists
-const ValidateLogin router.PluginMask = 1 << 9
+const ValidateLogin router.PluginMask = 1 << 11
 
 // ResetPassword - Update database entry for password
-const ResetPassword router.PluginMask = 1 << 10
+const ResetPassword router.PluginMask = 1 << 12
 
 func init() {
 	b := &router.Plugin{

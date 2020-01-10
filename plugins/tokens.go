@@ -6,7 +6,7 @@ import (
 )
 
 // FormToken - A database-persisted one time use token to relate forms to POST requests
-const FormToken router.PluginMask = 1 << 14
+const FormToken router.PluginMask = 1 << 15
 
 func init() {
 	c := &router.Plugin{

@@ -5,7 +5,7 @@ import (
 )
 
 // ListBookings retreives a list of all upcoming bookings for a given doctor
-const ListBookings router.PluginMask = 1 << 13
+const ListBookings router.PluginMask = 1 << 2
 
 func init() {
 	b := &router.Plugin{

@@ -6,7 +6,7 @@ import (
 
 // AddAppointment registers an appointment into the appointment book
 // TODO(halfwit) message/email client to fill out Symptoms form
-const AddAppointment router.PluginMask = 1 << 15
+const AddAppointment router.PluginMask = 1 << 1
 
 func init() {
 	b := &router.Plugin{
@@ -18,5 +18,8 @@ func init() {
 }
 
 func addAppt(s *router.Request) error {
+	// get &id=
+	// Auth user and requisite key
+	// TODO(halfwit) create unique key in patient/appointments 
 	return nil
 }
