@@ -34,11 +34,11 @@ func login(s *router.Request) error {
 	p := s.Printer()
 	user := r.PostFormValue("email")
 	pass := r.PostFormValue("pass")
-	if db.ValidateLogin(user, pass) {
+	if database.ValidateLogin(user, pass) {
 		us.Set("username", user)
 		us.Set("login", "true")
-		us.Set("role", db.UserRole(user))
-		us.Set("token", db.NewToken())
+		us.Set("role", database.UserRole(user))
+		us.Set("token", database.NewToken())
 		return nil
 	}
 	return errors.New(p.Sprint("Invalid login"))
@@ -54,9 +54,9 @@ func setPass(s *router.Request) error {
 		return errors.New(p.Sprint("Passwords do not match"))
 	}
 	token := r.PostFormValue("token")
-	if !db.FindTempEntry(token) {
+	if !database.FindTempEntry(token) {
 		return errors.New(p.Sprint("Session expired"))
 	}
-	db.UpdateUserPassword(token, pass)
+	database.UpdateUserPassword(token, pass)
 	return nil
 }

@@ -18,12 +18,12 @@ func init() {
 }
 
 func validateToken(r *router.Request) error {
-	return db.ValidateToken(r.Request(), r.Session())
+	return database.ValidateToken(r.Request(), r.Session())
 }
 
 // TODO(halfwit) - database
 func newFormToken(r *router.Request) map[string]interface{} {
 	return map[string]interface{}{
-		"token": db.NewToken(),
+		"token": database.NewToken(),
 	}
 }
