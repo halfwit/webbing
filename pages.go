@@ -80,7 +80,7 @@ func ValidatePages() []error {
 		p := &Request{
 			printer: printer,
 			path:    item.Path + ".html",
-			role:    db.PatientAuth | db.DoctorAuth | db.GuestAuth,
+			role:    database.PatientAuth | database.DoctorAuth | database.GuestAuth,
 		}
 		_, err = getData(p, "")
 		if err != nil {
@@ -93,10 +93,10 @@ func ValidatePages() []error {
 func getpage(p *Request, w http.ResponseWriter) {
 	var data []byte
 	var err error
-	switch db.UserRole(p.user) {
-	case db.DoctorAuth:
+	switch database.UserRole(p.user) {
+	case database.DoctorAuth:
 		data, err = getData(p, "doctor")
-	case db.PatientAuth:
+	case database.PatientAuth:
 		data, err = getData(p, "patient")
 	default:
 		data, err = getData(p, "guest")

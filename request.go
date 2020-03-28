@@ -16,7 +16,7 @@ type Request struct {
 	user    string
 	status  string
 	path    string
-	role    db.Access
+	role    database.Access
 }
 
 // Printer - returns the client's localized printer handler

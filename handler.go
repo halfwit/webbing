@@ -68,16 +68,16 @@ func (d *handler) profile(w http.ResponseWriter, r *http.Request) {
 	}
 	var data []byte
 	var err error
-	switch db.UserRole(user) {
-	case db.DoctorAuth:
-		if role != db.DoctorAuth {
+	switch database.UserRole(user) {
+	case database.DoctorAuth:
+		if role != database.DoctorAuth {
 			http.Error(w, "Unauthorized", 401)
 			return
 		}
 		p.path = "doctor/profile.html"
 		data, err = getData(p, "doctor")
-	case db.PatientAuth:
-		if role != db.PatientAuth {
+	case database.PatientAuth:
+		if role != database.PatientAuth {
 			http.Error(w, "Unauthorized", 401)
 			return
 		}
@@ -120,19 +120,19 @@ func (d *handler) reset(w http.ResponseWriter, r *http.Request) {
 	d.normal(w, r)
 }
 
-func (d *handler) getUser(w http.ResponseWriter, r *http.Request) (string, string, session.Session, db.Access) {
+func (d *handler) getUser(w http.ResponseWriter, r *http.Request) (string, string, session.Session, database.Access) {
 	us := d.manager.Start(w, r)
 	user, ok1 := us.Get("username").(string)
 	status, ok2 := us.Get("login").(string)
-	role, ok3 := us.Get("role").(db.Access)
+	role, ok3 := us.Get("role").(database.Access)
 	if !ok1 || !ok2 || status != "true" {
 		status = "false"
 	}
 	if !ok3 {
-		role = db.GuestAuth
+		role = database.GuestAuth
 	}
 	if status == "true" {
-		us.Set("token", db.NewToken())
+		us.Set("token", database.NewToken())
 	}
 	return user, status, us, role
 }
