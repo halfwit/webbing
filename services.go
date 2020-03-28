@@ -3,7 +3,7 @@ package plugins
 import (
 	"fmt"
 
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // Services - Bitmask to list services in native language

@@ -1,6 +1,6 @@
 package plugins
 
-import "github.com/olmaxmedical/olmax_go/router"
+import "github.com/olmaxmedical/router"
 
 // Search - generic search for doctors in area
 const Search router.PluginMask = 1 << 13

@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // FormErrors - A list of errors present on a POST request

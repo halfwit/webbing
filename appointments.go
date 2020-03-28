@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // AddAppointment registers an appointment into the appointment book

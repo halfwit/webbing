@@ -3,8 +3,8 @@ package plugins
 import (
 	"errors"
 
-	"github.com/olmaxmedical/olmax_go/db"
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/db"
+	"github.com/olmaxmedical/router"
 )
 
 // ValidateLogin - Check user/pass combo exists

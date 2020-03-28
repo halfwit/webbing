@@ -1,6 +1,6 @@
 package plugins
 
-import "github.com/olmaxmedical/olmax_go/router"
+import "github.com/olmaxmedical/router"
 
 // MakeOffer - Request a time slot with doctor
 const MakeOffer router.PluginMask = 1 << 10

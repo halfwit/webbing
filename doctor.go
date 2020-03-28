@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // ListDoctors - Bitmask to list doctors of in client country

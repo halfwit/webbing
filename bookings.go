@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // ListBookings retreives a list of all upcoming bookings for a given doctor

@@ -1,8 +1,8 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/db"
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/db"
+	"github.com/olmaxmedical/router"
 )
 
 // FormToken - A database-persisted one time use token to relate forms to POST requests

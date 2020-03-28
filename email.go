@@ -5,8 +5,8 @@ import (
 	"log"
 	"mime/multipart"
 
-	"github.com/olmaxmedical/olmax_go/email"
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/email"
+	"github.com/olmaxmedical/router"
 )
 
 // EmailForm - Patient form to gmail

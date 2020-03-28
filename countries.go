@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 	"github.com/pariz/gountries"
 	"golang.org/x/text/message"
 )

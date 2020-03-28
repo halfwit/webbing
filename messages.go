@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 )
 
 // Messages - list all messages by key for use in a message template
