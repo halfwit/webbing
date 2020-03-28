@@ -1,8 +1,0 @@
-the program starts up, caching all templates as structs with the function to call for page data, the various flags for additional data they want from the generic page handler, and the access flags
-
-Then, the program runs through every template and makes sure that they execute, at least using the English translations (the default ones) it'll error out and print every template error it encounters on stdout
-
-Then it spins up the (currently broken, so disabled) garbage collection. This garbage collection removes old session data, like tokens that have expired, rather than spinning up goroutines waiting to time out the token.
-We may revisit this, since a token, once used, is considered expired (and can be deleted) so it won't need garbage collection.
-
-Finally we start listening for incoming connections, using the router. It's handed a structure to use for accessing all the required session data through method calls, which keeps the sessions out of global scope
