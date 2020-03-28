@@ -1,7 +1,7 @@
 package plugins
 
 import (
-	"github.com/olmaxmedical/db"
+	"github.com/olmaxmedical/database"
 	"github.com/olmaxmedical/router"
 )
 

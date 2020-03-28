@@ -3,7 +3,7 @@ package plugins
 import (
 	"errors"
 
-	"github.com/olmaxmedical/db"
+	"github.com/olmaxmedical/database"
 	"github.com/olmaxmedical/router"
 )
 
