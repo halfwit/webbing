@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"net/http"
 
-	"github.com/olmaxmedical/olmax_go/session"
+	"github.com/olmaxmedical/session"
 )
 
 // Route - All requests pass through here first

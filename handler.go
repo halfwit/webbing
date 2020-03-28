@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/olmaxmedical/olmax_go/db"
-	"github.com/olmaxmedical/olmax_go/email"
-	"github.com/olmaxmedical/olmax_go/session"
+	"github.com/olmaxmedical/database"
+	"github.com/olmaxmedical/email"
+	"github.com/olmaxmedical/session"
 	"golang.org/x/text/message"
 )
 

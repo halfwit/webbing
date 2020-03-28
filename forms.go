@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/olmaxmedical/olmax_go/session"
+	"github.com/olmaxmedical/session"
 	"golang.org/x/text/message"
 )
 

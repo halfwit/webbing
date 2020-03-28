@@ -3,8 +3,8 @@ package router
 import (
 	"net/http"
 
-	"github.com/olmaxmedical/olmax_go/db"
-	"github.com/olmaxmedical/olmax_go/session"
+	"github.com/olmaxmedical/database"
+	"github.com/olmaxmedical/session"
 	"golang.org/x/text/message"
 )
 

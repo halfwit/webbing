@@ -11,7 +11,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/olmaxmedical/olmax_go/db"
+	"github.com/olmaxmedical/database"
 	"golang.org/x/text/message"
 )
 
