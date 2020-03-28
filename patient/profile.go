@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/albrow/forms"
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 	"golang.org/x/text/message"
 )
 
