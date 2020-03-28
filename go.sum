@@ -1,0 +1,11 @@
+github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
+github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/olmaxmedical/database v0.0.0 h1:VLMZr5vMYXq5NcljKKlSebtHNG3NuYxhqloUW17Wxkc=
+github.com/olmaxmedical/database v0.0.0/go.mod h1:BPYEBAP3GYeSeqg5hOaH7GC8+P/VnD2OuHYounbVjQs=
+github.com/olmaxmedical/session v0.0.1 h1:2xdSjpEg89+ClRFLPp/gR3lNxl4JjPAUd2Hsds++FFs=
+github.com/olmaxmedical/session v0.0.1/go.mod h1:XOVyHL+cKa5t2fLDIJtFxwEzJOa3r1hUkwlL4aybdqA=
+github.com/scorredoira/email v0.0.0-20191107070024-dc7b732c55da h1:hhmnjfzz7szp75AyXxn8tDfEA0oU4REQLmpuW6zNAOY=
+github.com/scorredoira/email v0.0.0-20191107070024-dc7b732c55da/go.mod h1:Q5ljvYIBpukMH+wgB8kcPV1i9NX8TqU++8GgBKq3pt0=
+golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
+golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
+golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
