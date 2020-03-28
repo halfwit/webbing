@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/olmaxmedical/olmax_go/db"
+	"github.com/olmaxmedical/database"
 	"golang.org/x/text/message"
 )
 
@@ -18,23 +18,23 @@ var url = "https://medical.olmax.dev"
 
 // SendSignup - email our prospective clients and create tokens
 func SendSignup(first, last, email, pass string, p *message.Printer) {
-	if !db.UserExists(email) {
+	if !database.UserExists(email) {
 		u, _ := uuid.NewRandom()
 		token := u.String()
-		db.CreateTempEntry(first, last, email, pass, token)
+		database.CreateTempEntry(first, last, email, pass, token)
 		signupemail(token, email, p)
 		go func() {
 			// Blow away the entry unconditionally after 10 minutes
 			time.Sleep(time.Minute * 10)
-			db.RemoveTempEntry(token)
+			database.RemoveTempEntry(token)
 		}()
 	}
 }
 
 // ValidateSignupToken - Make sure token is good
 func ValidateSignupToken(w http.ResponseWriter, r *http.Request, token string) {
-	if db.FindTempEntry(token) {
-		db.CreateEntry(token)
+	if database.FindTempEntry(token) {
+		database.CreateEntry(token)
 		http.Redirect(w, r, "/login.html", 302)
 		return
 	}

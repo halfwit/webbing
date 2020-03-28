@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/olmaxmedical/olmax_go/db"
+	"github.com/olmaxmedical/database"
 	"golang.org/x/text/message"
 )
 
@@ -16,26 +16,26 @@ import (
 func SendReset(email string, p *message.Printer) {
 	u, _ := uuid.NewRandom()
 	token := u.String()
-	if db.UserExists(email) {
-		db.CreateTempEntry("", "", email, "", token)
+	if database.UserExists(email) {
+		database.CreateTempEntry("", "", email, "", token)
 		resetemail(token, email, p)
 		go func() {
 			time.Sleep(time.Minute * 10)
-			db.RemoveTempEntry(token)
+			database.RemoveTempEntry(token)
 		}()
 	}
 }
 
 // NextResetToken - Make sure we have unique tokens!
 func NextResetToken(old, user string) string {
-	if db.FindTempEntry(old) {
-		db.RemoveTempEntry(old)
+	if database.FindTempEntry(old) {
+		database.RemoveTempEntry(old)
 		u, _ := uuid.NewRandom()
 		token := u.String()
-		db.CreateTempEntry("", "", user, "", token)
+		database.CreateTempEntry("", "", user, "", token)
 		go func() {
 			time.Sleep(time.Minute * 10)
-			db.RemoveTempEntry(token)
+			database.RemoveTempEntry(token)
 		}()
 		return token
 	}
