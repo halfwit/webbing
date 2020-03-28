@@ -1,7 +1,7 @@
 package doctor
 
 import (
-	"github.com/olmaxmedical/olmax_go/router"
+	"github.com/olmaxmedical/router"
 	"golang.org/x/text/message"
 )
 
