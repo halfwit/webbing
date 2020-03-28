@@ -3,17 +3,17 @@ package main
 import (
 	"log"
 	// Call our init functions to add our items
-	_ "github.com/olmaxmedical/olmax_go/forms"
-	_ "github.com/olmaxmedical/olmax_go/forms/doctor"
-	_ "github.com/olmaxmedical/olmax_go/forms/patient"
-	_ "github.com/olmaxmedical/olmax_go/pages"
-	_ "github.com/olmaxmedical/olmax_go/pages/doctor"
-	_ "github.com/olmaxmedical/olmax_go/pages/help"
-	_ "github.com/olmaxmedical/olmax_go/pages/patient"
-	_ "github.com/olmaxmedical/olmax_go/plugins"
+	_ "github.com/olmaxmedical/forms"
+	_ "github.com/olmaxmedical/forms/doctor"
+	_ "github.com/olmaxmedical/forms/patient"
+	_ "github.com/olmaxmedical/pages"
+	_ "github.com/olmaxmedical/pages/doctor"
+	_ "github.com/olmaxmedical/pages/help"
+	_ "github.com/olmaxmedical/pages/patient"
+	_ "github.com/olmaxmedical/plugins"
 
-	"github.com/olmaxmedical/olmax_go/router"
-	"github.com/olmaxmedical/olmax_go/session"
+	"github.com/olmaxmedical/router"
+	"github.com/olmaxmedical/session"
 )
 
 //go:generate gotext -srclang=en-US update -out=catalog.go -lang=en-US
