@@ -7,10 +7,12 @@ github.com/olmaxmedical/database v0.0.1 h1:cuocVljXq7cPRS9HygFg2B/WSdzWAZEHrc5uM
 github.com/olmaxmedical/database v0.0.1/go.mod h1:/5Tl6/p0jpvLpj4GaoFki3wRG/3b+ipNNhM5Dyi6Zf8=
 github.com/olmaxmedical/email v0.0.1 h1:bhOERmPiUmFJqC133s+FFXucSI3dNnfDKsboDYFEbkc=
 github.com/olmaxmedical/email v0.0.1/go.mod h1:bz6en9uc6h9fyu3MW2jTwYW19ZclQ22JkcIxsl3/epc=
-github.com/olmaxmedical/plugins v0.0.1 h1:KT6yy6faKLlDkGDx/RokGm+rsAxzKAzsFtb2zjaWUd8=
-github.com/olmaxmedical/plugins v0.0.1/go.mod h1:XIPHYhbFmjgxwo5ySRHXDK3Ar3Y3vcBW1k//nwMNncA=
-github.com/olmaxmedical/router v0.0.1 h1:0oDsfSoW+lP8g3yzql5QLAQgV4cTy4s+gZH7aJNJex8=
-github.com/olmaxmedical/router v0.0.1/go.mod h1:AM2lewexrBtUWFURwB9exKGvdHRGbKMEb1GL3iHX4js=
+github.com/olmaxmedical/plugins v0.0.1 h1:fON9AAfH635gLKNbytrUdRoRCjhI0ZPP7VFzCVZDVWA=
+github.com/olmaxmedical/plugins v0.0.1/go.mod h1:bHkYv5oh6bk5y1jCZDO9Bk5IyYMPWgZDjMrEifxVgbU=
+github.com/olmaxmedical/router v0.0.1 h1:x3fZ9u00xwKxLvPj8Au0QhIxpmxRv+q2lVMdBmyRQjM=
+github.com/olmaxmedical/router v0.0.1/go.mod h1:28e377pByZCQMBAdERDBhX4wYeTsJgc6U4yOEiz7MsA=
+github.com/olmaxmedical/router v0.0.2 h1:+yMidyoV62PUkVuXjtLYbi77omoqQA/sTfOsmoI2Keg=
+github.com/olmaxmedical/router v0.0.2/go.mod h1:28e377pByZCQMBAdERDBhX4wYeTsJgc6U4yOEiz7MsA=
 github.com/olmaxmedical/session v0.0.1 h1:2xdSjpEg89+ClRFLPp/gR3lNxl4JjPAUd2Hsds++FFs=
 github.com/olmaxmedical/session v0.0.1/go.mod h1:XOVyHL+cKa5t2fLDIJtFxwEzJOa3r1hUkwlL4aybdqA=
 github.com/pariz/gountries v0.0.0-20191029140926-233bc78cf5b5 h1:842t0ixg/A4my8/Q3oDNdHIsKYIx02NDlWVEhaiBToo=
