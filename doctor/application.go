@@ -23,9 +23,10 @@ func init() {
 
 func application(r *http.Request, p *message.Printer) []string {
 	var errors []string
+
 	data, err := forms.Parse(r)
 	if err != nil {
-		errors = append(errors, "Internal server error")
+		errors = append(errors, fmt.Sprintf("Internal server error %v", err))
 		return errors
 	}
 	val := data.Validator()
