@@ -27,5 +27,5 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
-    - name: Lint templates
+    - name: Lint Templates
       run: go test -v .
