@@ -1,6 +1,5 @@
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
-github.com/olmaxmedical/database v0.0.0 h1:VLMZr5vMYXq5NcljKKlSebtHNG3NuYxhqloUW17Wxkc=
 github.com/olmaxmedical/database v0.0.0/go.mod h1:BPYEBAP3GYeSeqg5hOaH7GC8+P/VnD2OuHYounbVjQs=
 github.com/olmaxmedical/database v0.0.1 h1:cuocVljXq7cPRS9HygFg2B/WSdzWAZEHrc5uMnN+A0A=
 github.com/olmaxmedical/database v0.0.1/go.mod h1:/5Tl6/p0jpvLpj4GaoFki3wRG/3b+ipNNhM5Dyi6Zf8=

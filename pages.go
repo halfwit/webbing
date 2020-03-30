@@ -54,15 +54,22 @@ func ValidatePages() []error {
 	hd := path.Join("templates", "header.tpl")
 	fd := path.Join("templates", "footer.tpl")
 	ld := path.Join("templates", "layout.tpl")
+
 	extra, err := os.Open(path.Join("templates", "plugins"))
 	if err != nil {
 		errs = append(errs, errors.New("Unable to locate templates/plugins"))
 		return errs
 	}
+
 	dirs, err := extra.Readdirnames(0)
+	if err != nil {
+		errs = append(errs, errors.New("Unable to read plugin dir"))
+	}
+
 	for n, dir := range dirs {
 		dirs[n] = path.Join("templates", "plugins", dir)
 	}
+
 	// TODO(halfwit) Validate our plugin templates here as well
 	dirs = append(dirs, hd, fd, ld)
 	printer := message.NewPrinter(message.MatchLanguage("en"))
@@ -82,12 +89,26 @@ func ValidatePages() []error {
 			path:    item.Path + ".html",
 			role:    database.PatientAuth | database.DoctorAuth | database.GuestAuth,
 		}
+
 		_, err = getData(p, "")
 		if err != nil {
 			errs = append(errs, err)
 		}
 	}
 	return errs
+}
+
+func RunPages() error {
+	printer := message.NewPrinter(message.MatchLanguage("en"))
+
+	for _, page := range pagecache {
+		data := page.Data(printer)
+		if len(data) < 1 {
+			return errors.New("no data from page")
+		}
+	}
+
+	return nil
 }
 
 func getpage(p *Request, w http.ResponseWriter) {
