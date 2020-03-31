@@ -23,7 +23,7 @@ func init() {
 
 func profile(r *http.Request, p *message.Printer) []string {
 	var errors []string
-	data, err := forms.Parse(r)
+	data, err := forms.ParseMax(r, r.ContentLength)
 	if err != nil {
 		errors = append(errors, "Internal server error")
 		return errors
