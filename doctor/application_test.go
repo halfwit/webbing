@@ -1,125 +1,94 @@
 package forms
 
 import (
-	"bufio"
+	"bytes"
+	"errors"
+	"fmt"
+	"mime/multipart"
 	"net/http"
-	"strings"
 	"testing"
+
+	"github.com/olmaxmedical/forms/util"
+	"golang.org/x/text/message"
 )
 
-// This isn't quite right yet, we'll get a working test soon.
-var req = `POST /doctor/application.html HTTP/1.1
-Host: localhost
-User-Agent: Mozilla/5.0
-Accept: */*
-Connection: keep-alive
-Cache-Control: no-cache
-Content-Length: 2028
-Content-Type: multipart/form-data; boundary=--------------------
-
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="Specialty"
-
-bariatric
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="country"
-
-Albania
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="email"
-
-mee%40foo.ca
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="gender"
-
-male
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="name"
-
-mememe
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="pagetitle"
-
-Application+for+doctor
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q1"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q10"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q11"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q2"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q3"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q4"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q5"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q6"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q7"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q8"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="q9"
-
-No
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="sendto"
-
-olmaxmedical%40gmail.com
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="cv"
-
-resume.pdf
---------------------------4ee5f9ad0b2d7899
-Content-Disposition: form-data; name="form"
-
-resume.pdf
---------------------------4ee5f9ad0b2d7899`
-
 func TestApplication(t *testing.T) {
-	// Build a POST request with a map of entries
-	rd := bufio.NewReader(strings.NewReader(req))
-
-	request, err := http.ReadRequest(rd)
-	if err != nil {
-		t.Errorf("test design error: bad request: %v", err)
-		return
+	fields := map[string]string{
+		"qs":      "no",
+		"gender":  "male",
+		"email":   "foo@bar.ca",
+		"name":    "Doctor Octopus",
+		"redFlag": "on",
 	}
 
-	if e := request.ParseMultipartForm(request.ContentLength); e != nil {
+	if e := testApplication(t, fields); e != nil {
 		t.Error(e)
 	}
-	/*
-		printer := message.NewPrinter(message.MatchLanguage("en"))
 
-		resp := application(request, printer)
-		if len(resp) > 0 {
-			for _, err := range resp {
-				t.Errorf("%s", err)
-			}
+	fields["gender"] = "pineapple"
+	if e := testApplication(t, fields); e == nil {
+		t.Error("invalid field accepted")
+	}
+
+	fields["gender"] = "male"
+	fields["email"] = "foo@bar@ca"
+	if e := testApplication(t, fields); e == nil {
+		t.Error("invalid field accepted")
+	}
+
+	fields["email"] = "foo@bar.ca"
+	fields["qs"] = "true"
+	if e := testApplication(t, fields); e == nil {
+		t.Error("invalid field accepted")
+	}
+}
+
+func testApplication(t *testing.T, fields map[string]string) error {
+	var reqBody bytes.Buffer
+
+	mpw := multipart.NewWriter(&reqBody)
+	files := map[string]string{
+		"cv":      "resume.pdf",
+		"diploma": "certificate.pdf",
+	}
+
+	for key, value := range files {
+		if e := util.WriteFile(mpw, key, "../resources/"+value); e != nil {
+			panic(e)
 		}
-	*/
+	}
+
+	for key, value := range fields {
+		if key == "qs" {
+			for i := 0; i < 12; i++ {
+				key = fmt.Sprintf("q%d", i)
+				if e := mpw.WriteField(key, value); e != nil {
+					panic(e)
+				}
+			}
+			continue
+		}
+
+		if e := mpw.WriteField(key, value); e != nil {
+			panic(e)
+		}
+	}
+
+	request := util.BuildMultiRequest(mpw, &reqBody)
+	printer := message.NewPrinter(message.MatchLanguage("en"))
+	return runTest(request, printer)
+}
+
+func runTest(request *http.Request, printer *message.Printer) error {
+	for _, err := range application(request, printer) {
+		switch err {
+		case "unsupported filetype for cv":
+		case "unsupported filetype for diploma":
+		default:
+			return errors.New(err)
+		}
+
+	}
+
+	return nil
 }

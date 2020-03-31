@@ -15,7 +15,7 @@ func init() {
 		Access:    router.PatientAuth,
 		Path:      "patient/offer",
 		Validator: offer,
-		After:     plugins.Search | plugins.Services,
+		After:     plugins.Search | plugins.Services, //|plugins.Offer
 		Redirect:  "results.html",
 	}
 	router.AddPost(b)
@@ -23,7 +23,7 @@ func init() {
 
 func offer(r *http.Request, p *message.Printer) []string {
 	var errors []string
-	data, err := forms.Parse(r)
+	data, err := forms.ParseMax(r, r.ContentLength)
 	if err != nil {
 		errors = append(errors, p.Sprint("Internal server error"))
 		return errors
@@ -45,7 +45,7 @@ func offer(r *http.Request, p *message.Printer) []string {
 	if err != nil {
 		val.AddError("endDate", p.Sprint("Invalid end-date entered"))
 	}
-	val.Require("")
+
 	if val.HasErrors() {
 		errors = append(errors, val.Messages()...)
 	}

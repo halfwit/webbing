@@ -1,5 +1,5 @@
-github.com/albrow/forms v0.3.3 h1:+40fCsDyS2lU97IEeed7bnUGENvlVzppQGBGy6kd77E=
-github.com/albrow/forms v0.3.3/go.mod h1:jvrM3b0gPuIRiY1E/KmKfPk2XXDEKj7yFB+g9g0BItQ=
+github.com/albrow/forms v0.3.4-0.20170215231405-c4277021bca2 h1:SnKbJhjY6YOX6cC0JL19DzxJ4nMZoTFqRJ006tgpclw=
+github.com/albrow/forms v0.3.4-0.20170215231405-c4277021bca2/go.mod h1:jvrM3b0gPuIRiY1E/KmKfPk2XXDEKj7yFB+g9g0BItQ=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
