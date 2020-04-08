@@ -2,60 +2,48 @@ package email
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"log"
 	"net/http"
 	"net/smtp"
-	"time"
 
-	"github.com/google/uuid"
 	"github.com/olmaxmedical/database"
 	"golang.org/x/text/message"
 )
 
-// TODO(halfwit) Update with whichever TLD we land on
-var url = "https://medical.olmax.dev"
-
+// These all need context
 // SendSignup - email our prospective clients and create tokens
-func SendSignup(first, last, email, pass string, p *message.Printer) {
-	if !database.UserExists(email) {
-		u, _ := uuid.NewRandom()
-		token := u.String()
-		database.CreateTempEntry(first, last, email, pass, token)
-		signupemail(token, email, p)
-		go func() {
-			// Blow away the entry unconditionally after 10 minutes
-			time.Sleep(time.Minute * 10)
-			database.RemoveTempEntry(token)
-		}()
-	}
+func SendSignup(ctx context.Context, db *database.Database, user *database.User, email, password string, p *message.Printer) {
+	token := db.CreateTempEntry(ctx, user, email, password)
+	signupemail(token, []string{email}, p)
 }
 
 // ValidateSignupToken - Make sure token is good
-func ValidateSignupToken(w http.ResponseWriter, r *http.Request, token string) {
-	if database.FindTempEntry(token) {
-		database.CreateEntry(token)
-		http.Redirect(w, r, "/login.html", 302)
-		return
+func ValidateSignupToken(ctx context.Context, db *database.Database, w http.ResponseWriter, r *http.Request, token string) {
+	if e := db.UserFromTemp(ctx, token); e != nil {
+		http.Error(w, "Bad Request", 400)
 	}
-	http.Error(w, "Bad Request", 400)
 
+	http.Redirect(w, r, "/login.html", 302)
+	return
 }
 
-func signupemail(token string, sendto string, p *message.Printer) {
+func signupemail(token string, to []string, p *message.Printer) {
 	var msg bytes.Buffer
+
 	msg.WriteString("From: ")
-	msg.WriteString("olmaxmedical@gmail.com" + "\n")
+	msg.WriteString(gmail + "\n")
 	msg.WriteString("To: ")
-	msg.WriteString(sendto + "\n")
+	msg.WriteString(to[0] + "\n")
 	msg.WriteString(p.Sprintf("Subject: Olmax Medical - Verify your new account\n\n"))
 	msg.WriteString(p.Sprintf("Please click the following link to finalize your account creation "))
 	msg.WriteString(fmt.Sprintf("%s/activate/%s\n", url, token))
-	err := smtp.SendMail("smtp.gmail.com:587",
-		smtp.PlainAuth("", "olmaxmedical@gmail.com", "hunter2", "smtp.gmail.com"),
-		"olmaxmedical@gmail.com", []string{sendto}, msg.Bytes(),
-	)
-	if err != nil {
-		log.Printf("smtp error: %v", err)
+
+	auth := smtp.PlainAuth("", gmail, pw, addr)
+	data := msg.Bytes()
+
+	if e := smtp.SendMail(addr+":587", auth, gmail, to, data); e != nil {
+		log.Printf("smtp error: %v", e)
 	}
 }

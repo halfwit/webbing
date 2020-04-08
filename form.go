@@ -1,6 +1,3 @@
-// All forms must set the "sendto" key to a []string{"someemail@email.com"}
-// As well, they require a "name" and "email" combo.
-
 package email
 
 import (
@@ -54,30 +51,39 @@ func init() {
 // SendForm - Fill in the template and send it out from our email address
 func SendForm(form map[string][]string, p *message.Printer, attachments map[string]multipart.File) {
 	var body bytes.Buffer
+
+	// Stash the address we want to send to
 	address := form["sendto"][0]
 	delete(form, "sendto")
-	if err := t.Execute(&body, form); err != nil {
-		log.Println(err)
+
+	if e := t.Execute(&body, form); e != nil {
+		log.Println(e)
 		return
 	}
+
 	m := email.NewHTMLMessage("Form contents", body.String())
 	m.From = mail.Address{
 		Name:    "From",
-		Address: "olmaxmedical@gmail.com",
+		Address: gmail,
 	}
+
 	m.AddTo(mail.Address{
 		Name:    "To",
 		Address: address,
 	})
+
 	for name, buff := range attachments {
 		var attc bytes.Buffer
+
 		attc.ReadFrom(buff)
+
 		if err := m.AttachBuffer(name, attc.Bytes(), false); err != nil {
 			log.Println(err)
 		}
 	}
-	auth := smtp.PlainAuth("", "olmaxmedical@gmail.com", "hunter2", "smtp.gmail.com")
-	if err := email.Send("smtp.gmail.com:587", auth, m); err != nil {
+
+	auth := smtp.PlainAuth("", gmail, pw, addr)
+	if err := email.Send(addr+":587", auth, m); err != nil {
 		log.Println(err)
 	}
 }
