@@ -24,7 +24,7 @@ func symptoms(p *message.Printer) map[string]interface{} {
 		"profileHeader":        p.Sprintf("Create Patient Profile"),
 		"formHeader":           p.Sprintf("Please submit some information regarding your consult."),
 		"birthdate":            p.Sprintf("When were you born?"),
-		"asab":                 p.Sprintf("Which were you assigned at birth?"),
+		"asab":                 p.Sprintf("Which sex were you assigned at birth?"),
 		"visitReason":          p.Sprintf("Please give a brief statement regarding the main reason you would like to see your doctor:"),
 		"symptomStart":         p.Sprintf("When did your symptoms start?"),
 		"symptomArea":          p.Sprintf("Where are your symptoms located? <i>part of your body</i>"),
