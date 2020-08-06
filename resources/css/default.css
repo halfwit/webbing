@@ -1,0 +1,102 @@
+header {
+  grid-area: header;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  transition: top 0.3s;
+}
+main {
+  grid-area: content;
+  font-size: 1.5rem;
+  color: #323232;
+}
+
+body {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 8rem auto auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+footer {
+  grid-area: footer;
+  padding: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #323232;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+footer ul {
+  list-style-type: none;
+}
+footer li a {
+  text-decoration: none;
+  display: block;
+}
+footer section.branding {
+  order: 1;
+  padding-bottom: 2rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer nav.leftfooter {
+  order: 2;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+footer nav.rightfooter {
+  order: 3;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+footer svg {
+  width: 6rem;
+  height: 6rem;
+  display: block;
+  fill: #4b83f2;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+}
+footer nav details[open] li a {
+  color: #cdcdcd;
+}
+footer nav details[open] li a:hover {
+  color: #3b4a96;
+}
+@media (pointer: fine) and (hover: hover) and (min-width: 660px) {
+  main {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  footer {
+    justify-content: space-evenly;
+    flex-flow: row;
+  }
+  footer section.branding {
+    order: 2;
+  }
+  footer nav.leftfooter {
+    order: 1;
+  }
+  footer nav.rightfooter {
+    order: 3;
+  }
+}
